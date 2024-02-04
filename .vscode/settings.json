@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "ble.h": "c",
+        "random": "c"
+    }
+}
