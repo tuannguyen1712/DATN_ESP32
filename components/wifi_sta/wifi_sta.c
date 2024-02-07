@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "wifi_sta.h"
 
-uint8_t wifi_connect = 1;       // = 0 when connect fail
+uint8_t wifi_connect = 0;       // = 0 when connect fail
+uint8_t wifi_done = 0;          
 esp_netif_t *ptr;
 int s_retry_num = 0;
 esp_event_handler_instance_t g_instance_any_id;
@@ -21,6 +22,7 @@ void event_handler(void* arg, esp_event_base_t event_base,
             ESP_LOGI("WIFI STATION", "Can't connect to the AP point");
             s_retry_num = 0;
             wifi_connect = 0;
+            wifi_done = 1;
         }
         ESP_LOGI("WIFI STATION","connect to the AP fail");
     } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
@@ -28,6 +30,7 @@ void event_handler(void* arg, esp_event_base_t event_base,
         ESP_LOGI("WIFI STATION", "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
         wifi_connect = 1;
         s_retry_num = 0;
+        wifi_done = 1;
     }
 }
 
@@ -61,7 +64,6 @@ void wifi_deinit_sta() {
 // xSemaphoreGive
 
 void wifi_init_lwip() {
-    wifi_connect = 1;
     ESP_ERROR_CHECK(esp_netif_init());
 
     ESP_ERROR_CHECK(esp_event_loop_create_default());

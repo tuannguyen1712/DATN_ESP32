@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "gatt_server_demos",
-    "project_version":    "f5a093e-dirty",
+    "project_version":    "6299586-dirty",
     "project_path":       "D:/ESP_IDF/ESP32_project/gatt_server",
     "idf_path":           "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1",
     "build_dir":          "D:/ESP_IDF/ESP32_project/gatt_server/build",

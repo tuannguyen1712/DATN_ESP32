@@ -20,7 +20,8 @@
         "esp_wifi.h": "c",
         "esp_netif.h": "c",
         "esp_event.h": "c",
-        "mqtt_handle.h": "c"
+        "mqtt_handle.h": "c",
+        "stddef.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

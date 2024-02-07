@@ -23,6 +23,7 @@
 #include "mqtt_handle.h"
 
 extern uint8_t wifi_connect;
+extern uint8_t wifi_done;
 
 extern volatile uint8_t data_flag;
 extern uint8_t ble_data[100];
@@ -34,6 +35,8 @@ TaskHandle_t ble_task;
 TaskHandle_t wifi_task;
 
 uint8_t wifi_state = 1;
+
+uint8_t init_mqtt = 0;
 
 void ble_gatt_server();
 void wifi_sta();
@@ -53,12 +56,12 @@ void app_main(void)
     
     // ESP_ERROR_CHECK(esp_bt_controller_mem_release(ESP_BT_MODE_CLASSIC_BT));                     // need?
     // init_ble();
-    ble_queue = xQueueCreate(1, sizeof(uint8_t) * 100);
+    ble_queue = xQueueCreate(1, sizeof(uint8_t));
     wifi_queue = xQueueCreate(1, sizeof(uint8_t));
     mutex1 = xSemaphoreCreateMutex();
     mutex2 = xSemaphoreCreateMutex();
-    xTaskCreate(ble_gatt_server, "BLE Task", 4096, NULL, 1, NULL);
-    xTaskCreate(wifi_sta, "Wifi Task", 4096, NULL, 1, NULL);
+    xTaskCreate(ble_gatt_server, "BLE Task", 5120, NULL, 1, NULL);
+    xTaskCreate(wifi_sta, "Wifi Task", 5120, NULL, 1, NULL);
     // xTaskCreate(wifi_sta, "Wifi Task", 2048, NULL, 1, NULL);
     // vTaskStartScheduler();
     // return;
@@ -68,13 +71,16 @@ void ble_gatt_server()
 {
     uint8_t wifi_flag = 1;
     uint8_t ss[100] = "";
-    uint8_t connect_state;
     uint8_t ssid[100];
     uint8_t pass[100];
-    uint8_t data[100];
+    uint8_t connect_state;
     ESP_LOGI("BLE:","ble task, wifi queue: %d, data_flag: %d", uxQueueMessagesWaiting(wifi_queue), data_flag);
     init_ble();
+    ESP_LOGI("BLE:","init ble");
     wifi_init_lwip();
+    mqtt_init();
+    wifi_init_sta((uint8_t*) "Infrastructure NW", (uint8_t*) "NetworkPolicy");
+    ESP_LOGI("BLE:","init lwip");
     while (1) {
         if (data_flag) {
             if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
@@ -82,28 +88,26 @@ void ble_gatt_server()
                 data_flag = 0;
                 strcpy((char*) ss, (char*) ble_data);
                 get_wifi_info(ss, ssid, pass);
-                wifi_init_sta(ssid, pass);
-                xQueueSend(ble_queue, (void*) ss, (TickType_t) 2);
-                ESP_LOGI("BLE:","send data to queue");
-                disable_ble();
-                ESP_LOGI("BLE:","disable ble");
+                // wifi_init_sta(ssid, pass);
+                ESP_LOGI("BLE:","start connect wifi");
                 xSemaphoreGive(mutex1);
                 ESP_LOGI("BLE:","ble task release mutex");
             }
         }
-        if (uxQueueMessagesWaiting(wifi_queue)) {
+        if (wifi_done) {
             if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
                 ESP_LOGI("BLE:","ble task have mutex");
-                xQueueReceive(wifi_queue, &connect_state, portMAX_DELAY);
-                ESP_LOGI("BLE:","received data from wifi_queue");
-                init_ble();
-                ESP_LOGI("BLE:","enable ble");
+                wifi_done = 0;
+                xQueueSend(wifi_queue, (void*) &wifi_connect, (TickType_t) 0);
+                ESP_LOGI("BLE:","connect state = %d", wifi_connect);
                 xSemaphoreGive(mutex1);
                 ESP_LOGI("BLE:","ble task release mutex");
             }
         }
         vTaskDelay(50 / portTICK_PERIOD_MS);
     }
+
+
 
     // EXAMPLE
     // if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
@@ -117,36 +121,32 @@ void ble_gatt_server()
 }
 void wifi_sta() 
 {
-    // uint8_t ssid[100];
-    // uint8_t pass[100];
-    // uint8_t data[100];
-    uint8_t connect_state;
+    uint8_t state;
+    uint8_t is_dis = 0;                 // is disconect ble
     // wifi_init_lwip();
     ESP_LOGI("WIFI","wifi task, ble_queue: %d wifi_connect: %d", uxQueueMessagesWaiting(ble_queue), wifi_connect);
     while (1) {
-        // if (uxQueueMessagesWaiting(ble_queue) != 0) {
-        //     if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
-        //         ESP_LOGI("WIFI","wifi task have mutex");
-        //         xQueueReceive(ble_queue, data, portMAX_DELAY); 
-        //         ESP_LOGI("WIFI", "receive data from ble: %s", data);
-        //         get_wifi_info(data, ssid, pass);
-        //         ESP_LOGI("WIFI", "ssid:%s password:%s", (char*) ssid, (char*) pass);
-        //         // wifi_init_lwip();
-        //         // wifi_init_sta(ssid, pass);
-        //         //mqtt_app_start();
-        //         xSemaphoreGive(mutex1);
-        //         ESP_LOGI("WIFI","wifi task release mutex");
-        //     }
-        // }
-        if (wifi_connect == 0) {
+        if (uxQueueMessagesWaiting(wifi_queue) != 0) {
             if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
                 ESP_LOGI("WIFI","wifi task have mutex");
-                wifi_connect = 1;
-                connect_state = 0;
-                xQueueSend(wifi_queue, (void*) &connect_state, (TickType_t) 0);
-                ESP_LOGI("WIFI", "send wifi connect state");
-                wifi_deinit_sta();
-                ESP_LOGI("WIFI", "disable wifi");
+                xQueueReceive(wifi_queue, &state, portMAX_DELAY);
+                if (state) {                                    // connect successfuly
+                    disable_ble();
+                    ESP_LOGI("WIFI","disable ble");
+                    mqtt_start();
+                    is_dis = 1;
+                }
+                else if (!state && is_dis) {                    // disable wifi when connect success before (need disable ble when connect success)
+                    init_ble();
+                    ESP_LOGI("WIFI","start ble again");
+                    wifi_deinit_sta();
+                    ESP_LOGI("WIFI","stop wifi connection");
+                    is_dis = 0;
+                }
+                else if (!state && !is_dis) {                   // connect fail in the first time
+                    wifi_deinit_sta();
+                    ESP_LOGI("WIFI","stop wifi connection, fail connect in the first time");
+                }
                 xSemaphoreGive(mutex1);
                 ESP_LOGI("WIFI","wifi task release mutex");
             }

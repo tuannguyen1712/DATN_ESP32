@@ -1,0 +1,130 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\ESP_IDF\ESP32_project\gatt_server\build\bootloader\esp-idf\esptool_py && D:\ESP_IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ESP_IDF/ESP32_project/gatt_server/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[2/9] Building C object esp-idf/mqtt_handle/CMakeFiles/__idf_mqtt_handle.dir/mqtt_handle.c.obj
+FAILED: esp-idf/mqtt_handle/CMakeFiles/__idf_mqtt_handle.dir/mqtt_handle.c.obj 
+ccache D:\ESP_IDF\Espressif\tools\xtensa-esp32-elf\esp-12.2.0_20230208\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.1.1-dirty\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -ID:/ESP_IDF/ESP32_project/gatt_server/build/config -ID:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/platform_include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/esp_additions/include/freertos -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/esp_additions/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/esp_additions/arch/xtensa/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/include/soc -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/include/soc/esp32 -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/port/esp32/. -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/port/esp32/private_include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/log/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/soc/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/soc/esp32 -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/soc/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/hal/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/hal/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/hal/platform_port/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/include/esp32 -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/esp32 -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_common/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/soc -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/include/private -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/xtensa/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/xtensa/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/include/apps -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/include/apps/sntp -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/lwip/src/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/port/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/port/freertos/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/port/esp32xx/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/port/esp32xx/include/arch -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_event/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/tcp_transport/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls/esp-tls-crypto -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mbedtls/port/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mbedtls/mbedtls/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mbedtls/mbedtls/library -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mbedtls/esp_crt_bundle/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_timer/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_wifi/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_wifi/wifi_apps/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_phy/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_phy/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_netif/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=D:/ESP_IDF/ESP32_project/gatt_server=. -fmacro-prefix-map=D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/mqtt_handle/CMakeFiles/__idf_mqtt_handle.dir/mqtt_handle.c.obj -MF esp-idf\mqtt_handle\CMakeFiles\__idf_mqtt_handle.dir\mqtt_handle.c.obj.d -o esp-idf/mqtt_handle/CMakeFiles/__idf_mqtt_handle.dir/mqtt_handle.c.obj -c D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c: In function 'mqtt_start':
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:24:20: error: storage class specified for parameter 'TAG1'
+   24 | static const char *TAG1 = "MQTT";
+      |                    ^~~~
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:24:1: error: parameter 'TAG1' is initialized
+   24 | static const char *TAG1 = "MQTT";
+      | ^~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:26:1: error: parameter 'topic' is initialized
+   26 | char topic[] = "doan2/aithing/data";
+      | ^~~~
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:29:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   29 | {
+      | ^
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:36:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   36 | {
+      | ^
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:95:1: error: two or more data types in declaration specifiers
+   95 | void mqtt_init()
+      | ^~~~
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:96:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   96 | {
+      | ^
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:110:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  110 | {
+      | ^
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:115:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  115 | {
+      | ^
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:26:6: error: declaration for parameter 'topic' but no such parameter
+   26 | char topic[] = "doan2/aithing/data";
+      |      ^~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:25:26: error: declaration for parameter 'client' but no such parameter
+   25 | esp_mqtt_client_handle_t client;
+      |                          ^~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:24:20: error: declaration for parameter 'TAG1' but no such parameter
+   24 | static const char *TAG1 = "MQTT";
+      |                    ^~~~
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:118: error: expected '{' at end of input
+[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/gatts_demo.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/gatts_demo.c.obj 
+ccache D:\ESP_IDF\Espressif\tools\xtensa-esp32-elf\esp-12.2.0_20230208\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.1.1-dirty\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -ID:/ESP_IDF/ESP32_project/gatt_server/build/config -ID:/ESP_IDF/ESP32_project/gatt_server/main -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/platform_include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/esp_additions/include/freertos -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/esp_additions/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/esp_additions/arch/xtensa/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/include/soc -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/include/soc/esp32 -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/port/esp32/. -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/port/esp32/private_include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/log/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/soc/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/soc/esp32 -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/soc/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/hal/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/hal/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/hal/platform_port/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/include/esp32 -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/esp32 -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_common/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/soc -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/include/private -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/xtensa/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/xtensa/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/include/apps -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/include/apps/sntp -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/lwip/src/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/port/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/port/freertos/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/port/esp32xx/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/port/esp32xx/include/arch -ID:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/bt/include/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/bt/common/osi/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/bt/common/api/include/api -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/bt/common/btc/profile/esp/blufi/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/bt/common/btc/profile/esp/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/bt/host/bluedroid/api/include/api -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/bt/porting/ext/tinycrypt/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_timer/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_wifi/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_wifi/wifi_apps/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_event/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_phy/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_phy/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_netif/include -ID:/ESP_IDF/ESP32_project/gatt_server/components/wifi_sta/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/nvs_flash/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_partition/include -ID:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/tcp_transport/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls/esp-tls-crypto -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mbedtls/port/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mbedtls/mbedtls/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mbedtls/mbedtls/library -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mbedtls/esp_crt_bundle/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=D:/ESP_IDF/ESP32_project/gatt_server=. -fmacro-prefix-map=D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/gatts_demo.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\gatts_demo.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/gatts_demo.c.obj -c D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c: In function 'mqtt_start':
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:25:16: error: storage class specified for parameter 'wifi_connect'
+   25 | extern uint8_t wifi_connect;
+      |                ^~~~~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:26:16: error: storage class specified for parameter 'wifi_done'
+   26 | extern uint8_t wifi_done;
+      |                ^~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:28:25: error: storage class specified for parameter 'data_flag'
+   28 | extern volatile uint8_t data_flag;
+      |                         ^~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:29:16: error: storage class specified for parameter 'ble_data'
+   29 | extern uint8_t ble_data[100];
+      |                ^~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:37:1: error: parameter 'wifi_state' is initialized
+   37 | uint8_t wifi_state = 1;
+      | ^~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:39:1: error: parameter 'init_mqtt' is initialized
+   39 | uint8_t init_mqtt = 0;
+      | ^~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:47:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   47 | {
+      | ^
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:71:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   71 | {
+      | ^
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:123:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  123 | {
+      | ^
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:44:19: error: declaration for parameter 'mutex2' but no such parameter
+   44 | SemaphoreHandle_t mutex2;               // for ble
+      |                   ^~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:43:19: error: declaration for parameter 'mutex1' but no such parameter
+   43 | SemaphoreHandle_t mutex1;               // for wifi
+      |                   ^~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:42:6: error: declaration for parameter 'wifi_sta' but no such parameter
+   42 | void wifi_sta();
+      |      ^~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:41:6: error: declaration for parameter 'ble_gatt_server' but no such parameter
+   41 | void ble_gatt_server();
+      |      ^~~~~~~~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:39:9: error: declaration for parameter 'init_mqtt' but no such parameter
+   39 | uint8_t init_mqtt = 0;
+      |         ^~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:37:9: error: declaration for parameter 'wifi_state' but no such parameter
+   37 | uint8_t wifi_state = 1;
+      |         ^~~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:35:14: error: declaration for parameter 'wifi_task' but no such parameter
+   35 | TaskHandle_t wifi_task;
+      |              ^~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:34:14: error: declaration for parameter 'ble_task' but no such parameter
+   34 | TaskHandle_t ble_task;
+      |              ^~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:32:15: error: declaration for parameter 'wifi_queue' but no such parameter
+   32 | QueueHandle_t wifi_queue;
+      |               ^~~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:31:15: error: declaration for parameter 'ble_queue' but no such parameter
+   31 | QueueHandle_t ble_queue;
+      |               ^~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:29:16: error: declaration for parameter 'ble_data' but no such parameter
+   29 | extern uint8_t ble_data[100];
+      |                ^~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:28:25: error: declaration for parameter 'data_flag' but no such parameter
+   28 | extern volatile uint8_t data_flag;
+      |                         ^~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:26:16: error: declaration for parameter 'wifi_done' but no such parameter
+   26 | extern uint8_t wifi_done;
+      |                ^~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:25:16: error: declaration for parameter 'wifi_connect' but no such parameter
+   25 | extern uint8_t wifi_connect;
+      |                ^~~~~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:171: error: expected '{' at end of input
+In file included from D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:21:
+D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h: At top level:
+D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h:53:13: warning: 'gatts_profile_a_event_handler' declared 'static' but never defined [-Wunused-function]
+   53 | static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h:51:13: warning: 'gap_event_handler' declared 'static' but never defined [-Wunused-function]
+   51 | static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param);
+      |             ^~~~~~~~~~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h:52:13: warning: 'gatts_event_handler' declared 'static' but never defined [-Wunused-function]
+   52 | static void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
+      |             ^~~~~~~~~~~~~~~~~~~
+ninja: build stopped: subcommand failed.

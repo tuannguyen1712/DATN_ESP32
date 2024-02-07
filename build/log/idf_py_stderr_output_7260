@@ -1,0 +1,100 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- idf_monitor on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081408: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40081ab2: panic_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/panic.c:452
+[0m
+[0;33m0x400917a9: esp_system_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x40098991: __assert_func at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/assert.c:81
+[0m
+[0;33m0x4017d68b: tcpip_send_msg_wait_sem at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x40190819: netconn_gethostbyname_addrtype at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/lwip/src/api/api_lib.c:1325 (discriminator 2)
+[0m
+[0;33m0x4017a9f1: lwip_getaddrinfo at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/lwip/src/api/netdb.c:345
+[0m
+[0;33m0x40137911: getaddrinfo at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/include/lwip/netdb.h:23
+ (inlined by) esp_tls_hostname_to_fd at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls/esp_tls.c:199
+[0m
+[0;33m0x40137c72: tcp_connect at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls/esp_tls.c:336 (discriminator 4)
+[0m
+[0;33m0x40138201: esp_tls_plain_tcp_connect at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls/esp_tls.c:513
+[0m
+[0;33m0x4013962b: tcp_connect at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/tcp_transport/transport_ssl.c:138
+[0m
+[0;33m0x401bc19d: esp_transport_connect at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/tcp_transport/transport.c:123
+[0m
+[0;33m0x4012b984: esp_mqtt_task at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/mqtt_client.c:1559
+[0m
+[0;33m0x40094189: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081408: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40081ab2: panic_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/panic.c:452
+[0m
+[0;33m0x400917a9: esp_system_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x40098991: __assert_func at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/assert.c:81
+[0m
+[0;33m0x4017d68b: tcpip_send_msg_wait_sem at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x40190819: netconn_gethostbyname_addrtype at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/lwip/src/api/api_lib.c:1325 (discriminator 2)
+[0m
+[0;33m0x4017a9f1: lwip_getaddrinfo at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/lwip/src/api/netdb.c:345
+[0m
+[0;33m0x40137911: getaddrinfo at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/include/lwip/netdb.h:23
+ (inlined by) esp_tls_hostname_to_fd at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls/esp_tls.c:199
+[0m
+[0;33m0x40137c72: tcp_connect at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls/esp_tls.c:336 (discriminator 4)
+[0m
+[0;33m0x40138201: esp_tls_plain_tcp_connect at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls/esp_tls.c:513
+[0m
+[0;33m0x4013962b: tcp_connect at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/tcp_transport/transport_ssl.c:138
+[0m
+[0;33m0x401bc19d: esp_transport_connect at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/tcp_transport/transport.c:123
+[0m
+[0;33m0x4012b984: esp_mqtt_task at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/mqtt_client.c:1559
+[0m
+[0;33m0x40094189: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081408: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40081ab2: panic_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/panic.c:452
+[0m
+[0;33m0x400917a9: esp_system_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x40098991: __assert_func at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/assert.c:81
+[0m
+[0;33m0x4017d68b: tcpip_send_msg_wait_sem at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x40190819: netconn_gethostbyname_addrtype at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/lwip/src/api/api_lib.c:1325 (discriminator 2)
+[0m
+[0;33m0x4017a9f1: lwip_getaddrinfo at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/lwip/src/api/netdb.c:345
+[0m
+[0;33m0x40137911: getaddrinfo at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/include/lwip/netdb.h:23
+ (inlined by) esp_tls_hostname_to_fd at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls/esp_tls.c:199
+[0m
+[0;33m0x40137c72: tcp_connect at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls/esp_tls.c:336 (discriminator 4)
+[0m
+[0;33m0x40138201: esp_tls_plain_tcp_connect at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls/esp_tls.c:513
+[0m
+[0;33m0x4013962b: tcp_connect at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/tcp_transport/transport_ssl.c:138
+[0m
+[0;33m0x401bc19d: esp_transport_connect at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/tcp_transport/transport.c:123
+[0m
+[0;33m0x4012b984: esp_mqtt_task at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/mqtt_client.c:1559
+[0m
+[0;33m0x40094189: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m
