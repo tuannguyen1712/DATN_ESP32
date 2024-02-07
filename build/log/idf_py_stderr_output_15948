@@ -1,0 +1,14 @@
+Note: D:/ESP_IDF/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;-m;esp_idf_monitor will search for a serial port. To specify a port, set the ESPPORT environment variable.
+Note: D:/ESP_IDF/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;-m;esp_idf_monitor will attempt to set baud rate automatically. To specify a baud rate, set the ESPBAUD environment variable.
+--- Using autodetected port COM3
+--- WARNING: GDB cannot open serial ports accessed as COMx
+--- Using \\.\COM3 instead...
+--- idf_monitor on \\.\COM3 115200 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+0x40080400: _init at ??:?
+
+0x40081408: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+
+None
+Waiting for the device to reconnect....
+

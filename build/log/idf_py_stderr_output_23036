@@ -1,0 +1,77 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- idf_monitor on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081408: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x4008cdd6: esp_crosscore_isr at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x40082e29: _xt_lowint1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4009446f: vPortClearInterruptMaskFromISR at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400922d7: uxQueueMessagesWaiting at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d790a: ble_gatt_server at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:87 (discriminator 15)
+[0m
+[0;33m0x40094189: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x4008cdd6: esp_crosscore_isr at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x40082e29: _xt_lowint1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4009446f: vPortClearInterruptMaskFromISR at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400922d7: uxQueueMessagesWaiting at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d790a: ble_gatt_server at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:87 (discriminator 15)
+[0m
+[0;33m0x40094189: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x4008cdd6: esp_crosscore_isr at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x40082e29: _xt_lowint1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4009446f: vPortClearInterruptMaskFromISR at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400922d7: uxQueueMessagesWaiting at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d790a: ble_gatt_server at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:87 (discriminator 15)
+[0m
+[0;33m0x40094189: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x4008cdd6: esp_crosscore_isr at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x40082e29: _xt_lowint1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d790a: ble_gatt_server at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:87 (discriminator 15)
+[0m
+[0;33m0x40094189: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x4008cdd6: esp_crosscore_isr at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x40082e29: _xt_lowint1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4009446f: vPortClearInterruptMaskFromISR at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400922d7: uxQueueMessagesWaiting at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d790a: ble_gatt_server at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:87 (discriminator 15)
+[0m
+[0;33m0x40094189: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0m

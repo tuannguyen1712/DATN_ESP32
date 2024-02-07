@@ -1,6 +1,26 @@
 {
     "files.associations": {
         "ble.h": "c",
-        "random": "c"
-    }
+        "random": "c",
+        "esp_gatt_common_api.h": "c",
+        "sdkconfig.h": "c",
+        "semphr.h": "c",
+        "esp_bt_main.h": "c",
+        "event_groups.h": "c",
+        "unistd.h": "c",
+        "esp_system.h": "c",
+        "task.h": "c",
+        "freertos.h": "c",
+        "wifi_sta.h": "c",
+        "bitset": "c",
+        "algorithm": "c",
+        "netdb.h": "c",
+        "mqtt_client.h": "c",
+        "sockets.h": "c",
+        "esp_wifi.h": "c",
+        "esp_netif.h": "c",
+        "esp_event.h": "c",
+        "mqtt_handle.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

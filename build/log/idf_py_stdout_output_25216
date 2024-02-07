@@ -1,0 +1,112 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\ESP_IDF\ESP32_project\gatt_server\build\bootloader\esp-idf\esptool_py && D:\ESP_IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ESP_IDF/ESP32_project/gatt_server/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/gatts_demo.c.obj
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c: In function 'ble_gatt_server':
+D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:68:13: warning: unused variable 'wifi_flag' [-Wunused-variable]
+   68 |     uint8_t wifi_flag = 1;
+      |             ^~~~~~~~~
+In file included from D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:21:
+D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h: At top level:
+D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h:53:13: warning: 'gatts_profile_a_event_handler' declared 'static' but never defined [-Wunused-function]
+   53 | static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h:51:13: warning: 'gap_event_handler' declared 'static' but never defined [-Wunused-function]
+   51 | static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param);
+      |             ^~~~~~~~~~~~~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h:52:13: warning: 'gatts_event_handler' declared 'static' but never defined [-Wunused-function]
+   52 | static void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
+      |             ^~~~~~~~~~~~~~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable gatt_server_demos.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/ESP_IDF/ESP32_project/gatt_server/build/gatt_server_demos.bin
+[7/8] cmd.exe /C "cd /D D:\ESP_IDF\ESP32_project\gatt_server\build\esp-idf\esptool_py && D:\ESP_IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP_IDF/ESP32_project/gatt_server/build/partition_table/partition-table.bin D:/ESP_IDF/ESP32_project/gatt_server/build/gatt_server_demos.bin"
+gatt_server_demos.bin binary size 0x134370 bytes. Smallest app partition is 0x177000 bytes. 0x42c90 bytes (18%) free.
+[7/8] cmd.exe /C "cd /D D:\ESP_IDF\Espressif\frameworks\esp-idf-v5.1.1\components\esptool_py && D:\ESP_IDF\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1 -D SERIAL_TOOL=D:/ESP_IDF/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/ESP_IDF/ESP32_project/gatt_server/build -P D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 gatt_server_demos.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port COM3
+Connecting........................
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 24:dc:c3:a6:d0:28
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00144fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26640 bytes to 16691...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000768e... (100 %)
+Wrote 26640 bytes (16691 compressed) at 0x00001000 in 0.6 seconds (effective 362.2 kbit/s)...
+Hash of data verified.
+Compressed 1262448 bytes to 794490...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001e039... (4 %)
+Writing at 0x0002a862... (6 %)
+Writing at 0x00035833... (8 %)
+Writing at 0x0003c4c8... (10 %)
+Writing at 0x0004309d... (12 %)
+Writing at 0x0004d6db... (14 %)
+Writing at 0x00053395... (16 %)
+Writing at 0x00058c10... (18 %)
+Writing at 0x0005e84d... (20 %)
+Writing at 0x0006403d... (22 %)
+Writing at 0x00069850... (24 %)
+Writing at 0x0006f0e6... (26 %)
+Writing at 0x00075285... (28 %)
+Writing at 0x0007b020... (30 %)
+Writing at 0x000811de... (32 %)
+Writing at 0x00087241... (34 %)
+Writing at 0x0008cfc3... (36 %)
+Writing at 0x00092a50... (38 %)
+Writing at 0x00098a3e... (40 %)
+Writing at 0x0009e85f... (42 %)
+Writing at 0x000a4c35... (44 %)
+Writing at 0x000aaab3... (46 %)
+Writing at 0x000b0657... (48 %)
+Writing at 0x000b65ee... (51 %)
+Writing at 0x000bc28d... (53 %)
+Writing at 0x000c15b4... (55 %)
+Writing at 0x000c692b... (57 %)
+Writing at 0x000cbf30... (59 %)
+Writing at 0x000d123c... (61 %)
+Writing at 0x000d68c8... (63 %)
+Writing at 0x000dc120... (65 %)
+Writing at 0x000e1eca... (67 %)
+Writing at 0x000e72e6... (69 %)
+Writing at 0x000ecb0f... (71 %)
+Writing at 0x000f2470... (73 %)
+Writing at 0x000f7ad5... (75 %)
+Writing at 0x000fd524... (77 %)
+Writing at 0x00102ea5... (79 %)
+Writing at 0x00108a5e... (81 %)
+Writing at 0x0010e429... (83 %)
+Writing at 0x00114b45... (85 %)
+Writing at 0x0011cc38... (87 %)
+Writing at 0x001250ee... (89 %)
+Writing at 0x0012afa7... (91 %)
+Writing at 0x00130ad4... (93 %)
+Writing at 0x001366a8... (95 %)
+Writing at 0x0013c343... (97 %)
+Writing at 0x001415d7... (100 %)
+Wrote 1262448 bytes (794490 compressed) at 0x00010000 in 19.7 seconds (effective 513.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 251.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

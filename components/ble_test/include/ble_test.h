@@ -44,9 +44,6 @@ typedef struct {
     int                     prepare_len;
 } prepare_type_env_t;
 
-extern uint8_t ssid[100];
-extern uint8_t password[100];
-
 void init_ble();
 
 void example_write_event_env(esp_gatt_if_t gatts_if, prepare_type_env_t *prepare_write_env, esp_ble_gatts_cb_param_t *param);
@@ -54,11 +51,10 @@ void example_exec_write_event_env(prepare_type_env_t *prepare_write_env, esp_ble
 static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param);
 static void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
 static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
-void ble_get_wifi_info(uint8_t *info);
 void disable_ble();
 
 extern void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);     
-extern void wifi_init_sta(void);
-extern void wifi_deinit_sta();
+// extern void wifi_init_sta(void);
+// extern void wifi_deinit_sta();
 
-extern void wifi_init();
+// extern void wifi_init();

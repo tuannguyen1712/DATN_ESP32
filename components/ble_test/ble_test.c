@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include "ble_test.h"
 
+uint8_t ble_data[100];
 static uint8_t char1_str[] = {0x11,0x22,0x33};
+volatile uint8_t data_flag = 0;      // = 1 when receive data from device 
 static esp_gatt_char_prop_t a_property = 0;
 static esp_attr_value_t gatts_demo_char1_val =
 {
@@ -283,11 +285,13 @@ static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
 
             }
         }
-        ble_get_wifi_info(param->write.value);
         example_write_event_env(gatts_if, &a_prepare_write_env, param);
-        esp_bt_controller_disable();
-        wifi_init();
-        wifi_init_sta();
+        data_flag = 1;
+        ESP_LOGI("BLE", "dataflag = 1");
+        strcpy((char*) ble_data, (char*) param->write.value);
+        // esp_bt_controller_disable();
+        // wifi_init();
+        // wifi_init_sta();
         break;
     }
     case ESP_GATTS_EXEC_WRITE_EVT:
@@ -424,28 +428,4 @@ void disable_ble() {
     esp_bluedroid_deinit();                    // Deinit and free the resource for bluetooth
     esp_bt_controller_disable();
     esp_bt_controller_deinit();
-}
-
-void ble_get_wifi_info(uint8_t *info)
-{
-    uint8_t sfl = 1;
-    int k = 0;
-    for (int i = 2; i < strlen((char*) info); i++) {
-        if (sfl) {
-            if (info[i] != '\t') {
-                ssid[k] = info[i];
-                k++;
-            }
-            else {
-                sfl = 0;
-                ssid[k] = 0;
-                k = 0;
-            }
-        }
-        else {
-            strcpy((char*) password, (char*) (info + i + 2));
-            break;
-        }
-    }
-    printf("ssid: .%s. pass: .%s.\n", ssid, password);
 }
