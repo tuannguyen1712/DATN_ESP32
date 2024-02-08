@@ -69,17 +69,18 @@ void app_main(void)
 
 void ble_gatt_server()
 {
-    uint8_t wifi_flag = 1;
     uint8_t ss[100] = "";
     uint8_t ssid[100];
     uint8_t pass[100];
-    uint8_t connect_state;
     ESP_LOGI("BLE:","ble task, wifi queue: %d, data_flag: %d", uxQueueMessagesWaiting(wifi_queue), data_flag);
     init_ble();
     ESP_LOGI("BLE:","init ble");
+    
     wifi_init_lwip();
-    mqtt_init();
-    wifi_init_sta((uint8_t*) "Infrastructure NW", (uint8_t*) "NetworkPolicy");
+    // vTaskDelay(100 / portTICK_PERIOD_MS);
+    // mqtt_init();
+    // wifi_init_sta((uint8_t*) "Infrastructure NW", (uint8_t*) "NetworkPolicy");
+    //mqtt_start();
     ESP_LOGI("BLE:","init lwip");
     while (1) {
         if (data_flag) {
@@ -88,7 +89,9 @@ void ble_gatt_server()
                 data_flag = 0;
                 strcpy((char*) ss, (char*) ble_data);
                 get_wifi_info(ss, ssid, pass);
-                // wifi_init_sta(ssid, pass);
+                mqtt_init();
+                wifi_init_sta(ssid, pass);
+                // mqtt_start();
                 ESP_LOGI("BLE:","start connect wifi");
                 xSemaphoreGive(mutex1);
                 ESP_LOGI("BLE:","ble task release mutex");
@@ -104,7 +107,7 @@ void ble_gatt_server()
                 ESP_LOGI("BLE:","ble task release mutex");
             }
         }
-        vTaskDelay(50 / portTICK_PERIOD_MS);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 
 
@@ -133,8 +136,8 @@ void wifi_sta()
                 if (state) {                                    // connect successfuly
                     disable_ble();
                     ESP_LOGI("WIFI","disable ble");
-                    mqtt_start();
                     is_dis = 1;
+                    mqtt_start();
                 }
                 else if (!state && is_dis) {                    // disable wifi when connect success before (need disable ble when connect success)
                     init_ble();
@@ -142,16 +145,18 @@ void wifi_sta()
                     wifi_deinit_sta();
                     ESP_LOGI("WIFI","stop wifi connection");
                     is_dis = 0;
+                    mqtt_stop();
                 }
                 else if (!state && !is_dis) {                   // connect fail in the first time
                     wifi_deinit_sta();
                     ESP_LOGI("WIFI","stop wifi connection, fail connect in the first time");
+                    mqtt_stop();
                 }
                 xSemaphoreGive(mutex1);
                 ESP_LOGI("WIFI","wifi task release mutex");
             }
         }
-        vTaskDelay(50 / portTICK_PERIOD_MS);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
         
         

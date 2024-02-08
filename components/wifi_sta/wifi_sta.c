@@ -45,7 +45,7 @@ void wifi_init_sta(uint8_t *s, uint8_t *p)
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config) );
     ESP_ERROR_CHECK(esp_wifi_start());
 
-    ESP_LOGI("WIFI STATION", "wifi_init_sta finished.");
+    ESP_LOGI("WIFI STATION", "wifi_init_sta finished, ssid: %s, pass: %s.", (char*) wifi_config.sta.ssid, (char*) wifi_config.sta.password);
 }
 
 void wifi_deinit_sta() {

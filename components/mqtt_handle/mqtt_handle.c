@@ -89,7 +89,7 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
         break;
     }
 }
-
+    
 void mqtt_init()
 {
     esp_mqtt_client_config_t mqtt_cfg = {
@@ -97,19 +97,21 @@ void mqtt_init()
         // .broker.address.uri = "mqtt://white-dev.aithings.vn:1883",
         // .broker.address.transport = MQTT_TRANSPORT_OVER_TCP,
         // .broker.address.path = "/mqtt",
-        .session.keepalive = 60
+        // .session.keepalive = 60
     };
     client = esp_mqtt_client_init(&mqtt_cfg);
     /* The last argument may be used to pass data to the event handler, in this example mqtt_event_handler */
-    esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);   
+    
 }
 
 void mqtt_start()
-{
+{   
+    esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
     esp_mqtt_client_start(client);
 }
 
 void mqtt_stop() 
-{
+{   
     esp_mqtt_client_stop(client);
+    esp_mqtt_client_unregister_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler);
 }

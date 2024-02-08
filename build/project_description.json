@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "gatt_server_demos",
-    "project_version":    "6299586-dirty",
+    "project_version":    "bb809dc-dirty",
     "project_path":       "D:/ESP_IDF/ESP32_project/gatt_server",
     "idf_path":           "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1",
     "build_dir":          "D:/ESP_IDF/ESP32_project/gatt_server/build",
@@ -835,7 +835,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/mqtt/libmqtt.a",
-            "sources": [ "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/mqtt_client.c", "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/lib/mqtt_msg.c", "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/lib/mqtt_outbox.c", "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/lib/platform_esp32_idf.c" ],
+            "sources": [ "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/mqtt_client.c", "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/lib/mqtt_msg.c", "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/lib/mqtt_outbox.c", "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/lib/platform_esp32_idf.c", "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/lib/mqtt5_msg.c", "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/mqtt5_client.c" ],
             "include_dirs": [ "D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt/esp-mqtt/include" ]
         },
         "mqtt_handle": {
