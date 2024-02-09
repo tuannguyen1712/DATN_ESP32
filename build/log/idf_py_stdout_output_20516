@@ -1,115 +1,343 @@
-[1/12] Performing build step for 'bootloader'
-[1/1] cmd.exe /C "cd /D D:\ESP_IDF\ESP32_project\gatt_server\build\bootloader\esp-idf\esptool_py && D:\ESP_IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ESP_IDF/ESP32_project/gatt_server/build/bootloader/bootloader.bin"
-Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
-[2/10] Building C object esp-idf/wifi_sta/CMakeFiles/__idf_wifi_sta.dir/wifi_sta.c.obj
-[3/10] Linking C static library esp-idf\wifi_sta\libwifi_sta.a
-[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/gatts_demo.c.obj
-D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c: In function 'ble_gatt_server':
-D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:68:13: warning: unused variable 'wifi_flag' [-Wunused-variable]
-   68 |     uint8_t wifi_flag = 1;
-      |             ^~~~~~~~~
-In file included from D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:21:
-D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h: At top level:
-D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h:53:13: warning: 'gatts_profile_a_event_handler' declared 'static' but never defined [-Wunused-function]
-   53 | static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
-      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h:51:13: warning: 'gap_event_handler' declared 'static' but never defined [-Wunused-function]
-   51 | static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param);
-      |             ^~~~~~~~~~~~~~~~~
-D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h:52:13: warning: 'gatts_event_handler' declared 'static' but never defined [-Wunused-function]
-   52 | static void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
-      |             ^~~~~~~~~~~~~~~~~~~
-[5/10] Linking C static library esp-idf\main\libmain.a
-[6/10] Generating ld/sections.ld
-[7/10] Linking CXX executable gatt_server_demos.elf
-[8/10] Generating binary image from built executable
-esptool.py v4.7.dev1
-Creating esp32 image...
-Merged 25 ELF sections
-Successfully created esp32 image.
-Generated D:/ESP_IDF/ESP32_project/gatt_server/build/gatt_server_demos.bin
-[9/10] cmd.exe /C "cd /D D:\ESP_IDF\ESP32_project\gatt_server\build\esp-idf\esptool_py && D:\ESP_IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP_IDF/ESP32_project/gatt_server/build/partition_table/partition-table.bin D:/ESP_IDF/ESP32_project/gatt_server/build/gatt_server_demos.bin"
-gatt_server_demos.bin binary size 0x134370 bytes. Smallest app partition is 0x177000 bytes. 0x42c90 bytes (18%) free.
-[9/10] cmd.exe /C "cd /D D:\ESP_IDF\Espressif\frameworks\esp-idf-v5.1.1\components\esptool_py && D:\ESP_IDF\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1 -D SERIAL_TOOL=D:/ESP_IDF/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/ESP_IDF/ESP32_project/gatt_server/build -P D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esptool_py/run_serial_tool.cmake"
-esptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 gatt_server_demos.bin 0x8000 partition_table/partition-table.bin
-esptool.py v4.7.dev1
-Serial port COM3
-Connecting....
-Chip is ESP32-D0WD-V3 (revision v3.1)
-Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
-WARNING: Detected crystal freq 41.01MHz is quite different to normalized freq 40MHz. Unsupported crystal in use?
-Crystal is 40MHz
-MAC: 24:dc:c3:a6:d0:28
-Uploading stub...
-Running stub...
-Stub running...
-Changing baud rate to 460800
-Changed.
-Configuring flash size...
-Flash will be erased from 0x00001000 to 0x00007fff...
-Flash will be erased from 0x00010000 to 0x00144fff...
-Flash will be erased from 0x00008000 to 0x00008fff...
-Compressed 26640 bytes to 16691...
-Writing at 0x00001000... (50 %)
-Writing at 0x0000768e... (100 %)
-Wrote 26640 bytes (16691 compressed) at 0x00001000 in 0.6 seconds (effective 358.9 kbit/s)...
-Hash of data verified.
-Compressed 1262448 bytes to 794487...
-Writing at 0x00010000... (2 %)
-Writing at 0x0001e026... (4 %)
-Writing at 0x0002a859... (6 %)
-Writing at 0x00035829... (8 %)
-Writing at 0x0003c4c5... (10 %)
-Writing at 0x00043099... (12 %)
-Writing at 0x0004d6cf... (14 %)
-Writing at 0x00053392... (16 %)
-Writing at 0x00058c0a... (18 %)
-Writing at 0x0005e849... (20 %)
-Writing at 0x00064037... (22 %)
-Writing at 0x0006984d... (24 %)
-Writing at 0x0006f0e0... (26 %)
-Writing at 0x00075282... (28 %)
-Writing at 0x0007b01a... (30 %)
-Writing at 0x000811dc... (32 %)
-Writing at 0x0008723e... (34 %)
-Writing at 0x0008cfaf... (36 %)
-Writing at 0x00092a4b... (38 %)
-Writing at 0x00098a39... (40 %)
-Writing at 0x0009e85c... (42 %)
-Writing at 0x000a4c32... (44 %)
-Writing at 0x000aaaaf... (46 %)
-Writing at 0x000b0654... (48 %)
-Writing at 0x000b65ea... (51 %)
-Writing at 0x000bc288... (53 %)
-Writing at 0x000c15ae... (55 %)
-Writing at 0x000c6927... (57 %)
-Writing at 0x000cbf29... (59 %)
-Writing at 0x000d1239... (61 %)
-Writing at 0x000d68c4... (63 %)
-Writing at 0x000dc11e... (65 %)
-Writing at 0x000e1ec7... (67 %)
-Writing at 0x000e72e1... (69 %)
-Writing at 0x000ecb0d... (71 %)
-Writing at 0x000f2470... (73 %)
-Writing at 0x000f7ad4... (75 %)
-Writing at 0x000fd522... (77 %)
-Writing at 0x00102ea4... (79 %)
-Writing at 0x00108a5e... (81 %)
-Writing at 0x0010e426... (83 %)
-Writing at 0x00114b45... (85 %)
-Writing at 0x0011cc38... (87 %)
-Writing at 0x001250ee... (89 %)
-Writing at 0x0012afa6... (91 %)
-Writing at 0x00130ad1... (93 %)
-Writing at 0x001366a2... (95 %)
-Writing at 0x0013c342... (97 %)
-Writing at 0x001415d6... (100 %)
-Wrote 1262448 bytes (794487 compressed) at 0x00010000 in 19.6 seconds (effective 514.7 kbit/s)...
-Hash of data verified.
-Compressed 3072 bytes to 105...
-Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 225.4 kbit/s)...
-Hash of data verified.
+ets Jul 29 2019 12:21:46
 
-Leaving...
-Hard resetting via RTS pin...
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb  8 2024 23:19:45[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3cea8h (249512) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0004ced0 vaddr=3ffbdb60 size=03148h ( 12616) load[0m
+[0;32mI (200) esp_image: segment 2: paddr=00050020 vaddr=400d0020 size=f9728h (1021736) map[0m
+[0;32mI (570) esp_image: segment 3: paddr=00149750 vaddr=3ffc0ca8 size=023d8h (  9176) load[0m
+[0;32mI (573) esp_image: segment 4: paddr=0014bb30 vaddr=40080000 size=1f66ch (128620) load[0m
+[0;32mI (645) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (645) boot: Disabling RNG early entropy source...[0m
+[0;32mI (656) cpu_start: Multicore app[0m
+[0;32mI (657) cpu_start: Pro cpu up.[0m
+[0;32mI (657) cpu_start: Starting app cpu, entry point is 0x400814e4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (677) cpu_start: Pro cpu start user code[0m
+[0;32mI (677) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (677) cpu_start: Application information:[0m
+[0;32mI (681) cpu_start: Project name:     gatt_server_demos[0m
+[0;32mI (687) cpu_start: App version:      77af8b6-dirty[0m
+[0;32mI (693) cpu_start: Compile time:     Feb  8 2024 23:19:23[0m
+[0;32mI (699) cpu_start: ELF file SHA256:  33bef46e350d5b95...[0m
+[0;32mI (705) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (710) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (715) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (720) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (725) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (732) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (738) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (744) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (750) heap_init: At 3FFCBBB0 len 00014450 (81 KiB): DRAM[0m
+[0;32mI (756) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (762) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (769) heap_init: At 4009F66C len 00000994 (2 KiB): IRAM[0m
+[0;32mI (777) spi_flash: detected chip: generic[0m
+[0;32mI (780) spi_flash: flash io: dio[0m
+[0;32mI (784) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (789) app_start: Starting scheduler on CPU0[0m
+[0;32[0;32mI (794) app_start: Starting scheduler on CPU1[0m
+mI (794) main_task: Started on CPU0[0m
+[0;32mI (804) main_task: Calling app_main()[0m
+[0;32mI (844) BLE:: ble task, wifi queue: 0, data_flag: 0[0m
+[0;32mI (844) BTDM_INIT: BT controller compile version [946b762][0m
+[0;32mI (844) BTDM_INIT: Bluetooth MAC: 24:dc:c3:a6:d0:2a[0m
+[0;32mI (844) WIFI: wifi task, ble_queue: 0 wifi_connect: 0[0m
+[0;32mI (854) UART: uart task[0m
+[0;32mI (854) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+[0;32mI (854) uart: queue free spaces: 20[0m
+[0;32mI (874) UART: init uart[0m
+[0;32mI (854) main_task: Returned from app_main()[0m
+[0;32mI (1294) BLE:: init ble[0m
+[0;32mI (1294) GATTS_DEMO: REGISTER_APP_EVT, status 0, app_id 0
+[0m
+[0;32mI (1304) GATTS_DEMO: CREATE_SERVICE_EVT, status 0,  service_handle 40
+[0m
+I (1314) wifi:wifi driver task: 3ffdca60, prio:23, stack:6656, core=0
+I (1334) wifi:wifi firmware version: ce9244d
+I (1334) wifi:wifi certification version: v7.0
+I (1334) wifi:config NVS flash: enabled
+I (1334) wifi:config nano formating: disabled
+I (1344) wifi:Init data frame dynamic rx buffer num: 32
+I (1344) wifi:Init management frame dynamic rx buffer num: 32
+I (1354) wifi:Init management short buffer num: 32
+I (1354) wifi:Init dynamic tx buffer num: 32
+I (1364) wifi:Init static rx buffer size: 1600
+I (1364) wifi:Init static rx buffer num: 10
+I (1364) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1374) wifi_init: rx ba win: 6[0m
+[0;32mI (1374) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1384) wifi_init: udp mbox: 6[0m
+[0;32mI (1384) wifi_init: tcp mbox: 6[0m
+[0;32mI (1384) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1384) GATTS_DEMO: SERVICE_START_EVT, status 0, service_handle 40
+[0m
+[0;32mI (1394) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1404) GATTS_DEMO: ADD_CHAR_EVT, status 0,  attr_handle 42, service_handle 40
+[0m
+[0;32mI (1404) wifi_init: tcp mss: 1440[0m
+[0;32mI (1414) GATTS_DEMO: the gatts demo char length = 3
+[0m
+[0;32mI (1424) GATTS_DEMO: prf_char[0] =11
+[0m
+[0;32mI (1414) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1424) GATTS_DEMO: prf_char[1] =22
+[0m
+[0;32mI (1434) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1434) GATTS_DEMO: prf_char[2] =33
+[0m
+[0;32mI (1444) BLE:: init lwip[0m
+[0;32mI (1444) GATTS_DEMO: ADD_DESCR_EVT, status 0, attr_handle 43, service_handle 40
+[0m
+[0;32mI (20104) GATTS_DEMO: ESP_GATTS_CONNECT_EVT, conn_id 0, remote 70:57:19:50:ce:79:[0m
+[0;32mI (20484) GATTS_DEMO: update connection params status = 0, min_int = 16, max_int = 32,conn_int = 6,latency = 0, timeout = 500[0m
+[0;32mI (20714) GATTS_DEMO: ESP_GATTS_MTU_EVT, MTU 500[0m
+[0;32mI (20764) GATTS_DEMO: update connection params status = 0, min_int = 0, max_int = 0,conn_int = 24,latency = 0, timeout = 400[0m
+[0;31mE (25634) BT_GATT: gatt_sr_write_cl_supp_feat len 19[0m
+[0;32mI (25694) GATTS_DEMO: GATT_WRITE_EVT, conn_id 0, trans_id 3, handle 42[0m
+[0;32mI (25704) GATTS_DEMO: GATT_WRITE_EVT, value len 19, value : w:laptop	p:12345678 profile x[0m
+[0;32mI (25704) GATTS_DEMO: 77 3a 6c 61 70 74 6f 70 09 70 3a 31 32 33 34 35 [0m
+[0;32mI (25714) GATTS_DEMO: 36 37 38 [0m
+[0;32mI (25714) BLE: dataflag = 1[0m
+[0;32mI (25724) BLE:: ble task have mutex[0m
+ssid: .laptop. pass: .12345678.
+I (25764) wifi:mode : sta (24:dc:c3:a6:d0:28)
+I (25764) wifi:enable tsf
+[0;32mI (25764) WIFI STATION: wifi_init_sta finished, ssid: laptop, pass: 12345678.[0m
+[0;32mI (25764) BLE:: start connect wifi[0m
+[0;32mI (25774) BLE:: ble task release mutex[0m
+I (29154) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (30374) wifi:state: init -> auth (b0)
+I (31374) wifi:state: auth -> init (200)
+I (31384) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (31384) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (31384) WIFI STATION: connect to the AP fail[0m
+[0;32mI (34774) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (34774) WIFI STATION: connect to the AP fail[0m
+I (38154) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (38154) wifi:state: init -> auth (b0)
+I (38154) wifi:state: auth -> assoc (0)
+I (38164) wifi:state: assoc -> run (10)
+I (38684) wifi:connected with laptop, aid = 15, channel 11, BW20, bssid = 16:13:33:02:85:b3
+I (38684) wifi:security: WPA2-PSK, phy: bgn, rssi: -32
+I (38694) wifi:pm start, type: 1
+
+[0;32mI (38714) esp_netif_handlers: sta ip: 192.168.137.64, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (38714) WIFI STATION: got ip:192.168.137.64[0m
+I (38724) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (38724) BLE:: ble task have mutex[0m
+[0;32mI (38724) BLE:: connect state = 1[0m
+[0;32mI (38734) BLE:: ble task release mutex[0m
+[0;32mI (38734) WIFI: wifi task have mutex[0m
+[0;33mW (38744) BT_HCI: hci cmd send: disconnect: hdl 0x0, rsn:0x13[0m
+[0;32mI (38754) GATTS_DEMO: ESP_GATTS_DISCONNECT_EVT, disconnect reason 0x16[0m
+[0;33mW (38804) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x16[0m
+[0;32mI (39824) WIFI: disable ble[0m
+[0;32mI (39824) WIFI: wifi task release mutex[0m
+[0;32mI (39824) MQTT: Other event id:7[0m
+I (39864) wifi:<ba-add>idx:0 (ifx:0, 16:13:33:02:85:b3), tid:0, ssn:4, winSize:64
+[0;32mI (42114) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (42114) MQTT: Subcribe to topic: doan2/aithing/control , id: 58261[0m
+[0;32mI (42114) MQTT: sent publish successful, msg_id=58261[0m
+[0;32mI (42614) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=58261[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb  8 2024 23:19:45[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3cea8h (249512) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0004ced0 vaddr=3ffbdb60 size=03148h ( 12616) load[0m
+[0;32mI (200) esp_image: segment 2: paddr=00050020 vaddr=400d0020 size=f9728h (1021736) map[0m
+[0;32mI (570) esp_image: segment 3: paddr=00149750 vaddr=3ffc0ca8 size=023d8h (  9176) load[0m
+[0;32mI (573) esp_image: segment 4: paddr=0014bb30 vaddr=40080000 size=1f66ch (128620) load[0m
+[0;32mI (645) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (645) boot: Disabling RNG early entropy source...[0m
+[0;32mI (656) cpu_start: Multicore app[0m
+[0;32mI (657) cpu_start: Pro cpu up.[0m
+[0;32mI (657) cpu_start: Starting app cpu, entry point is 0x400814e4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (677) cpu_start: Pro cpu start user code[0m
+[0;32mI (677) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (677) cpu_start: Application information:[0m
+[0;32mI (681) cpu_start: Project name:     gatt_server_demos[0m
+[0;32mI (687) cpu_start: App version:      77af8b6-dirty[0m
+[0;32mI (693) cpu_start: Compile time:     Feb  8 2024 23:19:23[0m
+[0;32mI (699) cpu_start: ELF file SHA256:  33bef46e350d5b95...[0m
+[0;32mI (705) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (710) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (715) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (720) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (725) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (732) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (738) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (744) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (750) heap_init: At 3FFCBBB0 len 00014450 (81 KiB): DRAM[0m
+[0;32mI (756) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (762) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (769) heap_init: At 4009F66C len 00000994 (2 KiB): IRAM[0m
+[0;32mI (777) spi_flash: detected chip: generic[0m
+[0;32mI (780) spi_flash: flash io: dio[0m
+[0;32mI (784) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (789) app_start: Starting scheduler on CPU0[0m
+[0;32[0;32mI (794) app_start: Starting scheduler on CPU1[0m
+mI (794) main_task: Started on CPU0[0m
+[0;32mI (804) main_task: Calling app_main()[0m
+[0;32mI (844) BLE:: ble task, wifi queue: 0, data_flag: 0[0m
+[0;32mI (844) BTDM_INIT: BT controller compile version [946b762][0m
+[0;32mI (844) BTDM_INIT: Bluetooth MAC: 24:dc:c3:a6:d0:2a[0m
+[0;32mI (844) WIFI: wifi task, ble_queue: 0 wifi_connect: 0[0m
+[0;32mI (854) UART: uart task[0m
+[0;32mI (854) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+[0;32mI (854) uart: queue free spaces: 20[0m
+[0;32mI (874) UART: init uart[0m
+[0;32mI (854) main_task: Returned from app_main()[0m
+[0;32mI (1284) BLE:: init ble[0m
+[0;32mI (1284) GATTS_DEMO: REGISTER_APP_EVT, status 0, app_id 0
+[0m
+[0;32mI (1294) GATTS_DEMO: CREATE_SERVICE_EVT, status 0,  service_handle 40
+[0m
+I (1294) wifi:wifi driver task: 3ffdca60, prio:23, stack:6656, core=0
+I (1314) wifi:wifi firmware version: ce9244d
+I (1314) wifi:wifi certification version: v7.0
+I (1314) wifi:config NVS flash: enabled
+I (1314) wifi:config nano formating: disabled
+I (1324) wifi:Init data frame dynamic rx buffer num: 32
+I (1324) wifi:Init management frame dynamic rx buffer num: 32
+I (1334) wifi:Init management short buffer num: 32
+I (1334) wifi:Init dynamic tx buffer num: 32
+I (1344) wifi:Init static rx buffer size: 1600
+I (1344) wifi:Init static rx buffer num: 10
+I (1354) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1354) wifi_init: rx ba win: 6[0m
+[0;32mI (1354) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1364) wifi_init: udp mbox: 6[0m
+[0;32mI (1364) wifi_init: tcp mbox: 6[0m
+[0;32mI (1374) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1374) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1374) GATTS_DEMO: SERVICE_START_EVT, status 0, service_handle 40
+[0m
+[0;32mI (1374) wifi_init: tcp mss: 1440[0m
+[0;32mI (1384) GATTS_DEMO: ADD_CHAR_EVT, status 0,  attr_handle 42, service_handle 40
+[0m
+[0;32mI (1384) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1394) GATTS_DEMO: the gatts demo char length = 3
+[0m
+[0;32mI (1404) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1404) GATTS_DEMO: prf_char[0] =11
+[0m
+[0;32mI (1414) BLE:: init lwip[0m
+[0;32mI (1414) GATTS_DEMO: prf_char[1] =22
+[0m
+[0;32mI (1424) GATTS_DEMO: prf_char[2] =33
+[0m
+[0;32mI (1434) GATTS_DEMO: ADD_DESCR_EVT, status 0, attr_handle 43, service_handle 40
+[0m
+[0;32mI (3954) UART2: uart[2] event:[0m
+[0;32mI (3954) UART2: [UART DATA]: 19[0m
+[0;32mI (3954) UART: uart task have mutex[0m
+[0;32mI (3954) UART: receive data from uart[0m
+[0;31mE (3954) mqtt_client: Client was not initialized[0m
+[0;32mI (3964) UART: publish data to mqtt server, data: time:20240113122500, len: 19[0m
+[0;32mI (3964) UART: uart task release mutex[0m
+[0;32mI (6484) UART2: uart[2] event:[0m
+[0;32mI (6484) UART2: [UART DATA]: 19[0m
+[0;32mI (6484) UART: uart task have mutex[0m
+[0;32mI (6484) UART: receive data from uart[0m
+[0;31mE (6484) mqtt_client: Client was not initialized[0m
+[0;32mI (6494) UART: publish data to mqtt server, data: time:20240113122500, len: 19[0m
+[0;32mI (6504) UART: uart task release mutex[0m
+[0;32mI (9514) GATTS_DEMO: ESP_GATTS_CONNECT_EVT, conn_id 0, remote 70:57:19:50:ce:79:[0m
+[0;32mI (9994) GATTS_DEMO: update connection params status = 0, min_int = 16, max_int = 32,conn_int = 24,latency = 0, timeout = 400[0m
+[0;32mI (10484) GATTS_DEMO: update connection params status = 0, min_int = 0, max_int = 0,conn_int = 6,latency = 0, timeout = 500[0m
+[0;32mI (10804) GATTS_DEMO: ESP_GATTS_MTU_EVT, MTU 500[0m
+[0;32mI (10854) GATTS_DEMO: update connection params status = 0, min_int = 0, max_int = 0,conn_int = 24,latency = 0, timeout = 400[0m
+[0;31mE (16844) BT_GATT: gatt_sr_write_cl_supp_feat len 35[0m
+[0;32mI (16964) GATTS_DEMO: GATT_WRITE_EVT, conn_id 0, trans_id 3, handle 42[0m
+[0;32mI (16964) GATTS_DEMO: GATT_WRITE_EVT, value len 35, value : w:Infrastructure NW	p:NetworkPolicy profile x[0m
+[0;32mI (16974) GATTS_DEMO: 77 3a 49 6e 66 72 61 73 74 72 75 63 74 75 72 65 [0m
+[0;32mI (16984) GATTS_DEMO: 20 4e 57 09 70 3a 4e 65 74 77 6f 72 6b 50 6f 6c [0m
+[0;32mI (16984) GATTS_DEMO: 69 63 79 [0m
+[0;32mI (16994) BLE: dataflag = 1[0m
+[0;32mI (16994) BLE:: ble task have mutex[0m
+ssid: .Infrastructure NW. pass: .NetworkPolicy.
+I (17034) wifi:mode : sta (24:dc:c3:a6:d0:28)
+I (17034) wifi:enable tsf
+[0;32mI (17034) WIFI STATION: wifi_init_sta finished, ssid: Infrastructure NW, pass: NetworkPolicy.[0m
+[0;32mI (17044) BLE:: start connect wifi[0m
+[0;32mI (17044) BLE:: ble task release mutex[0m
+I (20424) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1
+I (20434) wifi:state: init -> auth (b0)
+I (20434) wifi:state: auth -> assoc (0)
+I (20444) wifi:state: assoc -> run (10)
+I (20454) wifi:<ba-add>idx:0 (ifx:0, 24:0b:2a:2e:69:79), tid:5, ssn:0, winSize:64
+I (20554) wifi:<ba-add>idx:1 (ifx:0, 24:0b:2a:2e:69:79), tid:0, ssn:1, winSize:64
+I (20564) wifi:connected with Infrastructure NW, aid = 7, channel 7, BW20, bssid = 24:0b:2a:2e:69:79
+I (20564) wifi:security: WPA2-PSK, phy: bgn, rssi: -74
+I (20584) wifi:pm start, type: 1
+
+I (20624) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (21584) esp_netif_handlers: sta ip: 192.168.1.9, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (21584) WIFI STATION: got ip:192.168.1.9[0m
+[0;32mI (21594) BLE:: ble task have mutex[0m
+[0;32mI (21594) BLE:: connect state = 1[0m
+[0;32mI (21594) BLE:: ble task release mutex[0m
+[0;32mI (21604) WIFI: wifi task have mutex[0m
+[0;33mW (21614) BT_HCI: hci cmd send: disconnect: hdl 0x0, rsn:0x13[0m
+[0;32mI (21614) GATTS_DEMO: ESP_GATTS_DISCONNECT_EVT, disconnect reason 0x16[0m
+[0;33mW (21674) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x16[0m
+[0;32mI (22684) WIFI: disable ble[0m
+[0;32mI (22694) MQTT: Other event id:7[0m
+[0;32mI (22694) WIFI: wifi task release mutex[0m
+[0;32mI (23724) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (23724) MQTT: Subcribe to topic: doan2/aithing/control , id: 41076[0m
+[0;32mI (23724) MQTT: sent publish successful, msg_id=41076[0m
+[0;32mI (24034) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=41076[0m
+[0;32mI (41044) UART2: uart[2] event:[0m
+[0;32mI (41044) UART2: [UART DATA]: 19[0m
+[0;32mI (41044) UART: uart task have mutex[0m
+[0;32mI (41044) UART: receive data from uart[0m
+[0;32mI (41054) UART: publish data to mqtt server, data: time:20240113122500, len: 19[0m
+[0;32mI (41054) UART: uart task release mutex[0m

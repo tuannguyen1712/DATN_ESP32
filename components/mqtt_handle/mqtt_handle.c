@@ -23,6 +23,8 @@
 
 esp_mqtt_client_handle_t client;
 char topic[] = "doan2/aithing/data";
+uint8_t mqtt_rcv_done = 0;
+uint8_t mqtt_data[100] = "";
 
 void log_error_if_nonzero(const char *message, int error_code)
 {
@@ -43,7 +45,7 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
         int msg_id = esp_mqtt_client_subscribe(client, "doan2/aithing/control", 2);
 	    ESP_LOGI("MQTT", "Subcribe to topic: doan2/aithing/control , id: %d", msg_id);
         ESP_LOGI("MQTT", "sent publish successful, msg_id=%d", msg_id);
-        esp_mqtt_client_publish(client, "datn/aithing/data", (const char*) "OK", 2, 0, 0);
+        esp_mqtt_client_publish(client, "datn/aithing/data", (const char*) "Connect", 7, 0, 0);
         break;
     case MQTT_EVENT_DISCONNECTED:
         ESP_LOGI("MQTT", "MQTT_EVENT_DISCONNECTED");
@@ -71,8 +73,10 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
 
         itoa(event->data_len, x, 10);
 	    data[event->data_len] = 0;
+        strncpy((char*) mqtt_data, (char*) data, event->data_len + 1);
 
-        esp_mqtt_client_publish(client, "datn/aithing/data", (const char*) "OK", 2, 0, 0);
+        mqtt_rcv_done = 1;
+        //esp_mqtt_client_publish(client, "datn/aithing/data", (const char*) "OK", 2, 0, 0);
         // uart_write_bytes(UART_NUM_2, (const char*) data, event->data_len);
         break;
     case MQTT_EVENT_ERROR:

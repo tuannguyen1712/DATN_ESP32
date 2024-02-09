@@ -622,6 +622,13 @@ D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/mqtt_handle/CMakeFiles/list_i
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/mqtt_handle/CMakeFiles/install.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/mqtt_handle/CMakeFiles/install/local.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/mqtt_handle/CMakeFiles/install/strip.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/uart_handle/CMakeFiles/__idf_uart_handle.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/uart_handle/CMakeFiles/edit_cache.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/uart_handle/CMakeFiles/rebuild_cache.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/uart_handle/CMakeFiles/list_install_components.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/uart_handle/CMakeFiles/install.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/uart_handle/CMakeFiles/install/local.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/uart_handle/CMakeFiles/install/strip.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/main/CMakeFiles/__idf_main.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/main/CMakeFiles/edit_cache.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

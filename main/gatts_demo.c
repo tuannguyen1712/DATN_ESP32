@@ -21,12 +21,19 @@
 #include "ble_test.h"
 #include "wifi_sta.h"
 #include "mqtt_handle.h"
+#include "uart_handle.h"
 
 extern uint8_t wifi_connect;
 extern uint8_t wifi_done;
 
 extern volatile uint8_t data_flag;
 extern uint8_t ble_data[100];
+extern uint8_t mqtt_rcv_done;
+extern uint8_t uart_rcv_done;
+extern uint8_t mqtt_data[100];
+extern esp_mqtt_client_handle_t client;
+extern uart_event_t event;
+extern uint8_t dtmp[1024];
 
 QueueHandle_t ble_queue;
 QueueHandle_t wifi_queue;
@@ -38,10 +45,11 @@ uint8_t wifi_state = 1;
 
 uint8_t init_mqtt = 0;
 
+SemaphoreHandle_t mutex1;               // for wifi
+
 void ble_gatt_server();
 void wifi_sta();
-SemaphoreHandle_t mutex1;               // for wifi
-SemaphoreHandle_t mutex2;               // for ble
+void uart2_event_task();
 
 void app_main(void)
 {
@@ -59,11 +67,9 @@ void app_main(void)
     ble_queue = xQueueCreate(1, sizeof(uint8_t));
     wifi_queue = xQueueCreate(1, sizeof(uint8_t));
     mutex1 = xSemaphoreCreateMutex();
-    mutex2 = xSemaphoreCreateMutex();
-    xTaskCreate(ble_gatt_server, "BLE Task", 5120, NULL, 1, NULL);
-    xTaskCreate(wifi_sta, "Wifi Task", 5120, NULL, 1, NULL);
-    // xTaskCreate(wifi_sta, "Wifi Task", 2048, NULL, 1, NULL);
-    // vTaskStartScheduler();
+    xTaskCreate(ble_gatt_server, "BLE Task", 4096, NULL, 1, NULL);
+    xTaskCreate(wifi_sta, "Wifi Task", 4096, NULL, 1, NULL);
+    xTaskCreatePinnedToCore(uart2_event_task, "UART2 Task", 2048, NULL, 2, NULL, 0);
     // return;
 }
 
@@ -82,7 +88,7 @@ void ble_gatt_server()
     // wifi_init_sta((uint8_t*) "Infrastructure NW", (uint8_t*) "NetworkPolicy");
     //mqtt_start();
     ESP_LOGI("BLE:","init lwip");
-    while (1) {
+    for(;;) {
         if (data_flag) {
             if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
                 ESP_LOGI("BLE:","ble task have mutex");
@@ -107,7 +113,7 @@ void ble_gatt_server()
                 ESP_LOGI("BLE:","ble task release mutex");
             }
         }
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        vTaskDelay(10 / portTICK_PERIOD_MS);               // avoid esp32 reboot
     }
 
 
@@ -128,7 +134,7 @@ void wifi_sta()
     uint8_t is_dis = 0;                 // is disconect ble
     // wifi_init_lwip();
     ESP_LOGI("WIFI","wifi task, ble_queue: %d wifi_connect: %d", uxQueueMessagesWaiting(ble_queue), wifi_connect);
-    while (1) {
+    for(;;) {
         if (uxQueueMessagesWaiting(wifi_queue) != 0) {
             if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
                 ESP_LOGI("WIFI","wifi task have mutex");
@@ -156,7 +162,18 @@ void wifi_sta()
                 ESP_LOGI("WIFI","wifi task release mutex");
             }
         }
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        if (mqtt_rcv_done) {
+            if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
+                ESP_LOGI("WIFI","uart task have mutex");
+                ESP_LOGI("WIFI","receive data from mqtt broker");
+                mqtt_rcv_done = 0;
+                uart_write_bytes(UART_NUM_2, (const char*) mqtt_data, strlen((char*) mqtt_data));
+                ESP_LOGI("WIFI","uart send data: %s, len: %d", (const char*) mqtt_data, strlen((char*) mqtt_data));
+                xSemaphoreGive(mutex1);
+                ESP_LOGI("WIFI","uart task release mutex");
+            }
+        } 
+        vTaskDelay(10 / portTICK_PERIOD_MS);
     }
         
         
@@ -169,4 +186,26 @@ void wifi_sta()
     //     xSemaphoreGive(mutex2);
     //     ESP_LOGI("WIFI","wifi task release mutex");
     // }    
+}
+
+void uart2_event_task()
+{
+    ESP_LOGI("UART","uart task");
+    uart2_init();
+    ESP_LOGI("UART","init uart");
+    for(;;) {
+        uart_handle_event();
+        if (uart_rcv_done) {
+            if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
+                ESP_LOGI("UART","uart task have mutex");
+                ESP_LOGI("UART","receive data from uart");
+                uart_rcv_done = 0;
+                esp_mqtt_client_publish(client, "doan2/aithing/data", (const char*) dtmp, event.size, 0, 0);
+                ESP_LOGI("UART","publish data to mqtt server, data: %s, len: %d", (const char*) dtmp, event.size);
+                xSemaphoreGive(mutex1);
+                ESP_LOGI("UART","uart task release mutex");
+            }
+        }
+        vTaskDelay(10 / portTICK_PERIOD_MS);
+    }
 }

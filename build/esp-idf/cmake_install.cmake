@@ -419,6 +419,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/uart_handle/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/main/cmake_install.cmake")
 endif()
 
