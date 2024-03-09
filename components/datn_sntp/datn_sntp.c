@@ -35,7 +35,7 @@ void datn_sntp_init()
 void datn_sntp_get_time() 
 {
     time(&now);
-    setenv("TZ", "CST-8", 1);
+    setenv("TZ", "CST-7", 1);
     tzset();
     localtime_r(&now, &timeinfo);
     timeinfo.tm_year += 1900;

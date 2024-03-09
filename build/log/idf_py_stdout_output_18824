@@ -1,0 +1,211 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb  8 2024 23:19:45[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3d410h (250896) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0004d438 vaddr=3ffbdb60 size=02be0h ( 11232) load[0m
+[0;32mI (200) esp_image: segment 2: paddr=00050020 vaddr=400d0020 size=fb190h (1028496) map[0m
+[0;32mI (572) esp_image: segment 3: paddr=0014b1b8 vaddr=3ffc0740 size=029a0h ( 10656) load[0m
+[0;32mI (577) esp_image: segment 4: paddr=0014db60 vaddr=40080000 size=1f694h (128660) load[0m
+[0;32mI (647) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (648) boot: Disabling RNG early entropy source...[0m
+[0;32mI (659) cpu_start: Multicore app[0m
+[0;32mI (660) cpu_start: Pro cpu up.[0m
+[0;32mI (660) cpu_start: Starting app cpu, entry point is 0x400814e4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (680) cpu_start: Pro cpu start user code[0m
+[0;32mI (680) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (680) cpu_start: Application information:[0m
+[0;32mI (684) cpu_start: Project name:     gatt_server_demos[0m
+[0;32mI (690) cpu_start: App version:      3775727-dirty[0m
+[0;32mI (696) cpu_start: Compile time:     Mar  9 2024 22:57:08[0m
+[0;32mI (702) cpu_start: ELF file SHA256:  6766db7ad9f31c96...[0m
+[0;32mI (708) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (713) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (718) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (723) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (728) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (735) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (741) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (747) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (753) heap_init: At 3FFCC0A8 len 00013F58 (79 KiB): DRAM[0m
+[0;32mI (759) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (765) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (772) heap_init: At 4009F694 len 0000096C (2 KiB): IRAM[0m
+[0;32mI (780) spi_flash: detected chip: generic[0m
+[0;32mI (783) spi_flash: flash io: dio[0m
+[0;32mI (787) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (792) app_start: Starting scheduler on CPU0[0m
+[0;32m[0;32mI (797) app_start: Starting scheduler on CPU1[0m
+I (797) main_task: Started on CPU0[0m
+[0;32mI (807) main_task: Calling app_main()[0m
+[0;32mI (847) BLE:: ble task, wifi queue: 0, data_flag: 0[0m
+[0;32mI (847) BTDM_INIT: BT controller compile version [946b762][0m
+[0;32mI (847) BTDM_INIT: Bluetooth MAC: 24:dc:c3:a6:d0:2a[0m
+[0;32mI (847) WIFI: wifi task, ble_queue: 0 wifi_connect: 0[0m
+[0;32mI (857) UART: uart task[0m
+[0;32mI (857) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+[0;32mI (857) uart: queue free spaces: 20[0m
+[0;32mI (877) UART: init uart[0m
+[0;32mI (857) main_task: Returned from app_main()[0m
+[0;32mI (1287) BLE:: init ble[0m
+[0;32mI (1287) GATTS_DEMO: REGISTER_APP_EVT, status 0, app_id 0
+[0m
+[0;32mI (1297) GATTS_DEMO: CREATE_SERVICE_EVT, status 0,  service_handle 40
+[0m
+I (1297) wifi:wifi driver task: 3ffdcf70, prio:23, stack:6656, core=0
+I (1317) wifi:wifi firmware version: ce9244d
+I (1317) wifi:wifi certification version: v7.0
+I (1317) wifi:config NVS flash: enabled
+I (1317) wifi:config nano formating: disabled
+I (1327) wifi:Init data frame dynamic rx buffer num: 32
+I (1327) wifi:Init management frame dynamic rx buffer num: 32
+I (1337) wifi:Init management short buffer num: 32
+I (1337) wifi:Init dynamic tx buffer num: 32
+I (1347) wifi:Init static rx buffer size: 1600
+I (1347) wifi:Init static rx buffer num: 10
+I (1347) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1357) wifi_init: rx ba win: 6[0m
+[0;32mI (1357) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1367) wifi_init: udp mbox: 6[0m
+[0;32mI (1367) wifi_init: tcp mbox: 6[0m
+[0;32mI (1367) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1377) GATTS_DEMO: SERVICE_START_EVT, status 0, service_handle 40
+[0m
+[0;32mI (1377) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1387) GATTS_DEMO: ADD_CHAR_EVT, status 0,  attr_handle 42, service_handle 40
+[0m
+[0;32mI (1387) wifi_init: tcp mss: 1440[0m
+[0;32mI (1397) GATTS_DEMO: the gatts demo char length = 3
+[0m
+[0;32mI (1407) GATTS_DEMO: prf_char[0] =11
+[0m
+[0;32mI (1397) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1407) GATTS_DEMO: prf_char[1] =22
+[0m
+[0;32mI (1417) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1417) GATTS_DEMO: prf_char[2] =33
+[0m
+[0;32mI (1427) BLE:: init lwip[0m
+[0;32mI (1427) GATTS_DEMO: ADD_DESCR_EVT, status 0, attr_handle 43, service_handle 40
+[0m
+[0;32mI (21387) UART2: uart[2] event:[0m
+[0;32mI (21387) UART2: [UART DATA]: 26[0m
+[0;32mI (21387) UART: uart task have mutex[0m
+[0;32mI (21387) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (21387) UART: uart task release mutex[0m
+[0;32mI (27347) UART2: uart[2] event:[0m
+[0;32mI (27347) UART2: [UART DATA]: 7[0m
+[0;32mI (27347) UART: uart task have mutex[0m
+[0;32mI (27347) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (27347) UART: uart task release mutex[0m
+[0;32mI (36527) GATTS_DEMO: ESP_GATTS_CONNECT_EVT, conn_id 0, remote 53:3f:66:e8:28:87:[0m
+[0;32mI (37057) GATTS_DEMO: update connection params status = 0, min_int = 16, max_int = 32,conn_int = 6,latency = 0, timeout = 500[0m
+[0;32mI (37747) GATTS_DEMO: ESP_GATTS_MTU_EVT, MTU 500[0m
+[0;32mI (37797) GATTS_DEMO: update connection params status = 0, min_int = 0, max_int = 0,conn_int = 24,latency = 0, timeout = 400[0m
+[0;31mE (44357) BT_GATT: gatt_sr_write_cl_supp_feat len 35[0m
+[0;32mI (44537) GATTS_DEMO: GATT_WRITE_EVT, conn_id 0, trans_id 3, handle 42[0m
+[0;32mI (44537) GATTS_DEMO: GATT_WRITE_EVT, value len 35, value : w:Infrastructure NW	p:NetworkPolicy profile x[0m
+[0;32mI (44547) GATTS_DEMO: 77 3a 49 6e 66 72 61 73 74 72 75 63 74 75 72 65 [0m
+[0;32mI (44557) GATTS_DEMO: 20 4e 57 09 70 3a 4e 65 74 77 6f 72 6b 50 6f 6c [0m
+[0;32mI (44557) GATTS_DEMO: 69 63 79 [0m
+[0;32mI (44567) BLE: dataflag = 1[0m
+[0;32mI (44567) BLE:: ble task have mutex[0m
+ssid: .Infrastructure NW. pass: .NetworkPolicy.
+I (44587) wifi:mode : sta (24:dc:c3:a6:d0:28)
+I (44587) wifi:enable tsf
+[0;32mI (44587) WIFI STATION: wifi_init_sta finished, ssid: Infrastructure NW, pass: NetworkPolicy.[0m
+[0;32mI (44587) BLE:: start connect wifi[0m
+[0;32mI (44597) BLE:: ble task release mutex[0m
+I (47977) wifi:new:<12,0>, old:<1,0>, ap:<255,255>, sta:<12,0>, prof:1
+I (47977) wifi:state: init -> auth (b0)
+I (47977) wifi:state: auth -> assoc (0)
+I (47987) wifi:state: assoc -> run (10)
+I (47997) wifi:<ba-add>idx:0 (ifx:0, 24:0b:2a:2e:69:79), tid:5, ssn:0, winSize:64
+I (48097) wifi:<ba-add>idx:1 (ifx:0, 24:0b:2a:2e:69:79), tid:0, ssn:2, winSize:64
+I (48097) wifi:connected with Infrastructure NW, aid = 3, channel 12, BW20, bssid = 24:0b:2a:2e:69:79
+I (48097) wifi:security: WPA2-PSK, phy: bgn, rssi: -52
+I (48107) wifi:pm start, type: 1
+
+[0;32mI (48187) esp_netif_handlers: sta ip: 192.168.1.7, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (48187) WIFI STATION: got ip:192.168.1.7[0m
+I (48187) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (48197) BLE:: ble task have mutex[0m
+[0;32mI (48197) BLE:: connect state = 1[0m
+[0;32mI (48207) BLE:: ble task release mutex[0m
+[0;32mI (48207) WIFI: wifi task have mutex[0m
+[0;33mW (48217) BT_HCI: hci cmd send: disconnect: hdl 0x0, rsn:0x13[0m
+[0;32mI (48227) GATTS_DEMO: ESP_GATTS_DISCONNECT_EVT, disconnect reason 0x16[0m
+[0;33mW (48287) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x16[0m
+[0;32mI (49297) WIFI: disable ble[0m
+[0;32mI (49297) SNTP: Initializing and starting SNTP[0m
+[0;32mI (49297) MQTT: Other event id:7[0m
+[0;32mI (49457) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (49467) MQTT: Subcribe to topic: doan2/aithing/control , id: 40414[0m
+[0;32mI (49467) MQTT: sent publish successful, msg_id=40414[0m
+[0;32mI (49467) WIFI: wifi task release mutex[0m
+[0;32mI (49487) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=40414[0m
+[0;32mI (94067) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=doan2/aithing/control
+DATA=c:f:m:1
+[0;32mI (94067) WIFI: uart task have mutex[0m
+[0;32mI (94067) WIFI: receive data from mqtt broker[0m
+[0;32mI (94067) WIFI: uart send data: c:f:m:1, len: 7[0m
+[0;32mI (94077) WIFI: uart task release mutex[0m
+[0;32mI (98077) UART2: uart[2] event:[0m
+[0;32mI (98077) UART2: [UART DATA]: 74[0m
+[0;32mI (98077) UART: uart task have mutex[0m
+[0;32mI (98077) UART: receive data from uart[0m
+[0;32mI (98087) SNTP: Current time in Vietnam: 2024:03:09 23:59:39[0m
+[0;32mI (98097) UART: publish data to mqtt server, data: d:20240309235939	tem:30.1   hum:70.6   mq2:1023   dm:0    ds:%0   fs:3   lm:0   ls:1   bs:0, len: 74[0m
+[0;32mI (98107) UART: uart task release mutex[0m
+[0;32mI (107717) UART2: uart[2] event:[0m
+[0;32mI (107717) UART2: [UART DATA]: 74[0m
+[0;32mI (107727) UART: uart task have mutex[0m
+[0;32mI (107727) UART: receive data from uart[0m
+[0;32mI (107727) SNTP: Current time in Vietnam: 2024:03:09 23:59:48[0m
+[0;32mI (107737) UART: publish data to mqtt server, data: d:20240309235948	tem:30.1   hum:70.6   mq2:1023   dm:0    ds:%0   fs:3   lm:0   ls:1   bs:0, len: 74[0m
+[0;32mI (107747) UART: uart task release mutex[0m
+[0;32mI (198927) UART2: uart[2] event:[0m
+[0;32mI (198927) UART2: [UART DATA]: 74[0m
+[0;32mI (198927) UART: uart task have mutex[0m
+[0;32mI (198927) UART: receive data from uart[0m
+[0;32mI (198937) SNTP: Current time in Vietnam: 2024:03:10 00:01:20[0m
+[0;32mI (198947) UART: publish data to mqtt server, data: d:20240310000120	tem:30.1   hum:70.6   mq2:1023   dm:0    ds:%0   fs:3   lm:0   ls:1   bs:0, len: 74[0m
+[0;32mI (198957) UART: uart task release mutex[0m
+[0;32mI (273267) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=doan2/aithing/control
+DATA=c:f:m:1
+[0;32mI (273277) WIFI: uart task have mutex[0m
+[0;32mI (273277) WIFI: receive data from mqtt broker[0m
+[0;32mI (273277) WIFI: uart send data: c:f:m:1, len: 7[0m
+[0;32mI (273287) WIFI: uart task release mutex[0m
+[0;32mI (281307) UART2: uart[2] event:[0m
+[0;32mI (281307) UART2: [UART DATA]: 74[0m
+[0;32mI (281307) UART: uart task have mutex[0m
+[0;32mI (281307) UART: receive data from uart[0m
+[0;32mI (281317) SNTP: Current time in Vietnam: 2024:03:10 00:02:42[0m
+[0;32mI (281327) UART: publish data to mqtt server, data: d:20240310000242	tem:30.1   hum:70.6   mq2:1023   dm:0    ds:%0   fs:3   lm:0   ls:1   bs:0, len: 74[0m
+[0;32mI (281337) UART: uart task release mutex[0m
