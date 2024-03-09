@@ -22,6 +22,7 @@
 #include "wifi_sta.h"
 #include "mqtt_handle.h"
 #include "uart_handle.h"
+#include "datn_sntp.h"
 
 extern uint8_t wifi_connect;
 extern uint8_t wifi_done;
@@ -34,6 +35,8 @@ extern uint8_t mqtt_data[100];
 extern esp_mqtt_client_handle_t client;
 extern uart_event_t event;
 extern uint8_t dtmp[1024];
+extern uint8_t data[1024];
+extern struct tm timeinfo;
 
 QueueHandle_t ble_queue;
 QueueHandle_t wifi_queue;
@@ -144,6 +147,7 @@ void wifi_sta()
                     ESP_LOGI("WIFI","disable ble");
                     is_dis = 1;
                     mqtt_start();
+                    datn_sntp_init();
                 }
                 else if (!state && is_dis) {                    // disable wifi when connect success before (need disable ble when connect success)
                     init_ble();
@@ -152,11 +156,13 @@ void wifi_sta()
                     ESP_LOGI("WIFI","stop wifi connection");
                     is_dis = 0;
                     mqtt_stop();
+                    datn_sntp_deinit();
                 }
                 else if (!state && !is_dis) {                   // connect fail in the first time
                     wifi_deinit_sta();
                     ESP_LOGI("WIFI","stop wifi connection, fail connect in the first time");
                     mqtt_stop();
+                    datn_sntp_deinit();
                 }
                 xSemaphoreGive(mutex1);
                 ESP_LOGI("WIFI","wifi task release mutex");
@@ -195,13 +201,23 @@ void uart2_event_task()
     ESP_LOGI("UART","init uart");
     for(;;) {
         uart_handle_event();
-        if (uart_rcv_done) {
+        if (uart_rcv_done && wifi_connect) {
             if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
                 ESP_LOGI("UART","uart task have mutex");
                 ESP_LOGI("UART","receive data from uart");
                 uart_rcv_done = 0;
-                esp_mqtt_client_publish(client, "doan2/aithing/data", (const char*) dtmp, event.size, 0, 0);
-                ESP_LOGI("UART","publish data to mqtt server, data: %s, len: %d", (const char*) dtmp, event.size);
+                datn_sntp_get_time();
+                uart_format_data(timeinfo, (char*) dtmp);
+                esp_mqtt_client_publish(client, "doan2/aithing/data", (const char*) data, strlen((char*) data), 0, 0);
+                ESP_LOGI("UART","publish data to mqtt server, data: %s, len: %d", (const char*) data, event.size);
+                xSemaphoreGive(mutex1);
+                ESP_LOGI("UART","uart task release mutex");
+            }
+        }
+        else if (uart_rcv_done && !wifi_connect) {
+            if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
+                ESP_LOGI("UART","uart task have mutex");
+                ESP_LOGI("UART","receive data from uart, but not connected to the internet yet");
                 xSemaphoreGive(mutex1);
                 ESP_LOGI("UART","uart task release mutex");
             }

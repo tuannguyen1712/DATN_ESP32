@@ -97,8 +97,8 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
 void mqtt_init()
 {
     esp_mqtt_client_config_t mqtt_cfg = {
-        .broker.address.uri = "mqtt://broker.emqx.io:1883",
-        // .broker.address.uri = "mqtt://white-dev.aithings.vn:1883",
+        // .broker.address.uri = "mqtt://broker.emqx.io:1883",
+        .broker.address.uri = "mqtt://white-dev.aithings.vn:1883",
         // .broker.address.transport = MQTT_TRANSPORT_OVER_TCP,
         // .broker.address.path = "/mqtt",
         // .session.keepalive = 60

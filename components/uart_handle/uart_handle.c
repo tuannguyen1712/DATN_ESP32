@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <time.h>
+#include <sys/time.h>
 #include "uart_handle.h"
 
 static QueueHandle_t uart2_queue;
@@ -6,6 +8,7 @@ uint8_t uart_rcv_done = 0;
 
 uart_event_t event;
 uint8_t dtmp[1024];
+uint8_t data[1024];
 
 // delete pattern det and buffered_size;
 // static void uart2_event_task(void *pvParameters)
@@ -136,4 +139,10 @@ void uart_handle_event()
                 break;
         }
     }
+}
+
+void uart_format_data(struct tm time, char *rx_buf)
+{
+    sprintf((char*) data, "d:%d%02d%02d%02d%02d%02d\t%s", time.tm_year, time.tm_mon, time.tm_mday,
+                                                time.tm_hour, time.tm_min, time.tm_sec, rx_buf);
 }
