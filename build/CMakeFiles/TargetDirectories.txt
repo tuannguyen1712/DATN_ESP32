@@ -636,6 +636,13 @@ D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/datn_sntp/CMakeFiles/list_ins
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/datn_sntp/CMakeFiles/install.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/datn_sntp/CMakeFiles/install/local.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/datn_sntp/CMakeFiles/install/strip.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/CMakeFiles/__idf_w25q32.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/CMakeFiles/edit_cache.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/CMakeFiles/rebuild_cache.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/CMakeFiles/list_install_components.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/CMakeFiles/install.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/CMakeFiles/install/local.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/CMakeFiles/install/strip.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/main/CMakeFiles/__idf_main.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/main/CMakeFiles/edit_cache.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

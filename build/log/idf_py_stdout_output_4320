@@ -1,0 +1,243 @@
+[0/1] cmd.exe /C "cd /D D:\ESP_IDF\Espressif\frameworks\esp-idf-v5.1.1\components\esptool_py && D:\ESP_IDF\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1 -D SERIAL_TOOL=D:/ESP_IDF/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;-m;esp_idf_monitor -D SERIAL_TOOL_ARGS=--target;esp32;--revision;0;D:/ESP_IDF/ESP32_project/gatt_server/build/gatt_server_demos.elf -D WORKING_DIRECTORY=D:/ESP_IDF/ESP32_project/gatt_server/build -P run_serial_tool.cmake"
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+I (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader
+I (31) boot: compile time Mar 15 2024 21:45:27
+I (31) boot: Multicore bootloader
+I (36) boot: chip revision: v3.1
+I (40) boot.esp32: SPI Speed      : 40MHz
+I (44) boot.esp32: SPI Mode       : DIO
+I (49) boot.esp32: SPI Flash Size : 4MB
+I (53) boot: Enabling RNG early entropy source...
+I (59) boot: Partition Table:
+I (62) boot: ## Label            Usage          Type ST Offset   Length
+I (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (85) boot:  2 factory          factory app      00 00 00010000 00177000
+I (92) boot: End of partition table
+I (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3ef28h (257832) map
+I (198) esp_image: segment 1: paddr=0004ef50 vaddr=3ffbdb60 size=010c8h (  4296) load
+I (200) esp_image: segment 2: paddr=00050020 vaddr=400d0020 size=fdcf8h (1039608) map
+I (579) esp_image: segment 3: paddr=0014dd20 vaddr=3ffbec28 size=045f8h ( 17912) load
+I (586) esp_image: segment 4: paddr=00152320 vaddr=40080000 size=2108ch (135308) load
+I (659) boot: Loaded app from partition at offset 0x10000
+I (659) boot: Disabling RNG early entropy source...
+I (671) cpu_start: Multicore app
+I (671) cpu_start: Pro cpu up.
+I (671) cpu_start: Starting app cpu, entry point is 0x400815d0
+I (0) cpu_start: App cpu up.
+I (691) cpu_start: Pro cpu start user code
+I (691) cpu_start: cpu freq: 160000000 Hz
+I (691) cpu_start: Application information:
+I (696) cpu_start: Project name:     gatt_server_demos
+I (702) cpu_start: App version:      a2b1b1e-dirty
+I (707) cpu_start: Compile time:     Mar 15 2024 21:45:19
+I (714) cpu_start: ELF file SHA256:  2297389297bafeb9...
+I (719) cpu_start: ESP-IDF:          v5.1.1-dirty
+I (725) cpu_start: Min chip rev:     v0.0
+I (730) cpu_start: Max chip rev:     v3.99 
+I (734) cpu_start: Chip rev:         v3.1
+I (739) heap_init: Initializing. RAM available for dynamic allocation:
+I (747) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (752) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (758) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (765) heap_init: At 3FFCC350 len 00013CB0 (79 KiB): DRAM
+I (771) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (777) heap_init: At 3FFE4350 len 0001AC24 (107 KiB): D/IRAM
+I (785) spi_flash: detected chip: generic
+I (788) spi_flash: flash io: dio
+I (793) coexist: coex firmware version: 80b0d89
+I (798) app_start: Starting scheduler on CPU0
+I (803) app_start: Starting scheduler on CPU1
+I (803) main_task: Started on CPU0
+I (813) main_task: Calling app_main()
+I (843) W25Q32: Init spi bus
+I (853) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (853) BLE:: ble task, wifi queue: 0, data_flag: 0
+I (853) WIFI: wifi task, ble_queue: 0 wifi_connect: 0
+I (863) UART: uart task
+I (863) uart: queue free spaces: 20
+I (873) UART: init uart
+I (873) main_task: Returned from app_main()
+I (953) BLE:: ble task have mutex
+I (953) W25Q32: Read data from w25q32 at 0: Hello, this is te
+I (953) W25Q32: wifi data location: Hello, this is te
+I (953) W25Q32: There has never been wifi data written to the w25q32 before
+I (963) BLE:: ble task release mutex
+I (1073) wifi:wifi driver task: 3ffd3830, prio:23, stack:6656, core=0
+I (1093) wifi:wifi firmware version: ce9244d
+I (1093) wifi:wifi certification version: v7.0
+I (1093) wifi:config NVS flash: enabled
+I (1093) wifi:config nano formating: disabled
+I (1093) wifi:Init data frame dynamic rx buffer num: 32
+I (1103) wifi:Init management frame dynamic rx buffer num: 32
+I (1103) wifi:Init management short buffer num: 32
+I (1113) wifi:Init static tx buffer num: 16
+I (1113) wifi:Init static rx buffer size: 1600
+I (1113) wifi:Init static rx buffer num: 10
+I (1123) wifi:Init dynamic rx buffer num: 32
+I (1123) wifi_init: rx ba win: 6
+I (1133) wifi_init: tcpip mbox: 32
+I (1133) wifi_init: udp mbox: 6
+I (1133) wifi_init: tcp mbox: 6
+I (1143) wifi_init: tcp tx win: 5744
+I (1143) wifi_init: tcp rx win: 5744
+I (1153) wifi_init: tcp mss: 1440
+I (1153) wifi_init: WiFi IRAM OP enabled
+I (1153) wifi_init: WiFi RX IRAM OP enabled
+I (1163) BLE:: ble task have mutex
+I (1163) BTDM_INIT: BT controller compile version [946b762]
+I (1173) BTDM_INIT: Bluetooth MAC: fc:b4:67:f5:ed:82
+I (1183) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07
+I (1623) GATTS_DEMO: REGISTER_APP_EVT, status 0, app_id 0
+
+I (1633) BLE:: ble task release mutex
+I (1633) BLE:: init ble
+I (1633) BLE:: init lwip
+I (1633) GATTS_DEMO: CREATE_SERVICE_EVT, status 0,  service_handle 40
+
+I (1653) GATTS_DEMO: SERVICE_START_EVT, status 0, service_handle 40
+
+I (1653) GATTS_DEMO: ADD_CHAR_EVT, status 0,  attr_handle 42, service_handle 40
+
+I (1663) GATTS_DEMO: the gatts demo char length = 3
+
+I (1663) GATTS_DEMO: prf_char[0] =11
+
+I (1673) GATTS_DEMO: prf_char[1] =22
+
+I (1673) GATTS_DEMO: prf_char[2] =33
+
+I (1683) GATTS_DEMO: ADD_DESCR_EVT, status 0, attr_handle 43, service_handle 40
+
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+I (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader
+I (31) boot: compile time Mar 15 2024 21:45:27
+I (31) boot: Multicore bootloader
+I (36) boot: chip revision: v3.1
+I (40) boot.esp32: SPI Speed      : 40MHz
+I (44) boot.esp32: SPI Mode       : DIO
+I (49) boot.esp32: SPI Flash Size : 4MB
+I (53) boot: Enabling RNG early entropy source...
+I (59) boot: Partition Table:
+I (62) boot: ## Label            Usage          Type ST Offset   Length
+I (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (85) boot:  2 factory          factory app      00 00 00010000 00177000
+I (92) boot: End of partition table
+I (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3ef28h (257832) map
+I (198) esp_image: segment 1: paddr=0004ef50 vaddr=3ffbdb60 size=010c8h (  4296) load
+I (200) esp_image: segment 2: paddr=00050020 vaddr=400d0020 size=fdcf8h (1039608) map
+I (579) esp_image: segment 3: paddr=0014dd20 vaddr=3ffbec28 size=045f8h ( 17912) load
+I (586) esp_image: segment 4: paddr=00152320 vaddr=40080000 size=2108ch (135308) load
+I (659) boot: Loaded app from partition at offset 0x10000
+I (659) boot: Disabling RNG early entropy source...
+I (671) cpu_start: Multicore app
+I (671) cpu_start: Pro cpu up.
+I (671) cpu_start: Starting app cpu, entry point is 0x400815d0
+I (0) cpu_start: App cpu up.
+I (691) cpu_start: Pro cpu start user code
+I (691) cpu_start: cpu freq: 160000000 Hz
+I (691) cpu_start: Application information:
+I (696) cpu_start: Project name:     gatt_server_demos
+I (702) cpu_start: App version:      a2b1b1e-dirty
+I (707) cpu_start: Compile time:     Mar 15 2024 21:45:19
+I (713) cpu_start: ELF file SHA256:  2297389297bafeb9...
+I (719) cpu_start: ESP-IDF:          v5.1.1-dirty
+I (725) cpu_start: Min chip rev:     v0.0
+I (730) cpu_start: Max chip rev:     v3.99 
+I (734) cpu_start: Chip rev:         v3.1
+I (739) heap_init: Initializing. RAM available for dynamic allocation:
+I (747) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (752) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (758) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (765) heap_init: At 3FFCC350 len 00013CB0 (79 KiB): DRAM
+I (771) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (777) heap_init: At 3FFE4350 len 0001AC24 (107 KiB): D/IRAM
+I (785) spi_flash: detected chip: generic
+I (788) spi_flash: flash io: dio
+I (793) coexist: coex firmware version: 80b0d89
+I (798) app_start: Starting scheduler on CPU0
+I (803) app_start: Starting scheduler on CPU1
+I (803) main_task: Started on CPU0
+I (813) main_task: Calling app_main()
+I (843) W25Q32: Init spi bus
+I (853) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (853) BLE:: ble task, wifi queue: 0, data_flag: 0
+I (853) WIFI: wifi task, ble_queue: 0 wifi_connect: 0
+I (863) UART: uart task
+I (863) uart: queue free spaces: 20
+I (873) UART: init uart
+I (873) main_task: Returned from app_main()
+I (953) BLE:: ble task have mutex
+I (953) W25Q32: Read data from w25q32 at 0: Hello, this is te
+I (953) W25Q32: wifi data location: Hello, this is te
+I (953) W25Q32: There has never been wifi data written to the w25q32 before
+I (963) BLE:: ble task release mutex
+I (1073) wifi:wifi driver task: 3ffd3830, prio:23, stack:6656, core=0
+I (1093) wifi:wifi firmware version: ce9244d
+I (1093) wifi:wifi certification version: v7.0
+I (1093) wifi:config NVS flash: enabled
+I (1093) wifi:config nano formating: disabled
+I (1093) wifi:Init data frame dynamic rx buffer num: 32
+I (1103) wifi:Init management frame dynamic rx buffer num: 32
+I (1103) wifi:Init management short buffer num: 32
+I (1113) wifi:Init static tx buffer num: 16
+I (1113) wifi:Init static rx buffer size: 1600
+I (1113) wifi:Init static rx buffer num: 10
+I (1123) wifi:Init dynamic rx buffer num: 32
+I (1123) wifi_init: rx ba win: 6
+I (1133) wifi_init: tcpip mbox: 32
+I (1133) wifi_init: udp mbox: 6
+I (1133) wifi_init: tcp mbox: 6
+I (1143) wifi_init: tcp tx win: 5744
+I (1143) wifi_init: tcp rx win: 5744
+I (1153) wifi_init: tcp mss: 1440
+I (1153) wifi_init: WiFi IRAM OP enabled
+I (1153) wifi_init: WiFi RX IRAM OP enabled
+I (1163) BLE:: ble task have mutex
+I (1163) BTDM_INIT: BT controller compile version [946b762]
+I (1173) BTDM_INIT: Bluetooth MAC: fc:b4:67:f5:ed:82
+I (1183) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07
+I (1613) GATTS_DEMO: REGISTER_APP_EVT, status 0, app_id 0
+
+I (1623) BLE:: ble task release mutex
+I (1623) BLE:: init ble
+I (1623) BLE:: init lwip
+I (1623) GATTS_DEMO: CREATE_SERVICE_EVT, status 0,  service_handle 40
+
+I (1653) GATTS_DEMO: SERVICE_START_EVT, status 0, service_handle 40
+
+I (1653) GATTS_DEMO: ADD_CHAR_EVT, status 0,  attr_handle 42, service_handle 40
+
+I (1653) GATTS_DEMO: the gatts demo char length = 3
+
+I (1663) GATTS_DEMO: prf_char[0] =11
+
+I (1663) GATTS_DEMO: prf_char[1] =22
+
+I (1673) GATTS_DEMO: prf_char[2] =33
+
+I (1673) GATTS_DEMO: ADD_DESCR_EVT, status 0, attr_handle 43, service_handle 40
+

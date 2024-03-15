@@ -65,4 +65,5 @@ D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/ble_test/libble_test.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/mqtt_handle/libmqtt_handle.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/uart_handle/libuart_handle.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/datn_sntp/libdatn_sntp.a
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/libw25q32.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/main/libmain.a

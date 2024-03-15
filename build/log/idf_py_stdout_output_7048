@@ -1,0 +1,118 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\ESP_IDF\ESP32_project\gatt_server\build\bootloader\esp-idf\esptool_py && D:\ESP_IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ESP_IDF/ESP32_project/gatt_server/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[2/8] Building C object esp-idf/w25q32/CMakeFiles/__idf_w25q32.dir/w25q32.c.obj
+D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c: In function 'init_spi_bus':
+D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:48:50: warning: passing argument 3 of 'spi_bus_add_device' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   48 |     ret = spi_bus_add_device(VSPI_HOST, &dvccfg, &spi);
+      |                                                  ^~~~
+In file included from D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:9:
+D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/spi/include/driver/spi_master.h:183:127: note: expected 'struct spi_device_t **' but argument is of type 'struct spi_device_t * volatile*'
+  183 | esp_err_t spi_bus_add_device(spi_host_device_t host_id, const spi_device_interface_config_t *dev_config, spi_device_handle_t *handle);
+      |                                                                                                          ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c: In function 'W25Q32_Send_Receive':
+D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:60:40: warning: passing argument 2 of 'spi_device_transmit' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   60 |         ret = spi_device_transmit(spi, &trans);
+      |                                        ^~~~~~
+D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/spi/include/driver/spi_master.h:258:78: note: expected 'spi_transaction_t *' but argument is of type 'volatile spi_transaction_t *'
+  258 | esp_err_t spi_device_transmit(spi_device_handle_t handle, spi_transaction_t *trans_desc);
+      |                                                           ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+[3/8] Linking C static library esp-idf\w25q32\libw25q32.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable gatt_server_demos.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/ESP_IDF/ESP32_project/gatt_server/build/gatt_server_demos.bin
+[7/8] cmd.exe /C "cd /D D:\ESP_IDF\ESP32_project\gatt_server\build\esp-idf\esptool_py && D:\ESP_IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP_IDF/ESP32_project/gatt_server/build/partition_table/partition-table.bin D:/ESP_IDF/ESP32_project/gatt_server/build/gatt_server_demos.bin"
+gatt_server_demos.bin binary size 0x15eb40 bytes. Smallest app partition is 0x177000 bytes. 0x184c0 bytes (6%) free.
+[7/8] cmd.exe /C "cd /D D:\ESP_IDF\Espressif\frameworks\esp-idf-v5.1.1\components\esptool_py && D:\ESP_IDF\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1 -D SERIAL_TOOL=D:/ESP_IDF/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/ESP_IDF/ESP32_project/gatt_server/build -P D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 gatt_server_demos.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: fc:b4:67:f5:ed:80
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0016efff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26640 bytes to 16692...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000768a... (100 %)
+Wrote 26640 bytes (16692 compressed) at 0x00001000 in 0.9 seconds (effective 245.9 kbit/s)...
+Hash of data verified.
+Compressed 1436480 bytes to 897746...
+Writing at 0x00010000... (1 %)
+Writing at 0x0001dea3... (3 %)
+Writing at 0x0002ae3a... (5 %)
+Writing at 0x000381bd... (7 %)
+Writing at 0x0003d35a... (9 %)
+Writing at 0x00044b40... (10 %)
+Writing at 0x000505b1... (12 %)
+Writing at 0x0005606e... (14 %)
+Writing at 0x0005befc... (16 %)
+Writing at 0x000617f6... (18 %)
+Writing at 0x00066ea9... (20 %)
+Writing at 0x0006c849... (21 %)
+Writing at 0x00071eed... (23 %)
+Writing at 0x000786df... (25 %)
+Writing at 0x0007e3d9... (27 %)
+Writing at 0x0008440f... (29 %)
+Writing at 0x0008a2dc... (30 %)
+Writing at 0x000901d1... (32 %)
+Writing at 0x00095e86... (34 %)
+Writing at 0x0009befe... (36 %)
+Writing at 0x000a1bd5... (38 %)
+Writing at 0x000a7e45... (40 %)
+Writing at 0x000add78... (41 %)
+Writing at 0x000b479b... (43 %)
+Writing at 0x000ba4ab... (45 %)
+Writing at 0x000c03d2... (47 %)
+Writing at 0x000c5edb... (49 %)
+Writing at 0x000cbaec... (50 %)
+Writing at 0x000d1961... (52 %)
+Writing at 0x000d7486... (54 %)
+Writing at 0x000dce33... (56 %)
+Writing at 0x000e21e2... (58 %)
+Writing at 0x000e75f2... (60 %)
+Writing at 0x000ecb37... (61 %)
+Writing at 0x000f1df8... (63 %)
+Writing at 0x000f74ad... (65 %)
+Writing at 0x000fcc51... (67 %)
+Writing at 0x001027ed... (69 %)
+Writing at 0x00108187... (70 %)
+Writing at 0x0010d755... (72 %)
+Writing at 0x00112eba... (74 %)
+Writing at 0x0011889c... (76 %)
+Writing at 0x0011df5f... (78 %)
+Writing at 0x001238fd... (80 %)
+Writing at 0x00129330... (81 %)
+Writing at 0x0012ea99... (83 %)
+Writing at 0x0013629f... (85 %)
+Writing at 0x0013dc2e... (87 %)
+Writing at 0x00145dfe... (89 %)
+Writing at 0x0014c61f... (90 %)
+Writing at 0x00153ccf... (92 %)
+Writing at 0x001594ca... (94 %)
+Writing at 0x0015f2e1... (96 %)
+Writing at 0x00164d5a... (98 %)
+Writing at 0x0016a394... (100 %)
+Wrote 1436480 bytes (897746 compressed) at 0x00010000 in 21.2 seconds (effective 543.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 297.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -13,6 +13,8 @@
 
 time_t now;
 struct tm timeinfo;
+// char ntp_server[] = "pool.ntp.org";
+char ntp_server[] = "time1.google.com";
 
 void datn_sntp_init() 
 {

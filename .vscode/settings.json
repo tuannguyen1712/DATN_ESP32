@@ -22,7 +22,21 @@
         "esp_event.h": "c",
         "mqtt_handle.h": "c",
         "stddef.h": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "uart.h": "c",
+        "string.h": "c",
+        "queue.h": "c",
+        "stdlib.h": "c",
+        "gpio.h": "c",
+        "string_view": "c",
+        "regex": "c",
+        "esp_log.h": "c",
+        "spi_master.h": "c",
+        "soc.h": "c",
+        "spi_common.h": "c",
+        "esp_err.h": "c",
+        "soc_caps.h": "c",
+        "w25q32.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

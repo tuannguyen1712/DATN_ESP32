@@ -1,0 +1,12 @@
+[0/1] cmd.exe /C "cd /D D:\ESP_IDF\ESP32_project\gatt_server\build && D:\ESP_IDF\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_SIZE_TOOL=D:/ESP_IDF/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;-m;esp_idf_size -D MAP_FILE=D:/ESP_IDF/ESP32_project/gatt_server/build/gatt_server_demos.map -D OUTPUT_JSON= -P D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/tools/cmake/run_size_tool.cmake"
+Total sizes:
+Used static DRAM:   59292 bytes (  65288 remain, 47.6% used)
+      .data size:   22372 bytes
+      .bss  size:   36920 bytes
+Used static IRAM:  155622 bytes ( -24550 remain, 118.7% used) Overflow detected! You can run idf.py size-files for more information.
+      .text size:  154595 bytes
+   .vectors size:    1027 bytes
+Used Flash size : 1337815 bytes
+           .text: 1067103 bytes
+         .rodata:  270456 bytes
+Total image size: 1515809 bytes (.bin may be padded larger)

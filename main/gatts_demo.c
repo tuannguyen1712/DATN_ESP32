@@ -24,6 +24,8 @@
 #include "uart_handle.h"
 #include "datn_sntp.h"
 
+#include "w25q32.h"
+
 extern uint8_t wifi_connect;
 extern uint8_t wifi_done;
 
@@ -44,9 +46,16 @@ QueueHandle_t wifi_queue;
 TaskHandle_t ble_task;
 TaskHandle_t wifi_task;
 
+uint8_t ble_start = 0;
+volatile uint8_t fisrt_time_start = 1;
+
 uint8_t wifi_state = 1;
+uint8_t ssid[100];
+uint8_t pass[100];
 
 uint8_t init_mqtt = 0;
+
+extern uint8_t w25q32_data[100];
 
 SemaphoreHandle_t mutex1;               // for wifi
 
@@ -55,7 +64,7 @@ void wifi_sta();
 void uart2_event_task();
 
 void app_main(void)
-{
+{   
     esp_err_t ret;
     // Initialize NVS.
     ret = nvs_flash_init();
@@ -63,15 +72,17 @@ void app_main(void)
         ESP_ERROR_CHECK(nvs_flash_erase());
         ret = nvs_flash_init();
     }
+    init_spi_bus();
     // ESP_ERROR_CHECK( ret );
     
     // ESP_ERROR_CHECK(esp_bt_controller_mem_release(ESP_BT_MODE_CLASSIC_BT));                     // need?
     // init_ble();
+
     ble_queue = xQueueCreate(1, sizeof(uint8_t));
     wifi_queue = xQueueCreate(1, sizeof(uint8_t));
     mutex1 = xSemaphoreCreateMutex();
-    xTaskCreate(ble_gatt_server, "BLE Task", 4096, NULL, 1, NULL);
-    xTaskCreate(wifi_sta, "Wifi Task", 4096, NULL, 1, NULL);
+    xTaskCreate(ble_gatt_server, "BLE Task", 4096, NULL, 3, NULL);
+    xTaskCreate(wifi_sta, "Wifi Task", 4096, NULL, 3, NULL);
     xTaskCreatePinnedToCore(uart2_event_task, "UART2 Task", 2048, NULL, 2, NULL, 0);
     // return;
 }
@@ -79,13 +90,43 @@ void app_main(void)
 void ble_gatt_server()
 {
     uint8_t ss[100] = "";
-    uint8_t ssid[100];
-    uint8_t pass[100];
+    w25q32_t check;
     ESP_LOGI("BLE:","ble task, wifi queue: %d, data_flag: %d", uxQueueMessagesWaiting(wifi_queue), data_flag);
-    init_ble();
-    ESP_LOGI("BLE:","init ble");
-    
+    vTaskDelay(10);
+    if (fisrt_time_start) {
+        if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
+            ESP_LOGI("BLE:","ble task have mutex");
+            check = W25Q32_check_wifi_info();
+            fisrt_time_start = 0;
+            xSemaphoreGive(mutex1);
+            ESP_LOGI("BLE:","ble task release mutex");
+        }
+    }
+    vTaskDelay(10);
     wifi_init_lwip();
+    if (!check.result) {
+        if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
+            ESP_LOGI("BLE:","ble task have mutex");
+            init_ble();
+            ble_start = 1;
+            xSemaphoreGive(mutex1);
+            ESP_LOGI("BLE:","ble task release mutex");
+        }
+    }
+    else {
+        if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
+            ESP_LOGI("BLE:","ble task have mutex");
+            W25Q32_get_wifi_info(check.i, check.l);
+            strcpy((char*) ss, (char*) w25q32_data);
+            get_wifi_info(ss, ssid, pass);
+            mqtt_init();
+            wifi_init_sta(ssid, pass);
+            ESP_LOGI("BLE:","start connect wifi");
+            xSemaphoreGive(mutex1);
+            ESP_LOGI("BLE:","ble task release mutex");
+        }
+    }
+    ESP_LOGI("BLE:","init ble");
     // vTaskDelay(100 / portTICK_PERIOD_MS);
     // mqtt_init();
     // wifi_init_sta((uint8_t*) "Infrastructure NW", (uint8_t*) "NetworkPolicy");
@@ -143,7 +184,11 @@ void wifi_sta()
                 ESP_LOGI("WIFI","wifi task have mutex");
                 xQueueReceive(wifi_queue, &state, portMAX_DELAY);
                 if (state) {                                    // connect successfuly
-                    disable_ble();
+                    if (ble_start) {
+                        disable_ble();
+                        W25Q32_write_wifi_info(ssid, pass, 1);
+                        W25Q32_update_wifi_info(0, strlen((char*) ssid) + strlen((char*) pass) + 5);
+                    }
                     ESP_LOGI("WIFI","disable ble");
                     is_dis = 1;
                     mqtt_start();

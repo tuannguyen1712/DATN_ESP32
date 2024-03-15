@@ -1,0 +1,189 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- idf_monitor on \\.\COM4 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815d0: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40081c7a: panic_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/panic.c:452
+[0m
+[0;33m0x40093419: esp_system_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x4009b029: __assert_func at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/assert.c:81
+[0m
+[0;33m0x40098b02: tlsf_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1119 (discriminator 1)
+[0m
+[0;33m0x400989ac: multi_heap_free_impl at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/multi_heap.c:231
+[0m
+[0;33m0x4008253a: heap_caps_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:388
+[0m
+[0;33m0x4009b059: free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/heap.c:39
+[0m
+[0;33m0x401319c9: W25Q32_ReadData at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:107
+[0m
+[0;33m0x40131b5d: W25Q32_check_wifi_info at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:185
+[0m
+[0;33m0x400d81e3: ble_gatt_server at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:101
+[0m
+[0;33m0x40095e2d: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815d0: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40081c7a: panic_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/panic.c:452
+[0m
+[0;33m0x40093419: esp_system_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x4009b029: __assert_func at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/assert.c:81
+[0m
+[0;33m0x40098b02: tlsf_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1119 (discriminator 1)
+[0m
+[0;33m0x400989ac: multi_heap_free_impl at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/multi_heap.c:231
+[0m
+[0;33m0x4008253a: heap_caps_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:388
+[0m
+[0;33m0x4009b059: free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/heap.c:39
+[0m
+[0;33m0x401319c9: W25Q32_ReadData at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:107
+[0m
+[0;33m0x40131b5d: W25Q32_check_wifi_info at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:185
+[0m
+[0;33m0x400d81e3: ble_gatt_server at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:101
+[0m
+[0;33m0x40095e2d: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815d0: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40081c7a: panic_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/panic.c:452
+[0m
+[0;33m0x40093419: esp_system_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x4009b029: __assert_func at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/assert.c:81
+[0m
+[0;33m0x40098b02: tlsf_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1119 (discriminator 1)
+[0m
+[0;33m0x400989ac: multi_heap_free_impl at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/multi_heap.c:231
+[0m
+[0;33m0x4008253a: heap_caps_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:388
+[0m
+[0;33m0x4009b059: free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/heap.c:39
+[0m
+[0;33m0x401319c9: W25Q32_ReadData at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:107
+[0m
+[0;33m0x40131b5d: W25Q32_check_wifi_info at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:185
+[0m
+[0;33m0x400d81e3: ble_gatt_server at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:101
+[0m
+[0;33m0x40095e2d: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815d0: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40081c7a: panic_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/panic.c:452
+[0m
+[0;33m0x40093419: esp_system_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x4009b029: __assert_func at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/assert.c:81
+[0m
+[0;33m0x40098b02: tlsf_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1119 (discriminator 1)
+[0m
+[0;33m0x400989ac: multi_heap_free_impl at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/multi_heap.c:231
+[0m
+[0;33m0x4008253a: heap_caps_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:388
+[0m
+[0;33m0x4009b059: free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/heap.c:39
+[0m
+[0;33m0x401319c9: W25Q32_ReadData at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:107
+[0m
+[0;33m0x40131b5d: W25Q32_check_wifi_info at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:185
+[0m
+[0;33m0x400d81e3: ble_gatt_server at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:101
+[0m
+[0;33m0x40095e2d: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815d0: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40081c7a: panic_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/panic.c:452
+[0m
+[0;33m0x40093419: esp_system_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x4009b029: __assert_func at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/assert.c:81
+[0m
+[0;33m0x40098b02: tlsf_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1119 (discriminator 1)
+[0m
+[0;33m0x400989ac: multi_heap_free_impl at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/multi_heap.c:231
+[0m
+[0;33m0x4008253a: heap_caps_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:388
+[0m
+[0;33m0x4009b059: free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/heap.c:39
+[0m
+[0;33m0x401319c9: W25Q32_ReadData at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:107
+[0m
+[0;33m0x40131b5d: W25Q32_check_wifi_info at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:185
+[0m
+[0;33m0x400d81e3: ble_gatt_server at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:101
+[0m
+[0;33m0x40095e2d: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815d0: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40081c7a: panic_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/panic.c:452
+[0m
+[0;33m0x40093419: esp_system_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x4009b029: __assert_func at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/assert.c:81
+[0m
+[0;33m0x40098b02: tlsf_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1119 (discriminator 1)
+[0m
+[0;33m0x400989ac: multi_heap_free_impl at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/multi_heap.c:231
+[0m
+[0;33m0x4008253a: heap_caps_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:388
+[0m
+[0;33m0x4009b059: free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/heap.c:39
+[0m
+[0;33m0x401319c9: W25Q32_ReadData at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:107
+[0m
+[0;33m0x40131b5d: W25Q32_check_wifi_info at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:185
+[0m
+[0;33m0x400d81e3: ble_gatt_server at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:101
+[0m
+[0;33m0x40095e2d: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815d0: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40081c7a: panic_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/panic.c:452
+[0m
+[0;33m0x40093419: esp_system_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x4009b029: __assert_func at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/assert.c:81
+[0m
+[0;33m0x40098b02: tlsf_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1119 (discriminator 1)
+[0m
+[0;33m0x400989ac: multi_heap_free_impl at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/multi_heap.c:231
+[0m
+[0;33m0x4008253a: heap_caps_free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:388
+[0m
+[0;33m0x4009b059: free at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/heap.c:39
+[0m
+[0;33m0x401319c9: W25Q32_ReadData at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:107
+[0m
+[0;33m0x40131b5d: W25Q32_check_wifi_info at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:185
+[0m
+[0;33m0x400d81e3: ble_gatt_server at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:101
+[0m
+[0;33m0x40095e2d: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m
