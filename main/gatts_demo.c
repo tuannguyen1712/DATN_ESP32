@@ -31,13 +31,14 @@ extern uint8_t wifi_done;
 
 extern volatile uint8_t data_flag;
 extern uint8_t ble_data[100];
+extern uint8_t mqtt_connect;
 extern uint8_t mqtt_rcv_done;
 extern uint8_t uart_rcv_done;
 extern uint8_t mqtt_data[100];
 extern esp_mqtt_client_handle_t client;
 extern uart_event_t event;
-extern uint8_t dtmp[1024];
 extern uint8_t data[1024];
+extern uint8_t uart_buffer[1024];
 extern struct tm timeinfo;
 
 QueueHandle_t ble_queue;
@@ -97,7 +98,7 @@ void ble_gatt_server()
         if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
             ESP_LOGI("BLE:","ble task have mutex");
             check = W25Q32_check_wifi_info();
-            fisrt_time_start = 0;
+            // fisrt_time_start = 0;
             xSemaphoreGive(mutex1);
             ESP_LOGI("BLE:","ble task release mutex");
         }
@@ -185,6 +186,7 @@ void wifi_sta()
                 xQueueReceive(wifi_queue, &state, portMAX_DELAY);
                 if (state) {                                    // connect successfuly
                     if (ble_start) {
+                        ble_start = 0;
                         disable_ble();
                         W25Q32_write_wifi_info(ssid, pass, 1);
                         W25Q32_update_wifi_info(0, strlen((char*) ssid) + strlen((char*) pass) + 5);
@@ -193,6 +195,11 @@ void wifi_sta()
                     is_dis = 1;
                     mqtt_start();
                     datn_sntp_init();
+                    if (mqtt_connect && strlen((char*) uart_buffer) != 0) {
+                        datn_sntp_get_time();
+                        uart_format_data(timeinfo, (char*) uart_buffer);
+                        esp_mqtt_client_publish(client, "datn/aithing/data", (const char*) data, strlen((char*) data), 0, 0);
+                    }
                 }
                 else if (!state && is_dis) {                    // disable wifi when connect success before (need disable ble when connect success)
                     init_ble();
@@ -208,6 +215,11 @@ void wifi_sta()
                     ESP_LOGI("WIFI","stop wifi connection, fail connect in the first time");
                     mqtt_stop();
                     datn_sntp_deinit();
+                    if (fisrt_time_start) {
+                        fisrt_time_start = 0;
+                        init_ble();
+                        ble_start = 1;
+                    }
                 }
                 xSemaphoreGive(mutex1);
                 ESP_LOGI("WIFI","wifi task release mutex");
@@ -252,9 +264,11 @@ void uart2_event_task()
                 ESP_LOGI("UART","receive data from uart");
                 uart_rcv_done = 0;
                 datn_sntp_get_time();
-                uart_format_data(timeinfo, (char*) dtmp);
-                esp_mqtt_client_publish(client, "doan2/aithing/data", (const char*) data, strlen((char*) data), 0, 0);
+                uart_format_data(timeinfo, (char*) uart_buffer);
+                esp_mqtt_client_publish(client, "datn/aithing/data", (const char*) data, strlen((char*) data), 0, 0);
                 ESP_LOGI("UART","publish data to mqtt server, data: %s, len: %d", (const char*) data, event.size);
+                memset(uart_buffer, 0, strlen((char*) uart_buffer));
+                // cnt = 0;
                 xSemaphoreGive(mutex1);
                 ESP_LOGI("UART","uart task release mutex");
             }

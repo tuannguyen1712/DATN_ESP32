@@ -30,6 +30,8 @@ void datn_sntp_init()
     while (esp_netif_sntp_sync_wait(2000 / portTICK_PERIOD_MS) == ESP_ERR_TIMEOUT && ++retry < retry_count) {
         ESP_LOGI("SNTP", "Waiting for system time to be set... (%d/%d)", retry, retry_count);
     }
+    if (retry < retry_count) 
+        ESP_LOGI("SNTP", "Set time success");  
     time(&now);
     localtime_r(&now, &timeinfo);
 }

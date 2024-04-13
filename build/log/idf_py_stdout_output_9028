@@ -1,0 +1,174 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 22 2024 10:40:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3ef40h (257856) map[0m
+[0;32mI (198) esp_image: segment 1: paddr=0004ef68 vaddr=3ffbdb60 size=010b0h (  4272) load[0m
+[0;32mI (200) esp_image: segment 2: paddr=00050020 vaddr=400d0020 size=fddf8h (1039864) map[0m
+[0;32mI (579) esp_image: segment 3: paddr=0014de20 vaddr=3ffbec10 size=04610h ( 17936) load[0m
+[0;32mI (586) esp_image: segment 4: paddr=00152438 vaddr=40080000 size=2108ch (135308) load[0m
+[0;32mI (659) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (659) boot: Disabling RNG early entropy source...[0m
+[0;32mI (671) cpu_start: Multicore app[0m
+[0;32mI (671) cpu_start: Pro cpu up.[0m
+[0;32mI (672) cpu_start: Starting app cpu, entry point is 0x400815d0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (691) cpu_start: Pro cpu start user code[0m
+[0;32mI (692) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (692) cpu_start: Application information:[0m
+[0;32mI (696) cpu_start: Project name:     gatt_server_demos[0m
+[0;32mI (702) cpu_start: App version:      a2f6461-dirty[0m
+[0;32mI (708) cpu_start: Compile time:     Mar 22 2024 10:40:04[0m
+[0;32mI (714) cpu_start: ELF file SHA256:  1705545e141d3996...[0m
+[0;32mI (720) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (725) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (730) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (735) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (740) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (747) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (753) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (759) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (765) heap_init: At 3FFCC758 len 000138A8 (78 KiB): DRAM[0m
+[0;32mI (771) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (777) heap_init: At 3FFE4350 len 0001AC24 (107 KiB): D/IRAM[0m
+[0;32mI (785) spi_flash: detected chip: generic[0m
+[0;32mI (788) spi_flash: flash io: dio[0m
+[0;32mI (793) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (798) app_start: Starting scheduler on CPU0[0m
+[0;32m[0;32mI (803) app_start: Starting scheduler on CPU1[0m
+I (803) main_task: Started on CPU0[0m
+[0;32mI (813) main_task: Calling app_main()[0m
+[0;32mI (853) W25Q32: Init spi bus[0m
+[0;32mI (853) gpio: GPIO[19]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (853) BLE:: ble task, wifi queue: 0, data_flag: 0[0m
+[0;32mI (853) WIFI: wifi task, ble_queue: 0 wifi_connect: 0[0m
+[0;32mI (863) UART: uart task[0m
+[0;32mI (863) uart: queue free spaces: 20[0m
+[0;32mI (873) UART: init uart[0m
+[0;32mI (873) main_task: Returned from app_main()[0m
+[0;32mI (953) BLE:: ble task have mutex[0m
+[0;32mI (953) W25Q32: Read data from w25q32 at 0: save	i:0	l:19����[0m
+[0;32mI (953) W25Q32: wifi data location: save	i:0	l:19����[0m
+[0;32mI (953) W25Q32: wifi data at sector 0, len 19[0m
+[0;32mI (963) BLE:: ble task release mutex[0m
+I (1073) wifi:wifi driver task: 3ffd3c38, prio:23, stack:6656, core=0
+I (1093) wifi:wifi firmware version: ce9244d
+I (1093) wifi:wifi certification version: v7.0
+I (1093) wifi:config NVS flash: enabled
+I (1093) wifi:config nano formating: disabled
+I (1093) wifi:Init data frame dynamic rx buffer num: 32
+I (1103) wifi:Init management frame dynamic rx buffer num: 32
+I (1103) wifi:Init management short buffer num: 32
+I (1113) wifi:Init static tx buffer num: 16
+I (1113) wifi:Init static rx buffer size: 1600
+I (1113) wifi:Init static rx buffer num: 10
+I (1123) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1123) wifi_init: rx ba win: 6[0m
+[0;32mI (1133) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1133) wifi_init: udp mbox: 6[0m
+[0;32mI (1133) wifi_init: tcp mbox: 6[0m
+[0;32mI (1143) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1143) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1153) wifi_init: tcp mss: 1440[0m
+[0;32mI (1153) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1163) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1163) BLE:: ble task have mutex[0m
+[0;32mI (1163) W25Q32: Read data from w25q32 at 4096: w:laptop	p:12345678[0m
+[0;32mI (1173) W25Q32: get wifi info: w:laptop	p:12345678[0m
+ssid: .laptop. pass: .12345678.
+[0;32mI (1183) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1303) wifi:mode : sta (24:dc:c3:a6:d0:28)
+I (1303) wifi:enable tsf
+[0;32mI (1303) WIFI STATION: wifi_init_sta finished, ssid: laptop, pass: 12345678.[0m
+[0;32mI (1303) BLE:: start connect wifi[0m
+[0;32mI (1313) BLE:: ble task release mutex[0m
+[0;32mI (1313) BLE:: init ble[0m
+[0;32mI (1313) BLE:: init lwip[0m
+[0;32mI (3723) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (3723) WIFI STATION: connect to the AP fail[0m
+I (6143) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (6143) wifi:state: init -> auth (b0)
+I (6163) wifi:state: auth -> assoc (0)
+I (6173) wifi:state: assoc -> run (10)
+I (6693) wifi:connected with laptop, aid = 15, channel 11, BW20, bssid = 16:13:33:02:85:b3
+I (6693) wifi:security: WPA2-PSK, phy: bgn, rssi: -45
+I (6703) wifi:pm start, type: 1
+
+[0;32mI (6713) esp_netif_handlers: sta ip: 192.168.137.181, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (6713) WIFI STATION: got ip:192.168.137.181[0m
+[0;32mI (6723) BLE:: ble task have mutex[0m
+[0;32mI (6723) BLE:: connect state = 1[0m
+[0;32mI (6723) BLE:: ble task release mutex[0m
+[0;32mI (6733) WIFI: wifi task have mutex[0m
+[0;32mI (6733) WIFI: disable ble[0m
+[0;32mI (6733) SNTP: Initializing and starting SNTP[0m
+I (6733) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (6753) MQTT: Other event id:7[0m
+I (6753) wifi:<ba-add>idx:0 (ifx:0, 16:13:33:02:85:b3), tid:0, ssn:4, winSize:64
+[0;32mI (7393) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7393) MQTT: Subcribe to topic: doan2/aithing/control , id: 12713[0m
+[0;32mI (7393) MQTT: sent publish successful, msg_id=12713[0m
+[0;32mI (7663) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=12713[0m
+[0;32mI (8743) SNTP: Waiting for system time to be set... (1/15)[0m
+[0;32mI (9703) SNTP: Set time success[0m
+[0;32mI (9703) WIFI: wifi task release mutex[0m
+[0;32mI (21173) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:f:1:1
+[0;32mI (21183) WIFI: uart task have mutex[0m
+[0;32mI (21183) WIFI: receive data from mqtt broker[0m
+[0;32mI (21183) WIFI: uart send data: c:f:1:1, len: 7[0m
+[0;32mI (21193) WIFI: uart task release mutex[0m
+[0;32mI (24083) UART2: uart[2] event:[0m
+[0;32mI (24083) UART2: [UART DATA]: 120[0m
+[0;32mI (24103) UART2: uart[2] event:[0m
+[0;32mI (24103) UART2: [UART DATA]: 7[0m
+[0;32mI (24103) UART: uart task have mutex[0m
+[0;32mI (24103) UART: receive data from uart[0m
+[0;32mI (24103) SNTP: Current time in Vietnam: 2024:04:07 18:04:57[0m
+[0;32mI (24113) UART: publish data to mqtt server, data: 20240407180457	tem:-1.0	hum:-1.0	mq2:719	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (24133) UART: uart task release mutex[0m
+[0;32mI (53223) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:f:1:1
+[0;32mI (53233) WIFI: uart task have mutex[0m
+[0;32mI (53233) WIFI: receive data from mqtt broker[0m
+[0;32mI (53233) WIFI: uart send data: c:f:1:1, len: 7[0m
+[0;32mI (53243) WIFI: uart task release mutex[0m
+[0;32mI (56763) UART2: uart[2] event:[0m
+[0;32mI (56763) UART2: [UART DATA]: 120[0m
+[0;32mI (56773) UART2: uart[2] event:[0m
+[0;32mI (56773) UART2: [UART DATA]: 7[0m
+[0;32mI (56773) UART: uart task have mutex[0m
+[0;32mI (56773) UART: receive data from uart[0m
+[0;32mI (56773) SNTP: Current time in Vietnam: 2024:04:07 18:05:30[0m
+[0;32mI (56783) UART: publish data to mqtt server, data: 20240407180530	tem:-1.0	hum:-1.0	mq2:879	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (56803) UART: uart task release mutex[0m
+�������<���������Ͽ�����������������^����������?����~�������������������������֟Ξ������������������χ�����̎>������W����y����������Ky����޽���x����(���>�<�ǘ������x���X࢏C��>����������������8�>ޏ���H������8ǌ>� ����� �>������?808<<��� ��x��� �8���  ��������`8�>���_��0l ��0��� ����������}��������0$���8p�����p�0��| 0����<� ` ���xÏ8��`��x�<<<������������6��6���xo����������p ���p��|�����0����� ��|� >�8�ώp8x|�����y@� ���<��0 !�<C|�����8<<�8�<0�@�<p��p8� ���<�0 �|������8�����\#�.�������� ���8�|Ü��@9@���׀<�!� �   N�����8Ά<08��`G��p|�� �� �����B@ ��& �  �� �� ������������O���� <`�6 �� �>�   ��� ��08��� <���  �;���� ��08���  `<��`   ��|�  ��� `@��� @ �0� 8 88�� p�  � ��    `�    ��C� 88� �   6�> 0<88@ ��  �� � p��~��@q�� p`��  ���  C��08�p�� � �<�   � �`8� �@��B   ��� 0��� <0�� @� ��8���p<�� 0�0��@ ���  0� @ �� � ���0`0p�  0�  �  � ���  � j8�<  80�� �8���0x��<�8�  �  �| � 8<x�0 F�0p��8�A    `�π� ���� ���   ����0�  0��� �@��`� ̆��0 |!���xp�  4A @` p��  v�,���80�    ��   �  � kC�� @  cx`0B� 8 �
+  8�0#� � 8�`A8`�
+ 7   ��x 0�x�0  � 0�   ��  ��        C�� �  ��0  ��  `
+    &  ��� R0  � p   ��  �p8� @�  �0� ��@ 0@ 8�  � �pB@� `0c���  �`�   ��  X�� @` �  	��0  0�     >� p �   �� @ 1��@�\80088��  ���   0 a����   �� 0 ����88 @ r�00�    ���� 0�  �I   �  @���   �G�� �`00�     G��� @ �  a ��� 0{    ��  <�F  8 �   � ��0 `�`���C8X�� @ ��  p � � ��W � ��? 0���@ !�
+� $�    �  l   8� @�0 �� 0 80�     B �   ��   ��  p     �0<p`8�� 0�8�  0 �� 0 �  � a �  `|    �� h	1���0 @   
+�   pp8� @�    ���0�0�    �  ��@ ���  `x� � 0�    � �  00 ��  @  ��8  �   � � @` �   @        `   � @ A  ���  @ 8 �  `@         �        @          �    ��      �      ��  ��   ���    ��  �|��     �           @ �Z     0�   p�     ��� x�8  ��  ��8     9< �\�<   ����   ���  8<�   8�|   �T�   0>�  �<  @ ` ��~�     <�>0 0�0�<   �8� �� ��<    ��   �|    �� @ �88    �<��   ���    �     ��   �    ��8�<  � ��0��     �   <<�    �� <8�    � ��  ��>    @�� ��� <<�   �>     

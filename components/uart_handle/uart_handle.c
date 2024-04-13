@@ -6,9 +6,13 @@
 static QueueHandle_t uart2_queue;
 uint8_t uart_rcv_done = 0;
 
+uint32_t last_tick = 0;
+uint32_t g_sys_tick = 0;
 uart_event_t event;
 uint8_t dtmp[1024];
 uint8_t data[1024];
+uint8_t uart_buffer[1024];
+uint8_t cnt = 0;
 
 // delete pattern det and buffered_size;
 // static void uart2_event_task(void *pvParameters)
@@ -71,6 +75,23 @@ uint8_t data[1024];
 //     vTaskDelete(NULL);
 // }
 
+void periodic_timer_callback(void* arg) {
+    g_sys_tick++;
+    if (g_sys_tick >= 0xFFFFFFFF) 
+        g_sys_tick = 0;
+}
+
+void tim_start() {
+    const esp_timer_create_args_t periodic_timer_args = {
+            .callback = &periodic_timer_callback,
+            /* name is optional, but may help identify the timer when debugging */
+            .name = "periodic"
+    };
+    esp_timer_handle_t periodic_timer;
+    ESP_ERROR_CHECK(esp_timer_create(&periodic_timer_args, &periodic_timer));
+    ESP_ERROR_CHECK(esp_timer_start_periodic(periodic_timer, 999));
+}
+
 void uart2_init()
 {
     uart_config_t uart_config = {
@@ -81,6 +102,8 @@ void uart2_init()
         .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
         .source_clk = UART_SCLK_DEFAULT,
     };
+
+    tim_start();
 
     uart_driver_install(UART_NUM_2, BUF_SIZE * 2, BUF_SIZE * 2, 20, &uart2_queue, 0);
     uart_param_config(UART_NUM_2, &uart_config);                    // connect stm32
@@ -102,7 +125,27 @@ void uart_handle_event()
             case UART_DATA:
                 uart_read_bytes(UART_NUM_2, dtmp, event.size, portMAX_DELAY);
                 ESP_LOGI("UART2", "[UART DATA]: %d", event.size);
-                uart_rcv_done = 1;
+                // cnt++;
+                // if (cnt == 1) {
+                //     memset(uart_buffer, 0, sizeof(uart_buffer));
+                //     strcpy((char*) uart_buffer, (char*) dtmp);
+                // }
+                // else if (cnt == 2) {
+                //     strcat((char*) uart_buffer, (char*) dtmp);
+                //     uart_rcv_done = 1;
+                //     cnt = 0;
+                // }
+                if (g_sys_tick - last_tick > 10) {
+                    ESP_LOGI("UART2", "turn 1");
+                    memset(uart_buffer, 0, sizeof(uart_buffer));
+                    strcpy((char*) uart_buffer, (char*) dtmp);
+                }
+                else {
+                    ESP_LOGI("UART2", "turn 2");
+                    strcat((char*) uart_buffer, (char*) dtmp);
+                    uart_rcv_done = 1;
+                }
+                last_tick = g_sys_tick;
                 break;
             //Event of HW FIFO overflow detected
             case UART_FIFO_OVF:
@@ -143,6 +186,6 @@ void uart_handle_event()
 
 void uart_format_data(struct tm time, char *rx_buf)
 {
-    sprintf((char*) data, "d:%d%02d%02d%02d%02d%02d\t%s", time.tm_year, time.tm_mon, time.tm_mday,
+    sprintf((char*) data, "%d%02d%02d%02d%02d%02d\t%s", time.tm_year, time.tm_mon, time.tm_mday,
                                                 time.tm_hour, time.tm_min, time.tm_sec, rx_buf);
 }

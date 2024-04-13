@@ -10,10 +10,10 @@
 #include "driver/gpio.h"
 #include "soc/soc_caps.h"
 
-#define CS          14
-#define MISO        27
-#define CLK         26
-#define MOSI        25  
+#define CS          19
+#define MISO        18
+#define CLK         5
+#define MOSI        17  
 
 #define WRITE_EN				0x06
 #define WRITE_DIS				0x04

@@ -1,0 +1,1 @@
+ninja: error: 'D:/ESP_IDF/ESP32_project/gatt_server/partitions.csv', needed by 'partition_table/partition-table.bin', missing and no known rule to make it

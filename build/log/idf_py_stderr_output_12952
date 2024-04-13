@@ -1,0 +1,66 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM6 instead...[0m
+[0;33m--- idf_monitor on \\.\COM6 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815d0: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815d0: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815d0: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x4008dd4e: esp_crosscore_isr at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x40082ff1: _xt_lowint1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4008bf95: spi_device_polling_end at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/spi/gpspi/spi_master.c:1082
+[0m
+[0;33m0x4008bff1: spi_device_polling_transmit at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/spi/gpspi/spi_master.c:1113
+[0m
+[0;33m0x40131919: W25Q32_Send_Receive at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:61
+[0m
+[0;33m0x40131a84: W25Q32_WaitEndCycle at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:174 (discriminator 1)
+[0m
+[0;33m0x40131b74: W25Q32_erase4k at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:147
+[0m
+[0;33m0x40131d28: W25Q32_write_wifi_info at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:212
+[0m
+[0;33m0x400d851a: wifi_sta at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:189
+[0m
+[0;33m0x40095e2d: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x4008dd4e: esp_crosscore_isr at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x40082ff1: _xt_lowint1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400981db: spi_dma_ll_tx_start at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/hal/esp32/include/hal/spi_ll.h:1044
+ (inlined by) spi_hal_prepare_data at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/hal/spi_hal_iram.c:174
+[0m
+[0;33m0x4008bd1e: spi_new_trans at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/spi/gpspi/spi_master.c:637
+[0m
+[0;33m0x4008bf1d: spi_device_polling_start at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/spi/gpspi/spi_master.c:1068
+[0m
+[0;33m0x4008bfe8: spi_device_polling_transmit at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/spi/gpspi/spi_master.c:1110
+[0m
+[0;33m0x40131919: W25Q32_Send_Receive at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:61
+[0m
+[0;33m0x40131a84: W25Q32_WaitEndCycle at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:174 (discriminator 1)
+[0m
+[0;33m0x40131b74: W25Q32_erase4k at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:147
+[0m
+[0;33m0x40131d28: W25Q32_write_wifi_info at D:/ESP_IDF/ESP32_project/gatt_server/components/w25q32/w25q32.c:212
+[0m
+[0;33m0x400d851a: wifi_sta at D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:189
+[0m
+[0;33m0x40095e2d: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815d0: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0m

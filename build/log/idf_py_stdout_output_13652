@@ -1,0 +1,792 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 22 2024 10:40:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3ef40h (257856) map[0m
+[0;32mI (198) esp_image: segment 1: paddr=0004ef68 vaddr=3ffbdb60 size=010b0h (  4272) load[0m
+[0;32mI (200) esp_image: segment 2: paddr=00050020 vaddr=400d0020 size=fde18h (1039896) map[0m
+[0;32mI (579) esp_image: segment 3: paddr=0014de40 vaddr=3ffbec10 size=04610h ( 17936) load[0m
+[0;32mI (586) esp_image: segment 4: paddr=00152458 vaddr=40080000 size=2108ch (135308) load[0m
+[0;32mI (659) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (659) boot: Disabling RNG early entropy source...[0m
+[0;32mI (671) cpu_start: Multicore app[0m
+[0;32mI (671) cpu_start: Pro cpu up.[0m
+[0;32mI (672) cpu_start: Starting app cpu, entry point is 0x400815d0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (691) cpu_start: Pro cpu start user code[0m
+[0;32mI (691) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (692) cpu_start: Application information:[0m
+[0;32mI (696) cpu_start: Project name:     gatt_server_demos[0m
+[0;32mI (702) cpu_start: App version:      a2f6461-dirty[0m
+[0;32mI (708) cpu_start: Compile time:     Mar 22 2024 10:40:04[0m
+[0;32mI (714) cpu_start: ELF file SHA256:  5570d7faf75cefd7...[0m
+[0;32mI (720) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (725) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (730) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (735) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (739) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (747) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (752) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (759) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (765) heap_init: At 3FFCC758 len 000138A8 (78 KiB): DRAM[0m
+[0;32mI (771) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (777) heap_init: At 3FFE4350 len 0001AC24 (107 KiB): D/IRAM[0m
+[0;32mI (785) spi_flash: detected chip: generic[0m
+[0;32mI (788) spi_flash: flash io: dio[0m
+[0;32mI (793) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (798) app_start: Starting scheduler on CPU0[0m
+[0;32m[0;32mI (803) app_start: Starting scheduler on CPU1[0m
+I (803) main_task: Started on CPU0[0m
+[0;32mI (813) main_task: Calling app_main()[0m
+[0;32mI (853) W25Q32: Init spi bus[0m
+[0;32mI (853) gpio: GPIO[19]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (853) BLE:: ble task, wifi queue: 0, data_flag: 0[0m
+[0;32mI (853) WIFI: wifi task, ble_queue: 0 wifi_connect: 0[0m
+[0;32mI (863) UART: uart task[0m
+[0;32mI (863) uart: queue free spaces: 20[0m
+[0;32mI (873) UART: init uart[0m
+[0;32mI (873) main_task: Returned from app_main()[0m
+[0;32mI (953) BLE:: ble task have mutex[0m
+[0;32mI (953) W25Q32: Read data from w25q32 at 0: save	i:0	l:19����[0m
+[0;32mI (953) W25Q32: wifi data location: save	i:0	l:19����[0m
+[0;32mI (953) W25Q32: wifi data at sector 0, len 19[0m
+[0;32mI (963) BLE:: ble task release mutex[0m
+I (1073) wifi:wifi driver task: 3ffd3c38, prio:23, stack:6656, core=0
+I (1093) wifi:wifi firmware version: ce9244d
+I (1093) wifi:wifi certification version: v7.0
+I (1093) wifi:config NVS flash: enabled
+I (1093) wifi:config nano formating: disabled
+I (1093) wifi:Init data frame dynamic rx buffer num: 32
+I (1103) wifi:Init management frame dynamic rx buffer num: 32
+I (1103) wifi:Init management short buffer num: 32
+I (1113) wifi:Init static tx buffer num: 16
+I (1113) wifi:Init static rx buffer size: 1600
+I (1113) wifi:Init static rx buffer num: 10
+I (1123) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1123) wifi_init: rx ba win: 6[0m
+[0;32mI (1133) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1133) wifi_init: udp mbox: 6[0m
+[0;32mI (1133) wifi_init: tcp mbox: 6[0m
+[0;32mI (1143) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1143) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1153) wifi_init: tcp mss: 1440[0m
+[0;32mI (1153) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1153) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1163) BLE:: ble task have mutex[0m
+[0;32mI (1163) UART2: uart[2] event:[0m
+[0;32mI (1163) W25Q32: Read data from w25q32 at 4096: w:laptop	p:12345678[0m
+[0;32mI (1173) W25Q32: get wifi info: w:laptop	p:12345678[0m
+ssid: .laptop. pass: .12345678.
+[0;32mI (1193) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1303) wifi:mode : sta (24:dc:c3:a6:d0:28)
+I (1303) wifi:enable tsf
+[0;32mI (1313) WIFI STATION: wifi_init_sta finished, ssid: laptop, pass: 12345678.[0m
+[0;32mI (1313) BLE:: start connect wifi[0m
+[0;32mI (1313) UART2: [UART DATA]: 120[0m
+[0;32mI (1313) BLE:: ble task release mutex[0m
+[0;32mI (1323) BLE:: init ble[0m
+[0;32mI (1323) BLE:: init lwip[0m
+[0;32mI (1343) UART2: uart[2] event:[0m
+[0;32mI (1343) UART2: [UART DATA]: 7[0m
+[0;32mI (1343) UART: uart task have mutex[0m
+[0;32mI (1343) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (1353) UART: uart task release mutex[0m
+I (3723) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3733) wifi:state: init -> auth (b0)
+I (4733) wifi:state: auth -> init (200)
+I (4733) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (4733) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (4733) WIFI STATION: connect to the AP fail[0m
+[0;32mI (7153) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (7153) WIFI STATION: connect to the AP fail[0m
+I (9563) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (9563) wifi:state: init -> auth (b0)
+I (10563) wifi:state: auth -> init (200)
+I (10573) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (10573) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (10573) WIFI STATION: connect to the AP fail[0m
+[0;32mI (12983) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (12983) WIFI STATION: connect to the AP fail[0m
+I (15403) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (15403) wifi:state: init -> auth (b0)
+I (15423) wifi:state: auth -> assoc (0)
+I (15433) wifi:state: assoc -> run (10)
+I (16093) wifi:connected with laptop, aid = 14, channel 11, BW20, bssid = 16:13:33:02:85:b3
+I (16093) wifi:security: WPA2-PSK, phy: bgn, rssi: -38
+I (16093) wifi:pm start, type: 1
+
+[0;32mI (16113) esp_netif_handlers: sta ip: 192.168.137.181, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (16113) WIFI STATION: got ip:192.168.137.181[0m
+[0;32mI (16123) BLE:: ble task have mutex[0m
+[0;32mI (16123) BLE:: connect state = 1[0m
+[0;32mI (16123) BLE:: ble task release mutex[0m
+[0;32mI (16133) WIFI: wifi task have mutex[0m
+[0;32mI (16133) WIFI: disable ble[0m
+[0;32mI (16143) SNTP: Initializing and starting SNTP[0m
+[0;32mI (16143) MQTT: Other event id:7[0m
+I (16163) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (16163) wifi:<ba-add>idx:0 (ifx:0, 16:13:33:02:85:b3), tid:0, ssn:4, winSize:64
+[0;32mI (16603) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (16603) MQTT: Subcribe to topic: doan2/aithing/control , id: 58893[0m
+[0;32mI (16613) MQTT: sent publish successful, msg_id=58893[0m
+[0;32mI (16923) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=58893[0m
+[0;32mI (17083) SNTP: Set time success[0m
+[0;32mI (17093) SNTP: Current time in Vietnam: 2024:04:09 08:52:37[0m
+[0;32mI (17093) WIFI: wifi task release mutex[0m
+[0;32mI (31943) UART2: uart[2] event:[0m
+[0;32mI (31943) UART2: [UART DATA]: 120[0m
+[0;32mI (31943) UART: uart task have mutex[0m
+[0;32mI (31943) UART: receive data from uart[0m
+[0;32mI (31953) SNTP: Current time in Vietnam: 2024:04:09 08:52:51[0m
+[0;32mI (31963) UART: publish data to mqtt server, data: 20240409085251	tem:-1.0	hum:-1.0	mq2:799	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 120[0m
+[0;32mI (31973) UART: uart task release mutex[0m
+[0;32mI (31993) UART2: uart[2] event:[0m
+[0;32mI (31993) UART2: [UART DATA]: 7[0m
+[0;32mI (46893) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (46893) WIFI: uart task have mutex[0m
+[0;32mI (46893) WIFI: receive data from mqtt broker[0m
+[0;32mI (46893) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (46903) WIFI: uart task release mutex[0m
+[0;32mI (49343) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (49353) WIFI: uart task have mutex[0m
+[0;32mI (49353) WIFI: receive data from mqtt broker[0m
+[0;32mI (49353) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (49353) WIFI: uart task release mutex[0m
+[0;32mI (50573) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (50583) WIFI: uart task have mutex[0m
+[0;32mI (50583) WIFI: receive data from mqtt broker[0m
+[0;32mI (50583) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (50583) WIFI: uart task release mutex[0m
+[0;32mI (51293) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (51293) WIFI: uart task have mutex[0m
+[0;32mI (51293) WIFI: receive data from mqtt broker[0m
+[0;32mI (51303) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (51303) WIFI: uart task release mutex[0m
+[0;32mI (52003) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (52013) WIFI: uart task have mutex[0m
+[0;32mI (52013) WIFI: receive data from mqtt broker[0m
+[0;32mI (52013) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (52023) WIFI: uart task release mutex[0m
+[0;32mI (52523) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (52533) WIFI: uart task have mutex[0m
+[0;32mI (52533) WIFI: receive data from mqtt broker[0m
+[0;32mI (52533) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (52543) WIFI: uart task release mutex[0m
+[0;32mI (53033) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (53033) WIFI: uart task have mutex[0m
+[0;32mI (53033) WIFI: receive data from mqtt broker[0m
+[0;32mI (53033) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (53043) WIFI: uart task release mutex[0m
+[0;32mI (53543) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (53553) WIFI: uart task have mutex[0m
+[0;32mI (53553) WIFI: receive data from mqtt broker[0m
+[0;32mI (53553) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (53553) WIFI: uart task release mutex[0m
+[0;32mI (54053) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (54063) WIFI: uart task have mutex[0m
+[0;32mI (54063) WIFI: receive data from mqtt broker[0m
+[0;32mI (54063) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (54063) WIFI: uart task release mutex[0m
+[0;32mI (54563) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (54573) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (54573) WIFI: uart task have mutex[0m
+[0;32mI (54573) MQTT: MQTT_EVENT_DATA[0m
+[0;32mI (54573) WIFI: receive data from mqtt broker[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (54583) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (54593) WIFI: uart task release mutex[0m
+[0;32mI (54613) WIFI: uart task have mutex[0m
+[0;32mI (54613) WIFI: receive data from mqtt broker[0m
+[0;32mI (54613) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (54613) WIFI: uart task release mutex[0m
+[0;32mI (54983) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (54993) WIFI: uart task have mutex[0m
+[0;32mI (54993) WIFI: receive data from mqtt broker[0m
+[0;32mI (54993) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (54993) WIFI: uart task release mutex[0m
+[0;32mI (55763) UART2: uart[2] event:[0m
+[0;32mI (55763) UART2: [UART DATA]: 120[0m
+[0;32mI (55763) UART: uart task have mutex[0m
+[0;32mI (55763) UART: receive data from uart[0m
+[0;32mI (55773) SNTP: Current time in Vietnam: 2024:04:09 08:53:15[0m
+[0;32mI (55783) UART: publish data to mqtt server, data: 20240409085315	0	buz:0tem:-1.0	hum:-1.0	mq2:791	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:, len: 120[0m
+[0;32mI (55793) UART: uart task release mutex[0m
+[0;32mI (55813) UART2: uart[2] event:[0m
+[0;32mI (55813) UART2: [UART DATA]: 7[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 22 2024 10:40:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3ef40h (257856) map[0m
+[0;32mI (198) esp_image: segment 1: paddr=0004ef68 vaddr=3ffbdb60 size=010b0h (  4272) load[0m
+[0;32mI (200) esp_image: segment 2: paddr=00050020 vaddr=400d0020 size=fde18h (1039896) map[0m
+[0;32mI (579) esp_image: segment 3: paddr=0014de40 vaddr=3ffbec10 size=04610h ( 17936) load[0m
+[0;32mI (586) esp_image: segment 4: paddr=00152458 vaddr=40080000 size=2108ch (135308) load[0m
+[0;32mI (659) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (659) boot: Disabling RNG early entropy source...[0m
+[0;32mI (671) cpu_start: Multicore app[0m
+[0;32mI (671) cpu_start: Pro cpu up.[0m
+[0;32mI (672) cpu_start: Starting app cpu, entry point is 0x400815d0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (691) cpu_start: Pro cpu start user code[0m
+[0;32mI (691) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (692) cpu_start: Application information:[0m
+[0;32mI (696) cpu_start: Project name:     gatt_server_demos[0m
+[0;32mI (702) cpu_start: App version:      a2f6461-dirty[0m
+[0;32mI (708) cpu_start: Compile time:     Mar 22 2024 10:40:04[0m
+[0;32mI (714) cpu_start: ELF file SHA256:  5570d7faf75cefd7...[0m
+[0;32mI (720) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (725) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (730) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (735) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (739) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (747) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (752) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (759) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (765) heap_init: At 3FFCC758 len 000138A8 (78 KiB): DRAM[0m
+[0;32mI (771) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (777) heap_init: At 3FFE4350 len 0001AC24 (107 KiB): D/IRAM[0m
+[0;32mI (785) spi_flash: detected chip: generic[0m
+[0;32mI (788) spi_flash: flash io: dio[0m
+[0;32mI (793) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (798) app_start: Starting scheduler on CPU0[0m
+[0;32m[0;32mI (803) app_start: Starting scheduler on CPU1[0m
+I (803) main_task: Started on CPU0[0m
+[0;32mI (813) main_task: Calling app_main()[0m
+[0;32mI (853) W25Q32: Init spi bus[0m
+[0;32mI (853) gpio: GPIO[19]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (853) BLE:: ble task, wifi queue: 0, data_flag: 0[0m
+[0;32mI (853) WIFI: wifi task, ble_queue: 0 wifi_connect: 0[0m
+[0;32mI (863) UART: uart task[0m
+[0;32mI (863) uart: queue free spaces: 20[0m
+[0;32mI (873) UART: init uart[0m
+[0;32mI (873) main_task: Returned from app_main()[0m
+[0;32mI (953) BLE:: ble task have mutex[0m
+[0;32mI (953) W25Q32: Read data from w25q32 at 0: save	i:0	l:19����[0m
+[0;32mI (953) W25Q32: wifi data location: save	i:0	l:19����[0m
+[0;32mI (953) W25Q32: wifi data at sector 0, len 19[0m
+[0;32mI (963) BLE:: ble task release mutex[0m
+I (1073) wifi:wifi driver task: 3ffd3c38, prio:23, stack:6656, core=0
+I (1093) wifi:wifi firmware version: ce9244d
+I (1093) wifi:wifi certification version: v7.0
+I (1093) wifi:config NVS flash: enabled
+I (1093) wifi:config nano formating: disabled
+I (1093) wifi:Init data frame dynamic rx buffer num: 32
+I (1103) wifi:Init management frame dynamic rx buffer num: 32
+I (1103) wifi:Init management short buffer num: 32
+I (1113) wifi:Init static tx buffer num: 16
+I (1113) wifi:Init static rx buffer size: 1600
+I (1113) wifi:Init static rx buffer num: 10
+I (1123) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1123) wifi_init: rx ba win: 6[0m
+[0;32mI (1133) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1133) wifi_init: udp mbox: 6[0m
+[0;32mI (1133) wifi_init: tcp mbox: 6[0m
+[0;32mI (1143) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1143) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1153) wifi_init: tcp mss: 1440[0m
+[0;32mI (1153) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1153) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1163) BLE:: ble task have mutex[0m
+[0;32mI (1163) W25Q32: Read data from w25q32 at 4096: w:laptop	p:12345678[0m
+[0;32mI (1173) W25Q32: get wifi info: w:laptop	p:12345678[0m
+ssid: .laptop. pass: .12345678.
+[0;32mI (1183) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1303) wifi:mode : sta (24:dc:c3:a6:d0:28)
+I (1303) wifi:enable tsf
+[0;32mI (1303) WIFI STATION: wifi_init_sta finished, ssid: laptop, pass: 12345678.[0m
+[0;32mI (1303) BLE:: start connect wifi[0m
+[0;32mI (1303) BLE:: ble task release mutex[0m
+[0;32mI (1313) BLE:: init ble[0m
+[0;32mI (1313) BLE:: init lwip[0m
+I (3723) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3723) wifi:state: init -> auth (b0)
+I (3733) wifi:state: auth -> assoc (0)
+I (3743) wifi:state: assoc -> run (10)
+I (4273) wifi:connected with laptop, aid = 17, channel 11, BW20, bssid = 16:13:33:02:85:b3
+I (4273) wifi:security: WPA2-PSK, phy: bgn, rssi: -34
+I (4273) wifi:pm start, type: 1
+
+I (4293) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4303) esp_netif_handlers: sta ip: 192.168.137.181, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (4303) WIFI STATION: got ip:192.168.137.181[0m
+[0;32mI (4313) BLE:: ble task have mutex[0m
+[0;32mI (4313) BLE:: connect state = 1[0m
+[0;32mI (4313) BLE:: ble task release mutex[0m
+[0;32mI (4323) WIFI: wifi task have mutex[0m
+[0;32mI (4323) WIFI: disable ble[0m
+[0;32mI (4323) SNTP: Initializing and starting SNTP[0m
+[0;32mI (4333) MQTT: Other event id:7[0m
+I (5233) wifi:<ba-add>idx:0 (ifx:0, 16:13:33:02:85:b3), tid:0, ssn:4, winSize:64
+[0;32mI (5743) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (5753) MQTT: Subcribe to topic: doan2/aithing/control , id: 57563[0m
+[0;32mI (5753) MQTT: sent publish successful, msg_id=57563[0m
+[0;32mI (5993) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=57563[0m
+[0;32mI (6233) SNTP: Set time success[0m
+[0;32mI (6233) WIFI: wifi task release mutex[0m
+[0;32mI (10113) UART2: uart[2] event:[0m
+[0;32mI (10113) UART2: [UART DATA]: 120[0m
+[0;32mI (10123) UART2: uart[2] event:[0m
+[0;32mI (10123) UART2: [UART DATA]: 7[0m
+[0;32mI (10123) UART: uart task have mutex[0m
+[0;32mI (10123) UART: receive data from uart[0m
+[0;32mI (10123) SNTP: Current time in Vietnam: 2024:04:09 08:53:46[0m
+[0;32mI (10143) UART: publish data to mqtt server, data: 20240409085346	tem:-1.0	hum:-1.0	mq2:783	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (10153) UART: uart task release mutex[0m
+[0;32mI (10653) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (10653) WIFI: uart task have mutex[0m
+[0;32mI (10653) WIFI: receive data from mqtt broker[0m
+[0;32mI (10653) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (10663) WIFI: uart task release mutex[0m
+[0;32mI (17303) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:m:1
+[0;32mI (17313) WIFI: uart task have mutex[0m
+[0;32mI (17313) WIFI: receive data from mqtt broker[0m
+[0;32mI (17313) WIFI: uart send data: c:l:1:m:1, len: 9[0m
+[0;32mI (17323) WIFI: uart task release mutex[0m
+[0;32mI (21223) UART2: uart[2] event:[0m
+[0;32mI (21223) UART2: [UART DATA]: 120[0m
+[0;32mI (21233) UART2: uart[2] event:[0m
+[0;32mI (21233) UART2: [UART DATA]: 7[0m
+[0;32mI (21233) UART: uart task have mutex[0m
+[0;32mI (21233) UART: receive data from uart[0m
+[0;32mI (21233) SNTP: Current time in Vietnam: 2024:04:09 08:53:57[0m
+[0;32mI (21243) UART: publish data to mqtt server, data: 20240409085357	tem:-1.0	hum:-1.0	mq2:803	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (21263) UART: uart task release mutex[0m
+[0;32mI (30833) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:1
+[0;32mI (30833) WIFI: uart task have mutex[0m
+[0;32mI (30833) WIFI: receive data from mqtt broker[0m
+[0;32mI (30833) WIFI: uart send data: c:l:1:1, len: 7[0m
+[0;32mI (30843) WIFI: uart task release mutex[0m
+[0;32mI (34003) UART2: uart[2] event:[0m
+[0;32mI (34003) UART2: [UART DATA]: 120[0m
+[0;32mI (34013) UART2: uart[2] event:[0m
+[0;32mI (34013) UART2: [UART DATA]: 7[0m
+[0;32mI (34013) UART: uart task have mutex[0m
+[0;32mI (34013) UART: receive data from uart[0m
+[0;32mI (34013) SNTP: Current time in Vietnam: 2024:04:09 08:54:10[0m
+[0;32mI (34033) UART: publish data to mqtt server, data: 20240409085410	tem:-1.0	hum:-1.0	mq2:841	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (34043) UART: uart task release mutex[0m
+[0;32mI (64413) UART2: uart[2] event:[0m
+[0;32mI (64423) UART2: [UART DATA]: 120[0m
+[0;32mI (64433) UART2: uart[2] event:[0m
+[0;32mI (64433) UART2: [UART DATA]: 7[0m
+[0;32mI (64433) UART: uart task have mutex[0m
+[0;32mI (64433) UART: receive data from uart[0m
+[0;32mI (64433) SNTP: Current time in Vietnam: 2024:04:09 08:54:40[0m
+[0;32mI (64443) UART: publish data to mqtt server, data: 20240409085440	tem:-1.0	hum:-1.0	mq2:772	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (64463) UART: uart task release mutex[0m
+[0;32mI (69003) UART2: uart[2] event:[0m
+[0;32mI (69003) UART2: [UART DATA]: 120[0m
+[0;32mI (69013) UART2: uart[2] event:[0m
+[0;32mI (69013) UART2: [UART DATA]: 7[0m
+[0;32mI (69013) UART: uart task have mutex[0m
+[0;32mI (69013) UART: receive data from uart[0m
+[0;32mI (69023) SNTP: Current time in Vietnam: 2024:04:09 08:54:45[0m
+[0;32mI (69033) UART: publish data to mqtt server, data: 20240409085445	tem:-1.0	hum:-1.0	mq2:719	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (69043) UART: uart task release mutex[0m
+[0;32mI (74153) UART2: uart[2] event:[0m
+[0;32mI (74153) UART2: [UART DATA]: 120[0m
+[0;32mI (74163) UART2: uart[2] event:[0m
+[0;32mI (74163) UART2: [UART DATA]: 7[0m
+[0;32mI (74163) UART: uart task have mutex[0m
+[0;32mI (74163) UART: receive data from uart[0m
+[0;32mI (74163) SNTP: Current time in Vietnam: 2024:04:09 08:54:50[0m
+[0;32mI (74183) UART: publish data to mqtt server, data: 20240409085450	tem:-1.0	hum:-1.0	mq2:689	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (74193) UART: uart task release mutex[0m
+[0;32mI (104573) UART2: uart[2] event:[0m
+[0;32mI (104573) UART2: [UART DATA]: 120[0m
+[0;32mI (104583) UART2: uart[2] event:[0m
+[0;32mI (104583) UART2: [UART DATA]: 7[0m
+[0;32mI (104583) UART: uart task have mutex[0m
+[0;32mI (104583) UART: receive data from uart[0m
+[0;32mI (104593) SNTP: Current time in Vietnam: 2024:04:09 08:55:20[0m
+[0;32mI (104603) UART: publish data to mqtt server, data: 20240409085520	tem:-1.0	hum:-1.0	mq2:770	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (104613) UART: uart task release mutex[0m
+[0;32mI (135363) UART2: uart[2] event:[0m
+[0;32mI (135363) UART2: [UART DATA]: 120[0m
+[0;32mI (135373) UART2: uart[2] event:[0m
+[0;32mI (135373) UART2: [UART DATA]: 7[0m
+[0;32mI (135373) UART: uart task have mutex[0m
+[0;32mI (135373) UART: receive data from uart[0m
+[0;32mI (135373) SNTP: Current time in Vietnam: 2024:04:09 08:55:51[0m
+[0;32mI (135383) UART: publish data to mqtt server, data: 20240409085551	tem:-1.0	hum:-1.0	mq2:779	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (135403) UART: uart task release mutex[0m
+[0;32mI (166133) UART2: uart[2] event:[0m
+[0;32mI (166143) UART2: [UART DATA]: 120[0m
+[0;32mI (166153) UART2: uart[2] event:[0m
+[0;32mI (166153) UART2: [UART DATA]: 7[0m
+[0;32mI (166153) UART: uart task have mutex[0m
+[0;32mI (166153) UART: receive data from uart[0m
+[0;32mI (166153) SNTP: Current time in Vietnam: 2024:04:09 08:56:22[0m
+[0;32mI (166163) UART: publish data to mqtt server, data: 20240409085622	tem:-1.0	hum:-1.0	mq2:766	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (166183) UART: uart task release mutex[0m
+[0;32mI (196913) UART2: uart[2] event:[0m
+[0;32mI (196913) UART2: [UART DATA]: 120[0m
+[0;32mI (196923) UART2: uart[2] event:[0m
+[0;32mI (196923) UART2: [UART DATA]: 7[0m
+[0;32mI (196923) UART: uart task have mutex[0m
+[0;32mI (196923) UART: receive data from uart[0m
+[0;32mI (196923) SNTP: Current time in Vietnam: 2024:04:09 08:56:52[0m
+[0;32mI (196933) UART: publish data to mqtt server, data: 20240409085652	tem:-1.0	hum:-1.0	mq2:775	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (196953) UART: uart task release mutex[0m
+[0;32mI (227683) UART2: uart[2] event:[0m
+[0;32mI (227683) UART2: [UART DATA]: 120[0m
+[0;32mI (227693) UART2: uart[2] event:[0m
+[0;32mI (227693) UART2: [UART DATA]: 7[0m
+[0;32mI (227693) UART: uart task have mutex[0m
+[0;32mI (227693) UART: receive data from uart[0m
+[0;32mI (227693) SNTP: Current time in Vietnam: 2024:04:09 08:57:23[0m
+[0;32mI (227703) UART: publish data to mqtt server, data: 20240409085723	tem:-1.0	hum:-1.0	mq2:755	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (227723) UART: uart task release mutex[0m
+[0;32mI (258453) UART2: uart[2] event:[0m
+[0;32mI (258453) UART2: [UART DATA]: 120[0m
+[0;32mI (258463) UART2: uart[2] event:[0m
+[0;32mI (258463) UART2: [UART DATA]: 7[0m
+[0;32mI (258463) UART: uart task have mutex[0m
+[0;32mI (258463) UART: receive data from uart[0m
+[0;32mI (258463) SNTP: Current time in Vietnam: 2024:04:09 08:57:54[0m
+[0;32mI (258473) UART: publish data to mqtt server, data: 20240409085754	tem:-1.0	hum:-1.0	mq2:755	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (258493) UART: uart task release mutex[0m
+[0;32mI (289223) UART2: uart[2] event:[0m
+[0;32mI (289223) UART2: [UART DATA]: 120[0m
+[0;32mI (289233) UART2: uart[2] event:[0m
+[0;32mI (289233) UART2: [UART DATA]: 7[0m
+[0;32mI (289233) UART: uart task have mutex[0m
+[0;32mI (289233) UART: receive data from uart[0m
+[0;32mI (289233) SNTP: Current time in Vietnam: 2024:04:09 08:58:25[0m
+[0;32mI (289243) UART: publish data to mqtt server, data: 20240409085825	tem:-1.0	hum:-1.0	mq2:753	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (289263) UART: uart task release mutex[0m
+[0;32mI (319993) UART2: uart[2] event:[0m
+[0;32mI (319993) UART2: [UART DATA]: 120[0m
+[0;32mI (320003) UART2: uart[2] event:[0m
+[0;32mI (320003) UART2: [UART DATA]: 7[0m
+[0;32mI (320003) UART: uart task have mutex[0m
+[0;32mI (320003) UART: receive data from uart[0m
+[0;32mI (320003) SNTP: Current time in Vietnam: 2024:04:09 08:58:56[0m
+[0;32mI (320013) UART: publish data to mqtt server, data: 20240409085856	tem:-1.0	hum:-1.0	mq2:751	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (320033) UART: uart task release mutex[0m
+[0;32mI (350763) UART2: uart[2] event:[0m
+[0;32mI (350763) UART2: [UART DATA]: 120[0m
+[0;32mI (350773) UART2: uart[2] event:[0m
+[0;32mI (350773) UART2: [UART DATA]: 7[0m
+[0;32mI (350773) UART: uart task have mutex[0m
+[0;32mI (350773) UART: receive data from uart[0m
+[0;32mI (350773) SNTP: Current time in Vietnam: 2024:04:09 08:59:26[0m
+[0;32mI (350783) UART: publish data to mqtt server, data: 20240409085926	tem:-1.0	hum:-1.0	mq2:759	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (350803) UART: uart task release mutex[0m
+[0;32mI (381553) UART2: uart[2] event:[0m
+[0;32mI (381553) UART2: [UART DATA]: 120[0m
+[0;32mI (381563) UART2: uart[2] event:[0m
+[0;32mI (381563) UART2: [UART DATA]: 7[0m
+[0;32mI (381563) UART: uart task have mutex[0m
+[0;32mI (381563) UART: receive data from uart[0m
+[0;32mI (381563) SNTP: Current time in Vietnam: 2024:04:09 08:59:57[0m
+[0;32mI (381573) UART: publish data to mqtt server, data: 20240409085957	tem:-1.0	hum:-1.0	mq2:767	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (381593) UART: uart task release mutex[0m
+[0;32mI (412343) UART2: uart[2] event:[0m
+[0;32mI (412343) UART2: [UART DATA]: 120[0m
+[0;32mI (412353) UART2: uart[2] event:[0m
+[0;32mI (412353) UART2: [UART DATA]: 7[0m
+[0;32mI (412353) UART: uart task have mutex[0m
+[0;32mI (412353) UART: receive data from uart[0m
+[0;32mI (412353) SNTP: Current time in Vietnam: 2024:04:09 09:00:28[0m
+[0;32mI (412373) UART: publish data to mqtt server, data: 20240409090028	tem:-1.0	hum:-1.0	mq2:757	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (412383) UART: uart task release mutex[0m
+[0;32mI (443143) UART2: uart[2] event:[0m
+[0;32mI (443143) UART2: [UART DATA]: 120[0m
+[0;32mI (443153) UART2: uart[2] event:[0m
+[0;32mI (443153) UART2: [UART DATA]: 7[0m
+[0;32mI (443153) UART: uart task have mutex[0m
+[0;32mI (443153) UART: receive data from uart[0m
+[0;32mI (443153) SNTP: Current time in Vietnam: 2024:04:09 09:00:59[0m
+[0;32mI (443163) UART: publish data to mqtt server, data: 20240409090059	tem:-1.0	hum:-1.0	mq2:758	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (443183) UART: uart task release mutex[0m
+[0;32mI (473923) UART2: uart[2] event:[0m
+[0;32mI (473933) UART2: [UART DATA]: 120[0m
+[0;32mI (473943) UART2: uart[2] event:[0m
+[0;32mI (473943) UART2: [UART DATA]: 7[0m
+[0;32mI (473943) UART: uart task have mutex[0m
+[0;32mI (473943) UART: receive data from uart[0m
+[0;32mI (473943) SNTP: Current time in Vietnam: 2024:04:09 09:01:29[0m
+[0;32mI (473953) UART: publish data to mqtt server, data: 20240409090129	tem:-1.0	hum:-1.0	mq2:769	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (473973) UART: uart task release mutex[0m
+[0;32mI (479843) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=datn/aithing/control
+DATA=c:l:1:1
+[0;32mI (479853) WIFI: uart task have mutex[0m
+[0;32mI (479853) WIFI: receive data from mqtt broker[0m
+[0;32mI (479853) WIFI: uart send data: c:l:1:1, len: 7[0m
+[0;32mI (479853) WIFI: uart task release mutex[0m
+[0;32mI (504703) UART2: uart[2] event:[0m
+[0;32mI (504703) UART2: [UART DATA]: 120[0m
+[0;32mI (504713) UART2: uart[2] event:[0m
+[0;32mI (504713) UART2: [UART DATA]: 7[0m
+[0;32mI (504713) UART: uart task have mutex[0m
+[0;32mI (504713) UART: receive data from uart[0m
+[0;32mI (504723) SNTP: Current time in Vietnam: 2024:04:09 09:02:00[0m
+[0;32mI (504733) UART: publish data to mqtt server, data: 20240409090200	tem:-1.0	hum:-1.0	mq2:761	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (504743) UART: uart task release mutex[0m
+[0;32mI (535493) UART2: uart[2] event:[0m
+[0;32mI (535493) UART2: [UART DATA]: 120[0m
+[0;32mI (535503) UART2: uart[2] event:[0m
+[0;32mI (535503) UART2: [UART DATA]: 7[0m
+[0;32mI (535503) UART: uart task have mutex[0m
+[0;32mI (535503) UART: receive data from uart[0m
+[0;32mI (535503) SNTP: Current time in Vietnam: 2024:04:09 09:02:31[0m
+[0;32mI (535513) UART: publish data to mqtt server, data: 20240409090231	tem:-1.0	hum:-1.0	mq2:750	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (535533) UART: uart task release mutex[0m
+[0;32mI (566273) UART2: uart[2] event:[0m
+[0;32mI (566273) UART2: [UART DATA]: 120[0m
+[0;32mI (566283) UART2: uart[2] event:[0m
+[0;32mI (566283) UART2: [UART DATA]: 7[0m
+[0;32mI (566283) UART: uart task have mutex[0m
+[0;32mI (566283) UART: receive data from uart[0m
+[0;32mI (566293) SNTP: Current time in Vietnam: 2024:04:09 09:03:02[0m
+[0;32mI (566303) UART: publish data to mqtt server, data: 20240409090302	tem:-1.0	hum:-1.0	mq2:743	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (566313) UART: uart task release mutex[0m
+[0;32mI (597053) UART2: uart[2] event:[0m
+[0;32mI (597053) UART2: [UART DATA]: 120[0m
+[0;32mI (597063) UART2: uart[2] event:[0m
+[0;32mI (597063) UART2: [UART DATA]: 7[0m
+[0;32mI (597063) UART: uart task have mutex[0m
+[0;32mI (597063) UART: receive data from uart[0m
+[0;32mI (597073) SNTP: Current time in Vietnam: 2024:04:09 09:03:33[0m
+[0;32mI (597083) UART: publish data to mqtt server, data: 20240409090333	tem:-1.0	hum:-1.0	mq2:751	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (597093) UART: uart task release mutex[0m
+[0;32mI (627833) UART2: uart[2] event:[0m
+[0;32mI (627833) UART2: [UART DATA]: 120[0m
+[0;32mI (627843) UART2: uart[2] event:[0m
+[0;32mI (627843) UART2: [UART DATA]: 7[0m
+[0;32mI (627843) UART: uart task have mutex[0m
+[0;32mI (627843) UART: receive data from uart[0m
+[0;32mI (627843) SNTP: Current time in Vietnam: 2024:04:09 09:04:03[0m
+[0;32mI (627853) UART: publish data to mqtt server, data: 20240409090403	tem:-1.0	hum:-1.0	mq2:761	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (627873) UART: uart task release mutex[0m
+[0;32mI (658603) UART2: uart[2] event:[0m
+[0;32mI (658603) UART2: [UART DATA]: 120[0m
+[0;32mI (658623) UART2: uart[2] event:[0m
+[0;32mI (658623) UART2: [UART DATA]: 7[0m
+[0;32mI (658623) UART: uart task have mutex[0m
+[0;32mI (658623) UART: receive data from uart[0m
+[0;32mI (658623) SNTP: Current time in Vietnam: 2024:04:09 09:04:34[0m
+[0;32mI (658633) UART: publish data to mqtt server, data: 20240409090434	tem:-1.0	hum:-1.0	mq2:763	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (658653) UART: uart task release mutex[0m
+[0;32mI (689383) UART2: uart[2] event:[0m
+[0;32mI (689383) UART2: [UART DATA]: 120[0m
+[0;32mI (689393) UART2: uart[2] event:[0m
+[0;32mI (689393) UART2: [UART DATA]: 7[0m
+[0;32mI (689393) UART: uart task have mutex[0m
+[0;32mI (689393) UART: receive data from uart[0m
+[0;32mI (689403) SNTP: Current time in Vietnam: 2024:04:09 09:05:05[0m
+[0;32mI (689413) UART: publish data to mqtt server, data: 20240409090505	tem:-1.0	hum:-1.0	mq2:750	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (689423) UART: uart task release mutex[0m
+[0;32mI (720163) UART2: uart[2] event:[0m
+[0;32mI (720163) UART2: [UART DATA]: 120[0m
+[0;32mI (720173) UART2: uart[2] event:[0m
+[0;32mI (720173) UART2: [UART DATA]: 7[0m
+[0;32mI (720173) UART: uart task have mutex[0m
+[0;32mI (720173) UART: receive data from uart[0m
+[0;32mI (720173) SNTP: Current time in Vietnam: 2024:04:09 09:05:36[0m
+[0;32mI (720183) UART: publish data to mqtt server, data: 20240409090536	tem:-1.0	hum:-1.0	mq2:767	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (720203) UART: uart task release mutex[0m
+[0;32mI (750933) UART2: uart[2] event:[0m
+[0;32mI (750933) UART2: [UART DATA]: 120[0m
+[0;32mI (750943) UART2: uart[2] event:[0m
+[0;32mI (750943) UART2: [UART DATA]: 7[0m
+[0;32mI (750943) UART: uart task have mutex[0m
+[0;32mI (750943) UART: receive data from uart[0m
+[0;32mI (750953) SNTP: Current time in Vietnam: 2024:04:09 09:06:06[0m
+[0;32mI (750963) UART: publish data to mqtt server, data: 20240409090606	tem:-1.0	hum:-1.0	mq2:751	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (750973) UART: uart task release mutex[0m
+[0;32mI (781713) UART2: uart[2] event:[0m
+[0;32mI (781713) UART2: [UART DATA]: 120[0m
+[0;32mI (781723) UART2: uart[2] event:[0m
+[0;32mI (781723) UART2: [UART DATA]: 7[0m
+[0;32mI (781723) UART: uart task have mutex[0m
+[0;32mI (781723) UART: receive data from uart[0m
+[0;32mI (781723) SNTP: Current time in Vietnam: 2024:04:09 09:06:37[0m
+[0;32mI (781733) UART: publish data to mqtt server, data: 20240409090637	tem:-1.0	hum:-1.0	mq2:761	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (781753) UART: uart task release mutex[0m
+[0;32mI (812493) UART2: uart[2] event:[0m
+[0;32mI (812493) UART2: [UART DATA]: 120[0m
+[0;32mI (812503) UART2: uart[2] event:[0m
+[0;32mI (812503) UART2: [UART DATA]: 7[0m
+[0;32mI (812503) UART: uart task have mutex[0m
+[0;32mI (812503) UART: receive data from uart[0m
+[0;32mI (812503) SNTP: Current time in Vietnam: 2024:04:09 09:07:08[0m
+[0;32mI (812523) UART: publish data to mqtt server, data: 20240409090708	tem:-1.0	hum:-1.0	mq2:759	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (812533) UART: uart task release mutex[0m
+[0;32mI (843273) UART2: uart[2] event:[0m
+[0;32mI (843273) UART2: [UART DATA]: 120[0m
+[0;32mI (843283) UART2: uart[2] event:[0m
+[0;32mI (843283) UART2: [UART DATA]: 7[0m
+[0;32mI (843283) UART: uart task have mutex[0m
+[0;32mI (843283) UART: receive data from uart[0m
+[0;32mI (843283) SNTP: Current time in Vietnam: 2024:04:09 09:07:39[0m
+[0;32mI (843293) UART: publish data to mqtt server, data: 20240409090739	tem:-1.0	hum:-1.0	mq2:762	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (843313) UART: uart task release mutex[0m
+[0;32mI (874043) UART2: uart[2] event:[0m
+[0;32mI (874043) UART2: [UART DATA]: 120[0m
+[0;32mI (874053) UART2: uart[2] event:[0m
+[0;32mI (874053) UART2: [UART DATA]: 7[0m
+[0;32mI (874053) UART: uart task have mutex[0m
+[0;32mI (874053) UART: receive data from uart[0m
+[0;32mI (874063) SNTP: Current time in Vietnam: 2024:04:09 09:08:10[0m
+[0;32mI (874073) UART: publish data to mqtt server, data: 20240409090810	tem:-1.0	hum:-1.0	mq2:759	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (874083) UART: uart task release mutex[0m
+[0;32mI (904823) UART2: uart[2] event:[0m
+[0;32mI (904823) UART2: [UART DATA]: 120[0m
+[0;32mI (904833) UART2: uart[2] event:[0m
+[0;32mI (904833) UART2: [UART DATA]: 7[0m
+[0;32mI (904833) UART: uart task have mutex[0m
+[0;32mI (904833) UART: receive data from uart[0m
+[0;32mI (904833) SNTP: Current time in Vietnam: 2024:04:09 09:08:40[0m
+[0;32mI (904843) UART: publish data to mqtt server, data: 20240409090840	tem:-1.0	hum:-1.0	mq2:754	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (904863) UART: uart task release mutex[0m
+[0;32mI (935603) UART2: uart[2] event:[0m
+[0;32mI (935603) UART2: [UART DATA]: 120[0m
+[0;32mI (935613) UART2: uart[2] event:[0m
+[0;32mI (935613) UART2: [UART DATA]: 7[0m
+[0;32mI (935613) UART: uart task have mutex[0m
+[0;32mI (935613) UART: receive data from uart[0m
+[0;32mI (935613) SNTP: Current time in Vietnam: 2024:04:09 09:09:11[0m
+[0;32mI (935633) UART: publish data to mqtt server, data: 20240409090911	tem:-1.0	hum:-1.0	mq2:755	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (935643) UART: uart task release mutex[0m
+[0;32mI (966383) UART2: uart[2] event:[0m
+[0;32mI (966383) UART2: [UART DATA]: 120[0m
+[0;32mI (966393) UART2: uart[2] event:[0m
+[0;32mI (966393) UART2: [UART DATA]: 7[0m
+[0;32mI (966393) UART: uart task have mutex[0m
+[0;32mI (966393) UART: receive data from uart[0m
+[0;32mI (966393) SNTP: Current time in Vietnam: 2024:04:09 09:09:42[0m
+[0;32mI (966403) UART: publish data to mqtt server, data: 20240409090942	tem:-1.0	hum:-1.0	mq2:754	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (966423) UART: uart task release mutex[0m
+[0;32mI (997153) UART2: uart[2] event:[0m
+[0;32mI (997153) UART2: [UART DATA]: 120[0m
+[0;32mI (997163) UART2: uart[2] event:[0m
+[0;32mI (997163) UART2: [UART DATA]: 7[0m
+[0;32mI (997163) UART: uart task have mutex[0m
+[0;32mI (997163) UART: receive data from uart[0m
+[0;32mI (997173) SNTP: Current time in Vietnam: 2024:04:09 09:10:13[0m
+[0;32mI (997183) UART: publish data to mqtt server, data: 20240409091013	tem:-1.0	hum:-1.0	mq2:756	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (997193) UART: uart task release mutex[0m
+[0;32mI (1027943) UART2: uart[2] event:[0m
+[0;32mI (1027943) UART2: [UART DATA]: 120[0m
+[0;32mI (1027953) UART2: uart[2] event:[0m
+[0;32mI (1027953) UART2: [UART DATA]: 7[0m
+[0;32mI (1027953) UART: uart task have mutex[0m
+[0;32mI (1027953) UART: receive data from uart[0m
+[0;32mI (1027953) SNTP: Current time in Vietnam: 2024:04:09 09:10:43[0m
+[0;32mI (1027973) UART: publish data to mqtt server, data: 20240409091043	tem:-1.0	hum:-1.0	mq2:773	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (1027983) UART: uart task release mutex[0m
+[0;32mI (1058733) UART2: uart[2] event:[0m
+[0;32mI (1058733) UART2: [UART DATA]: 120[0m
+[0;32mI (1058743) UART2: uart[2] event:[0m
+[0;32mI (1058743) UART2: [UART DATA]: 7[0m
+[0;32mI (1058743) UART: uart task have mutex[0m
+[0;32mI (1058743) UART: receive data from uart[0m
+[0;32mI (1058743) SNTP: Current time in Vietnam: 2024:04:09 09:11:14[0m
+[0;32mI (1058753) UART: publish data to mqtt server, data: 20240409091114	tem:-1.0	hum:-1.0	mq2:769	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (1058773) UART: uart task release mutex[0m
+[0;32mI (1089513) UART2: uart[2] event:[0m
+[0;32mI (1089513) UART2: [UART DATA]: 120[0m
+[0;32mI (1089523) UART2: uart[2] event:[0m
+[0;32mI (1089523) UART2: [UART DATA]: 7[0m
+[0;32mI (1089523) UART: uart task have mutex[0m
+[0;32mI (1089523) UART: receive data from uart[0m
+[0;32mI (1089533) SNTP: Current time in Vietnam: 2024:04:09 09:11:45[0m
+[0;32mI (1089543) UART: publish data to mqtt server, data: 20240409091145	tem:-1.0	hum:-1.0	mq2:759	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (1089553) UART: uart task release mutex[0m
+[0;32mI (1120303) UART2: uart[2] event:[0m
+[0;32mI (1120303) UART2: [UART DATA]: 120[0m
+[0;32mI (1120313) UART2: uart[2] event:[0m
+[0;32mI (1120313) UART2: [UART DATA]: 7[0m
+[0;32mI (1120313) UART: uart task have mutex[0m
+[0;32mI (1120313) UART: receive data from uart[0m
+[0;32mI (1120313) SNTP: Current time in Vietnam: 2024:04:09 09:12:16[0m
+[0;32mI (1120323) UART: publish data to mqtt server, data: 20240409091216	tem:-1.0	hum:-1.0	mq2:775	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (1120343) UART: uart task release mutex[0m
+[0;32mI (1151093) UART2: uart[2] event:[0m
+[0;32mI (1151093) UART2: [UART DATA]: 120[0m
+[0;32mI (1151103) UART2: uart[2] event:[0m
+[0;32mI (1151103) UART2: [UART DATA]: 7[0m
+[0;32mI (1151103) UART: uart task have mutex[0m
+[0;32mI (1151103) UART: receive data from uart[0m
+[0;32mI (1151103) SNTP: Current time in Vietnam: 2024:04:09 09:12:47[0m
+[0;32mI (1151123) UART: publish data to mqtt server, data: 20240409091247	tem:-1.0	hum:-1.0	mq2:763	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:0	fn2:0	fs2:0	ld1:0	lm1:0	ls1:0	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (1151133) UART: uart task release mutex[0m
