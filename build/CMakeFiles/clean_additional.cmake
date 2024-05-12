@@ -18,6 +18,7 @@ if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   "gatt_server_demos.map"
   "ldgen_libraries"
   "ldgen_libraries.in"
+  "mqtt_datn_io.pem.S"
   "project_elf_src_esp32.c"
   "x509_crt_bundle.S"
   )

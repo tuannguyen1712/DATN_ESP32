@@ -4,3 +4,5 @@ cmake_minimum_required(VERSION 3.16)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(gatt_server_demos)
+
+target_add_binary_data(gatt_server_demos.elf "components/mqtt_handle/mqtt_datn_io.pem" TEXT)

@@ -9,7 +9,9 @@
 #include "esp_log.h"
 #include "nvs_flash.h"
 #include "esp_bt.h"
+#include "mbedtls/aes.h"
 
+#include "esp_mac.h"
 #include "esp_gap_ble_api.h"
 #include "esp_gatts_api.h"
 #include "esp_bt_defs.h"
@@ -26,6 +28,8 @@
 
 #include "w25q32.h"
 
+#define MAC_ADDR_SIZE   6
+
 extern uint8_t wifi_connect;
 extern uint8_t wifi_done;
 
@@ -35,6 +39,7 @@ extern uint8_t mqtt_connect;
 extern uint8_t mqtt_rcv_done;
 extern uint8_t uart_rcv_done;
 extern uint8_t mqtt_data[100];
+extern char topic_pub[50];
 extern esp_mqtt_client_handle_t client;
 extern uart_event_t event;
 extern uint8_t data[1024];
@@ -74,6 +79,13 @@ void app_main(void)
         ret = nvs_flash_init();
     }
     init_spi_bus();
+
+    uint8_t mac_bt[6] = {0};
+    uint8_t mac_add[13];
+    esp_efuse_mac_get_default(mac_bt);
+    esp_read_mac(mac_bt, ESP_MAC_BT);
+    sprintf((char*) mac_add, "%x%x%x%x%x%x", mac_bt[0], mac_bt[1], mac_bt[2], mac_bt[3], mac_bt[4], mac_bt[5]);
+    mqtt_getMacAddress(mac_add);
     // ESP_ERROR_CHECK( ret );
     
     // ESP_ERROR_CHECK(esp_bt_controller_mem_release(ESP_BT_MODE_CLASSIC_BT));                     // need?
@@ -195,11 +207,11 @@ void wifi_sta()
                     is_dis = 1;
                     mqtt_start();
                     datn_sntp_init();
-                    if (mqtt_connect && strlen((char*) uart_buffer) != 0) {
-                        datn_sntp_get_time();
-                        uart_format_data(timeinfo, (char*) uart_buffer);
-                        esp_mqtt_client_publish(client, "datn/aithing/data", (const char*) data, strlen((char*) data), 0, 0);
-                    }
+                    // if (mqtt_connect && strlen((char*) uart_buffer) != 0) {
+                    //     datn_sntp_get_time();
+                    //     uart_format_data(timeinfo, (char*) uart_buffer);
+                    //     esp_mqtt_client_publish(client, "datn/aithing/data", (const char*) data, strlen((char*) data), 0, 0);
+                    // }
                 }
                 else if (!state && is_dis) {                    // disable wifi when connect success before (need disable ble when connect success)
                     init_ble();
@@ -265,7 +277,7 @@ void uart2_event_task()
                 uart_rcv_done = 0;
                 datn_sntp_get_time();
                 uart_format_data(timeinfo, (char*) uart_buffer);
-                esp_mqtt_client_publish(client, "datn/aithing/data", (const char*) data, strlen((char*) data), 0, 0);
+                esp_mqtt_client_publish(client, topic_pub, (const char*) data, strlen((char*) data), 0, 0);
                 ESP_LOGI("UART","publish data to mqtt server, data: %s, len: %d", (const char*) data, event.size);
                 memset(uart_buffer, 0, strlen((char*) uart_buffer));
                 // cnt = 0;

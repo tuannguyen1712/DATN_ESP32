@@ -1,0 +1,10 @@
+Compiler supported targets: xtensa-esp32-elf
+
+CMake Error at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/tools/cmake/utilities.cmake:108 (target_sources):
+  Cannot specify sources for target "mqtt_ssl.elf" which is not built by this
+  project.
+Call Stack (most recent call first):
+  CMakeLists.txt:8 (target_add_binary_data)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

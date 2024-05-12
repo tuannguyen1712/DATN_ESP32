@@ -21,11 +21,20 @@
 #include "esp_log.h"
 #include "mqtt_handle.h"
 
+#include "esp_tls.h"
+#include <sys/param.h>
+
 esp_mqtt_client_handle_t client;
-char topic[] = "doan2/aithing/data";
+char topic_pub[50];
+char topic_sub[50];
 uint8_t mqtt_rcv_done = 0;
 uint8_t mqtt_data[100] = "";
 uint8_t mqtt_connect = 0;
+uint8_t mac[12] = {0};
+
+extern const uint8_t mqtt_eclipseprojects_io_pem_start[]   asm("_binary_mqtt_datn_io_pem_start");
+
+extern const uint8_t mqtt_eclipseprojects_io_pem_end[]   asm("_binary_mqtt_datn_io_pem_end");
 
 void log_error_if_nonzero(const char *message, int error_code)
 {
@@ -43,10 +52,11 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
     switch ((esp_mqtt_event_id_t)event_id) {
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI("MQTT", "MQTT_EVENT_CONNECTED");
-        int msg_id = esp_mqtt_client_subscribe(client, "datn/aithing/control", 2);
-	    ESP_LOGI("MQTT", "Subcribe to topic: doan2/aithing/control , id: %d", msg_id);
+        int msg_id = esp_mqtt_client_subscribe(client, topic_sub, 2);
+        // int msg_id = esp_mqtt_client_subscribe(client, "test", 2);
+	    ESP_LOGI("MQTT", "Subcribe to topic: %s , id: %d", topic_sub, msg_id);
         ESP_LOGI("MQTT", "sent publish successful, msg_id=%d", msg_id);
-        esp_mqtt_client_publish(client, "datn/aithing/data", (const char*) "Connect", 7, 0, 0);
+        esp_mqtt_client_publish(client, topic_pub, (const char*) "Connect", 7, 0, 0);
         mqtt_connect = 1;
         break;
     case MQTT_EVENT_DISCONNECTED:
@@ -100,7 +110,9 @@ void mqtt_init()
 {
     esp_mqtt_client_config_t mqtt_cfg = {
         // .broker.address.uri = "mqtt://broker.emqx.io:1883",
-        .broker.address.uri = "mqtt://white-dev.aithings.vn:1883",
+        // .broker.address.uri = "mqtt://white-dev.aithings.vn:1883",
+        .broker.address.uri = "mqtts://192.168.1.15:8883",
+        .broker.verification.certificate = (const char *)mqtt_eclipseprojects_io_pem_start
         // .broker.address.transport = MQTT_TRANSPORT_OVER_TCP,
         // .broker.address.path = "/mqtt",
         // .session.keepalive = 60
@@ -120,4 +132,11 @@ void mqtt_stop()
 {   
     esp_mqtt_client_stop(client);
     esp_mqtt_client_unregister_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler);
+}
+
+void mqtt_getMacAddress(const uint8_t* mac_add) {
+    strcpy((char*) mac, (char*) mac_add);
+    sprintf(topic_pub, "datn/%s/data", mac);
+    sprintf(topic_sub, "datn/%s/control", mac);
+    ESP_LOGI("MQTT", "%s %s", topic_pub, topic_sub);
 }
