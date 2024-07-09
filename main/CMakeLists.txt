@@ -7,4 +7,5 @@ idf_component_register(SRCS "gatts_demo.c"
                     REQUIRES mqtt_handle
                     REQUIRES uart_handle
                     REQUIRES datn_sntp
-                    REQUIRES w25q32)
+                    REQUIRES w25q32
+                    REQUIRES lcd)

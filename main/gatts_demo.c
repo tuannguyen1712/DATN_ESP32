@@ -25,8 +25,17 @@
 #include "mqtt_handle.h"
 #include "uart_handle.h"
 #include "datn_sntp.h"
+#include "lcd.h"
 
 #include "w25q32.h"
+
+#define rs      15
+#define rw      16      
+#define en      13
+#define d4      14
+#define d5      27
+#define d6      26
+#define d7      25
 
 #define MAC_ADDR_SIZE   6
 
@@ -46,6 +55,10 @@ extern uint8_t data[1024];
 extern uint8_t uart_buffer[1024];
 extern struct tm timeinfo;
 
+extern float tem;
+extern float hum;
+extern int adc_val;
+
 QueueHandle_t ble_queue;
 QueueHandle_t wifi_queue;
 
@@ -58,6 +71,8 @@ volatile uint8_t fisrt_time_start = 1;
 uint8_t wifi_state = 1;
 uint8_t ssid[100];
 uint8_t pass[100];
+
+uint8_t lcd_buf[17];
 
 uint8_t init_mqtt = 0;
 
@@ -78,13 +93,12 @@ void app_main(void)
         ESP_ERROR_CHECK(nvs_flash_erase());
         ret = nvs_flash_init();
     }
-    init_spi_bus();
 
     uint8_t mac_bt[6] = {0};
-    uint8_t mac_add[13];
+    uint8_t mac_add[18];
     esp_efuse_mac_get_default(mac_bt);
     esp_read_mac(mac_bt, ESP_MAC_BT);
-    sprintf((char*) mac_add, "%x%x%x%x%x%x", mac_bt[0], mac_bt[1], mac_bt[2], mac_bt[3], mac_bt[4], mac_bt[5]);
+    sprintf((char*) mac_add, "%X:%X:%X:%X:%X:%X", mac_bt[0], mac_bt[1], mac_bt[2], mac_bt[3], mac_bt[4], mac_bt[5]);
     mqtt_getMacAddress(mac_add);
     // ESP_ERROR_CHECK( ret );
     
@@ -94,6 +108,16 @@ void app_main(void)
     ble_queue = xQueueCreate(1, sizeof(uint8_t));
     wifi_queue = xQueueCreate(1, sizeof(uint8_t));
     mutex1 = xSemaphoreCreateMutex();
+
+    Init_pin_4bit_mode(rs, rw, en, d4, d5, d6, d7);
+    LCD_Init_4bit_mode();
+    LCD_Command_4bit_mode(0x01);
+    vTaskDelay(15 / portTICK_PERIOD_MS);
+    LCD_String_xy_4bit_mode(0, 0, (uint8_t*) "Starting...");
+    
+    // vTaskDelay(15 / portTICK_PERIOD_MS);
+    init_spi_bus();
+    
     xTaskCreate(ble_gatt_server, "BLE Task", 4096, NULL, 3, NULL);
     xTaskCreate(wifi_sta, "Wifi Task", 4096, NULL, 3, NULL);
     xTaskCreatePinnedToCore(uart2_event_task, "UART2 Task", 2048, NULL, 2, NULL, 0);
@@ -279,6 +303,18 @@ void uart2_event_task()
                 uart_format_data(timeinfo, (char*) uart_buffer);
                 esp_mqtt_client_publish(client, topic_pub, (const char*) data, strlen((char*) data), 0, 0);
                 ESP_LOGI("UART","publish data to mqtt server, data: %s, len: %d", (const char*) data, event.size);
+
+                vTaskDelay(10 / portTICK_PERIOD_MS);
+                LCD_Command_4bit_mode(0x01);
+                vTaskDelay(15 / portTICK_PERIOD_MS);
+                sprintf((char*) lcd_buf, "t:%2.1f  h:%2.1f", tem, hum);
+                LCD_String_xy_4bit_mode(0, 0, lcd_buf);
+                ESP_LOGI("LCD","%s", (char*) lcd_buf);
+                vTaskDelay(15 / portTICK_PERIOD_MS);
+                sprintf((char*) lcd_buf, "MQ2:%d", adc_val);
+                ESP_LOGI("LCD","%s", (char*) lcd_buf);
+                LCD_String_xy_4bit_mode(1, 0, lcd_buf);
+
                 memset(uart_buffer, 0, strlen((char*) uart_buffer));
                 // cnt = 0;
                 xSemaphoreGive(mutex1);
@@ -289,6 +325,20 @@ void uart2_event_task()
             if (xSemaphoreTake(mutex1, portMAX_DELAY) == pdTRUE) {
                 ESP_LOGI("UART","uart task have mutex");
                 ESP_LOGI("UART","receive data from uart, but not connected to the internet yet");
+                uart_rcv_done = 0;
+
+                vTaskDelay(10 / portTICK_PERIOD_MS);
+                LCD_Command_4bit_mode(0x01);
+                vTaskDelay(15 / portTICK_PERIOD_MS);
+                sprintf((char*) lcd_buf, "t:%2.1f  h:%2.1f", tem, hum);
+                LCD_String_xy_4bit_mode(0, 0, lcd_buf);
+                ESP_LOGI("LCD","%s", (char*) lcd_buf);
+                vTaskDelay(15 / portTICK_PERIOD_MS);
+                sprintf((char*) lcd_buf, "MQ2:%d", adc_val);
+                ESP_LOGI("LCD","%s", (char*) lcd_buf);
+                LCD_String_xy_4bit_mode(1, 0, lcd_buf);
+                
+                memset(uart_buffer, 0, strlen((char*) uart_buffer));
                 xSemaphoreGive(mutex1);
                 ESP_LOGI("UART","uart task release mutex");
             }

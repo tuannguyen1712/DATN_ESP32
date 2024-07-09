@@ -1,0 +1,2584 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 22 2024 10:40:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3f540h (259392) map[0m
+[0;32mI (198) esp_image: segment 1: paddr=0004f568 vaddr=3ffbdb60 size=00ab0h (  2736) load[0m
+[0;32mI (200) esp_image: segment 2: paddr=00050020 vaddr=400d0020 size=fdf38h (1040184) map[0m
+[0;32mI (580) esp_image: segment 3: paddr=0014df60 vaddr=3ffbe610 size=04c10h ( 19472) load[0m
+[0;32mI (588) esp_image: segment 4: paddr=00152b78 vaddr=40080000 size=2108ch (135308) load[0m
+[0;32mI (661) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (661) boot: Disabling RNG early entropy source...[0m
+[0;32mI (672) cpu_start: Multicore app[0m
+[0;32mI (673) cpu_start: Pro cpu up.[0m
+[0;32mI (673) cpu_start: Starting app cpu, entry point is 0x400815d0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (693) cpu_start: Pro cpu start user code[0m
+[0;32mI (693) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (693) cpu_start: Application information:[0m
+[0;32mI (698) cpu_start: Project name:     gatt_server_demos[0m
+[0;32mI (703) cpu_start: App version:      09d1446-dirty[0m
+[0;32mI (709) cpu_start: Compile time:     May 13 2024 22:40:35[0m
+[0;32mI (715) cpu_start: ELF file SHA256:  113064b73e645a05...[0m
+[0;32mI (721) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (726) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (731) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (736) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (741) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (748) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (754) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (760) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (766) heap_init: At 3FFCC7D0 len 00013830 (78 KiB): DRAM[0m
+[0;32mI (772) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (779) heap_init: At 3FFE4350 len 0001AC24 (107 KiB): D/IRAM[0m
+[0;32mI (787) spi_flash: detected chip: generic[0m
+[0;32mI (790) spi_flash: flash io: dio[0m
+[0;32mI (795) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (800) app_start: Starting scheduler on CPU0[0m
+[0;32[0;32mI (804) app_start: Starting scheduler on CPU1[0m
+mI (804) main_task: Started on CPU0[0m
+[0;32mI (814) main_task: Calling app_main()[0m
+[0;32mI (844) W25Q32: Init spi bus[0m
+[0;32mI (854) gpio: GPIO[19]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (854) MQTT: datn/FC:B4:67:F5:ED:82/data datn/FC:B4:67:F5:ED:82/control[0m
+[0;32mI (854) BLE:: ble task, wifi queue: 0, data_flag: 0[0m
+[0;32mI (864) WIFI: wifi task, ble_queue: 0 wifi_connect: 0[0m
+[0;32mI (874) UART: uart task[0m
+[0;32mI (874) uart: queue free spaces: 20[0m
+[0;32mI (874) UART: init uart[0m
+[0;32mI (884) main_task: Returned from app_main()[0m
+[0;32mI (964) BLE:: ble task have mutex[0m
+[0;32mI (964) W25Q32: Read data from w25q32 at 0: [0m
+[0;32mI (964) W25Q32: wifi data location: [0m
+[0;32mI (964) W25Q32: There has never been wifi data written to the w25q32 before[0m
+[0;32mI (964) BLE:: ble task release mutex[0m
+I (1084) wifi:wifi driver task: 3ffd3cd0, prio:23, stack:6656, core=0
+I (1094) wifi:wifi firmware version: ce9244d
+I (1104) wifi:wifi certification version: v7.0
+I (1104) wifi:config NVS flash: enabled
+I (1104) wifi:config nano formating: disabled
+I (1104) wifi:Init data frame dynamic rx buffer num: 32
+I (1104) wifi:Init management frame dynamic rx buffer num: 32
+I (1114) wifi:Init management short buffer num: 32
+I (1124) wifi:Init static tx buffer num: 16
+I (1124) wifi:Init static rx buffer size: 1600
+I (1124) wifi:Init static rx buffer num: 10
+I (1134) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1134) wifi_init: rx ba win: 6[0m
+[0;32mI (1134) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1144) wifi_init: udp mbox: 6[0m
+[0;32mI (1144) wifi_init: tcp mbox: 6[0m
+[0;32mI (1154) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1154) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1154) wifi_init: tcp mss: 1440[0m
+[0;32mI (1164) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1164) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1174) BLE:: ble task have mutex[0m
+[0;32mI (1174) BTDM_INIT: BT controller compile version [946b762][0m
+[0;32mI (1184) BTDM_INIT: Bluetooth MAC: fc:b4:67:f5:ed:82[0m
+[0;32mI (1194) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+[0;32mI (1634) BLE:: ble task release mutex[0m
+[0;32mI (1634) BLE:: init ble[0m
+[0;32mI (1634) BLE:: init lwip[0m
+[0;32mI (1634) GATTS_DEMO: REGISTER_APP_EVT, status 0, app_id 0
+[0m
+[0;32mI (1654) GATTS_DEMO: CREATE_SERVICE_EVT, status 0,  service_handle 40
+[0m
+[0;32mI (1674) GATTS_DEMO: SERVICE_START_EVT, status 0, service_handle 40
+[0m
+[0;32mI (1674) GATTS_DEMO: ADD_CHAR_EVT, status 0,  attr_handle 42, service_handle 40
+[0m
+[0;32mI (1674) GATTS_DEMO: the gatts demo char length = 3
+[0m
+[0;32mI (1684) GATTS_DEMO: prf_char[0] =11
+[0m
+[0;32mI (1684) GATTS_DEMO: prf_char[1] =22
+[0m
+[0;32mI (1694) GATTS_DEMO: prf_char[2] =33
+[0m
+[0;32mI (1694) GATTS_DEMO: ADD_DESCR_EVT, status 0, attr_handle 43, service_handle 40
+[0m
+[0;32mI (89924) GATTS_DEMO: ESP_GATTS_CONNECT_EVT, conn_id 0, remote 7d:65:26:3e:01:72:[0m
+[0;32mI (90304) GATTS_DEMO: update connection params status = 0, min_int = 16, max_int = 32,conn_int = 6,latency = 0, timeout = 500[0m
+[0;32mI (90524) GATTS_DEMO: ESP_GATTS_MTU_EVT, MTU 500[0m
+[0;32mI (90574) GATTS_DEMO: update connection params status = 0, min_int = 0, max_int = 0,conn_int = 24,latency = 0, timeout = 400[0m
+[0;31mE (98054) BT_GATT: gatt_sr_write_cl_supp_feat len 30[0m
+[0;32mI (98114) GATTS_DEMO: GATT_WRITE_EVT, conn_id 0, trans_id 3, handle 42[0m
+[0;32mI (98114) GATTS_DEMO: GATT_WRITE_EVT, value len 30, value : w:Wifi Chùa :/	p:toikhongbiet profile x[0m
+[0;32mI (98114) GATTS_DEMO: 77 3a 57 69 66 69 20 43 68 c3 b9 61 20 3a 2f 09 [0m
+[0;32mI (98124) GATTS_DEMO: 70 3a 74 6f 69 6b 68 6f 6e 67 62 69 65 74 [0m
+[0;32mI (98134) BLE: dataflag = 1[0m
+[0;32mI (98134) BLE:: ble task have mutex[0m
+ssid: .Wifi Chùa :/. pass: .toikhongbiet.
+I (98224) wifi:mode : sta (fc:b4:67:f5:ed:80)
+I (98224) wifi:enable tsf
+[0;32mI (98224) WIFI STATION: wifi_init_sta finished, ssid: Wifi Chùa :/, pass: toikhongbiet.[0m
+[0;32mI (98234) BLE:: start connect wifi[0m
+[0;32mI (98234) BLE:: ble task release mutex[0m
+I (101614) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (102814) wifi:state: init -> auth (b0)
+I (102824) wifi:state: auth -> assoc (0)
+I (102854) wifi:state: assoc -> run (10)
+I (102894) wifi:connected with Wifi Chùa :/, aid = 2, channel 11, BW20, bssid = 26:d1:fa:05:6e:c0
+I (102894) wifi:security: WPA2-PSK, phy: bgn, rssi: -63
+I (102904) wifi:pm start, type: 1
+
+I (103084) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (104914) esp_netif_handlers: sta ip: 192.168.243.121, mask: 255.255.255.0, gw: 192.168.243.82[0m
+[0;32mI (104914) WIFI STATION: got ip:192.168.243.121[0m
+[0;32mI (104924) BLE:: ble task have mutex[0m
+[0;32mI (104924) BLE:: connect state = 1[0m
+[0;32mI (104924) BLE:: ble task release mutex[0m
+[0;32mI (104934) WIFI: wifi task have mutex[0m
+[0;33mW (104944) BT_HCI: hci cmd send: disconnect: hdl 0x0, rsn:0x13[0m
+[0;32mI (104954) GATTS_DEMO: ESP_GATTS_DISCONNECT_EVT, disconnect reason 0x16[0m
+[0;33mW (105044) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x16[0m
+[0;32mI (106054) W25Q32: write wifi info: w:Wifi Chùa :/	p:toikhongbiet[0m
+[0;32mI (106054) W25Q32: Erase 4k of w25q32 at 4096[0m
+[0;32mI (106054) W25Q32: Write data to w25q32 at 4096: w:Wifi Chùa :/	p:toikhongbiet[0m
+[0;32mI (106064) W25Q32: update info location: i:0 l:30[0m
+[0;32mI (106064) W25Q32: Erase 4k of w25q32 at 0[0m
+[0;32mI (106074) W25Q32: Write data to w25q32 at 0: save	i:0	l:30[0m
+[0;32mI (106074) WIFI: disable ble[0m
+[0;32mI (106084) SNTP: Initializing and starting SNTP[0m
+[0;32mI (106084) MQTT: Other event id:7[0m
+[0;31mE (106094) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (106104) esp-tls: Failed to open new connection[0m
+[0;31mE (106104) transport_base: Failed to open a new connection[0m
+[0;31mE (106114) mqtt_client: Error transport connect[0m
+[0;32mI (106114) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (106114) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (106124) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (106134) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (106144) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (108084) SNTP: Waiting for system time to be set... (1/15)[0m
+[0;32mI (110084) SNTP: Waiting for system time to be set... (2/15)[0m
+[0;32mI (112084) SNTP: Waiting for system time to be set... (3/15)[0m
+[0;32mI (114084) SNTP: Waiting for system time to be set... (4/15)[0m
+[0;32mI (116084) SNTP: Waiting for system time to be set... (5/15)[0m
+[0;32mI (118084) SNTP: Waiting for system time to be set... (6/15)[0m
+[0;32mI (120084) SNTP: Waiting for system time to be set... (7/15)[0m
+[0;32mI (121144) MQTT: Other event id:7[0m
+[0;31mE (121144) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (121144) esp-tls: Failed to open new connection[0m
+[0;31mE (121144) transport_base: Failed to open a new connection[0m
+[0;31mE (121154) mqtt_client: Error transport connect[0m
+[0;32mI (121164) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (121164) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (121174) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (121174) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (121184) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (122084) SNTP: Waiting for system time to be set... (8/15)[0m
+[0;32mI (124084) SNTP: Waiting for system time to be set... (9/15)[0m
+[0;32mI (126084) SNTP: Waiting for system time to be set... (10/15)[0m
+[0;32mI (128084) SNTP: Waiting for system time to be set... (11/15)[0m
+[0;32mI (130084) SNTP: Waiting for system time to be set... (12/15)[0m
+[0;32mI (132084) SNTP: Waiting for system time to be set... (13/15)[0m
+[0;32mI (134084) SNTP: Waiting for system time to be set... (14/15)[0m
+[0;32mI (136084) WIFI: wifi task release mutex[0m
+[0;32mI (136184) MQTT: Other event id:7[0m
+[0;31mE (136184) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (136184) esp-tls: Failed to open new connection[0m
+[0;31mE (136184) transport_base: Failed to open a new connection[0m
+[0;31mE (136194) mqtt_client: Error transport connect[0m
+[0;32mI (136204) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (136204) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (136214) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (136214) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (136224) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (146234) MQTT: Other event id:7[0m
+[0;31mE (146234) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (146234) esp-tls: Failed to open new connection[0m
+[0;31mE (146234) transport_base: Failed to open a new connection[0m
+[0;31mE (146244) mqtt_client: Error transport connect[0m
+[0;32mI (146254) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (146254) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (146264) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (146264) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (146274) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (161274) MQTT: Other event id:7[0m
+[0;31mE (161274) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (161274) esp-tls: Failed to open new connection[0m
+[0;31mE (161274) transport_base: Failed to open a new connection[0m
+[0;31mE (161284) mqtt_client: Error transport connect[0m
+[0;32mI (161294) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (161294) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (161304) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (161304) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (161314) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (176314) MQTT: Other event id:7[0m
+[0;31mE (176314) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (176314) esp-tls: Failed to open new connection[0m
+[0;31mE (176314) transport_base: Failed to open a new connection[0m
+[0;31mE (176324) mqtt_client: Error transport connect[0m
+[0;32mI (176334) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (176334) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (176344) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (176344) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (176354) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (191354) MQTT: Other event id:7[0m
+[0;31mE (191354) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (191354) esp-tls: Failed to open new connection[0m
+[0;31mE (191354) transport_base: Failed to open a new connection[0m
+[0;31mE (191364) mqtt_client: Error transport connect[0m
+[0;32mI (191374) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (191374) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (191384) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (191384) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (191394) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (206394) MQTT: Other event id:7[0m
+[0;31mE (206394) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (206394) esp-tls: Failed to open new connection[0m
+[0;31mE (206394) transport_base: Failed to open a new connection[0m
+[0;31mE (206404) mqtt_client: Error transport connect[0m
+[0;32mI (206414) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (206414) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (206424) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (206424) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (206434) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (221434) MQTT: Other event id:7[0m
+[0;31mE (221434) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (221434) esp-tls: Failed to open new connection[0m
+[0;31mE (221434) transport_base: Failed to open a new connection[0m
+[0;31mE (221444) mqtt_client: Error transport connect[0m
+[0;32mI (221454) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (221454) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (221464) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (221464) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (221474) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (236474) MQTT: Other event id:7[0m
+[0;31mE (236474) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (236474) esp-tls: Failed to open new connection[0m
+[0;31mE (236474) transport_base: Failed to open a new connection[0m
+[0;31mE (236484) mqtt_client: Error transport connect[0m
+[0;32mI (236494) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (236494) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (236504) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (236504) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (236514) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (251514) MQTT: Other event id:7[0m
+[0;31mE (251514) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (251514) esp-tls: Failed to open new connection[0m
+[0;31mE (251514) transport_base: Failed to open a new connection[0m
+[0;31mE (251524) mqtt_client: Error transport connect[0m
+[0;32mI (251534) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (251534) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (251544) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (251544) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (251554) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (266554) MQTT: Other event id:7[0m
+[0;31mE (266554) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (266554) esp-tls: Failed to open new connection[0m
+[0;31mE (266554) transport_base: Failed to open a new connection[0m
+[0;31mE (266564) mqtt_client: Error transport connect[0m
+[0;32mI (266574) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (266574) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (266584) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (266584) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (266594) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (281594) MQTT: Other event id:7[0m
+[0;31mE (281594) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (281594) esp-tls: Failed to open new connection[0m
+[0;31mE (281594) transport_base: Failed to open a new connection[0m
+[0;31mE (281604) mqtt_client: Error transport connect[0m
+[0;32mI (281614) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (281614) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (281624) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (281624) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (281634) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (296634) MQTT: Other event id:7[0m
+[0;31mE (296634) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (296634) esp-tls: Failed to open new connection[0m
+[0;31mE (296634) transport_base: Failed to open a new connection[0m
+[0;31mE (296644) mqtt_client: Error transport connect[0m
+[0;32mI (296654) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (296654) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (296664) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (296664) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (296674) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (311674) MQTT: Other event id:7[0m
+[0;31mE (311674) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (311674) esp-tls: Failed to open new connection[0m
+[0;31mE (311674) transport_base: Failed to open a new connection[0m
+[0;31mE (311684) mqtt_client: Error transport connect[0m
+[0;32mI (311694) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (311694) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (311704) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (311704) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (311714) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (326714) MQTT: Other event id:7[0m
+[0;31mE (326714) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (326714) esp-tls: Failed to open new connection[0m
+[0;31mE (326714) transport_base: Failed to open a new connection[0m
+[0;31mE (326724) mqtt_client: Error transport connect[0m
+[0;32mI (326734) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (326734) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (326744) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (326744) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (326754) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (341754) MQTT: Other event id:7[0m
+[0;31mE (341754) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (341754) esp-tls: Failed to open new connection[0m
+[0;31mE (341754) transport_base: Failed to open a new connection[0m
+[0;31mE (341764) mqtt_client: Error transport connect[0m
+[0;32mI (341774) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (341774) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (341784) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (341784) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (341794) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (356794) MQTT: Other event id:7[0m
+[0;31mE (356794) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (356794) esp-tls: Failed to open new connection[0m
+[0;31mE (356794) transport_base: Failed to open a new connection[0m
+[0;31mE (356804) mqtt_client: Error transport connect[0m
+[0;32mI (356814) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (356814) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (356824) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (356824) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (356834) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (371834) MQTT: Other event id:7[0m
+[0;31mE (371834) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (371834) esp-tls: Failed to open new connection[0m
+[0;31mE (371834) transport_base: Failed to open a new connection[0m
+[0;31mE (371844) mqtt_client: Error transport connect[0m
+[0;32mI (371854) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (371854) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (371864) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (371864) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (371874) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (386874) MQTT: Other event id:7[0m
+[0;31mE (386874) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (386874) esp-tls: Failed to open new connection[0m
+[0;31mE (386874) transport_base: Failed to open a new connection[0m
+[0;31mE (386884) mqtt_client: Error transport connect[0m
+[0;32mI (386894) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (386894) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (386904) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (386904) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (386914) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (401914) MQTT: Other event id:7[0m
+[0;31mE (401914) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (401914) esp-tls: Failed to open new connection[0m
+[0;31mE (401914) transport_base: Failed to open a new connection[0m
+[0;31mE (401924) mqtt_client: Error transport connect[0m
+[0;32mI (401934) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (401934) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (401944) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (401944) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (401954) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (416954) MQTT: Other event id:7[0m
+[0;31mE (416954) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (416954) esp-tls: Failed to open new connection[0m
+[0;31mE (416954) transport_base: Failed to open a new connection[0m
+[0;31mE (416964) mqtt_client: Error transport connect[0m
+[0;32mI (416974) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (416974) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (416984) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (416984) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (416994) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (431994) MQTT: Other event id:7[0m
+[0;31mE (431994) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (431994) esp-tls: Failed to open new connection[0m
+[0;31mE (431994) transport_base: Failed to open a new connection[0m
+[0;31mE (432004) mqtt_client: Error transport connect[0m
+[0;32mI (432014) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (432014) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (432024) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (432024) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (432034) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (447034) MQTT: Other event id:7[0m
+[0;31mE (447034) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (447034) esp-tls: Failed to open new connection[0m
+[0;31mE (447034) transport_base: Failed to open a new connection[0m
+[0;31mE (447044) mqtt_client: Error transport connect[0m
+[0;32mI (447054) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (447054) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (447064) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (447064) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (447074) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (462074) MQTT: Other event id:7[0m
+[0;31mE (462074) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (462084) esp-tls: Failed to open new connection[0m
+[0;31mE (462084) transport_base: Failed to open a new connection[0m
+[0;31mE (462084) mqtt_client: Error transport connect[0m
+[0;32mI (462094) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (462094) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (462104) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (462114) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (462114) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (472124) MQTT: Other event id:7[0m
+[0;31mE (472124) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (472124) esp-tls: Failed to open new connection[0m
+[0;31mE (472124) transport_base: Failed to open a new connection[0m
+[0;31mE (472134) mqtt_client: Error transport connect[0m
+[0;32mI (472144) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (472144) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (472154) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (472154) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (472164) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (487164) MQTT: Other event id:7[0m
+[0;31mE (487164) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (487164) esp-tls: Failed to open new connection[0m
+[0;31mE (487164) transport_base: Failed to open a new connection[0m
+[0;31mE (487174) mqtt_client: Error transport connect[0m
+[0;32mI (487184) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (487184) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (487194) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (487194) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (487204) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (502204) MQTT: Other event id:7[0m
+[0;31mE (502204) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (502204) esp-tls: Failed to open new connection[0m
+[0;31mE (502204) transport_base: Failed to open a new connection[0m
+[0;31mE (502214) mqtt_client: Error transport connect[0m
+[0;32mI (502224) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (502224) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (502234) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (502234) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (502244) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (517244) MQTT: Other event id:7[0m
+[0;31mE (517244) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (517244) esp-tls: Failed to open new connection[0m
+[0;31mE (517244) transport_base: Failed to open a new connection[0m
+[0;31mE (517254) mqtt_client: Error transport connect[0m
+[0;32mI (517264) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (517264) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (517274) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (517274) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (517284) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (532284) MQTT: Other event id:7[0m
+[0;31mE (532284) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (532284) esp-tls: Failed to open new connection[0m
+[0;31mE (532284) transport_base: Failed to open a new connection[0m
+[0;31mE (532294) mqtt_client: Error transport connect[0m
+[0;32mI (532304) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (532304) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (532314) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (532314) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (532324) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (547324) MQTT: Other event id:7[0m
+[0;31mE (547324) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (547324) esp-tls: Failed to open new connection[0m
+[0;31mE (547324) transport_base: Failed to open a new connection[0m
+[0;31mE (547334) mqtt_client: Error transport connect[0m
+[0;32mI (547344) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (547344) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (547354) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (547354) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (547364) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (562364) MQTT: Other event id:7[0m
+[0;31mE (562364) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (562364) esp-tls: Failed to open new connection[0m
+[0;31mE (562364) transport_base: Failed to open a new connection[0m
+[0;31mE (562374) mqtt_client: Error transport connect[0m
+[0;32mI (562384) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (562384) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (562394) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (562394) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (562404) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (577404) MQTT: Other event id:7[0m
+[0;31mE (577404) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (577404) esp-tls: Failed to open new connection[0m
+[0;31mE (577404) transport_base: Failed to open a new connection[0m
+[0;31mE (577414) mqtt_client: Error transport connect[0m
+[0;32mI (577424) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (577424) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (577434) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (577434) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (577444) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (592444) MQTT: Other event id:7[0m
+[0;31mE (592444) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (592444) esp-tls: Failed to open new connection[0m
+[0;31mE (592444) transport_base: Failed to open a new connection[0m
+[0;31mE (592454) mqtt_client: Error transport connect[0m
+[0;32mI (592464) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (592464) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (592474) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (592474) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (592484) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (607484) MQTT: Other event id:7[0m
+[0;31mE (607484) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (607494) esp-tls: Failed to open new connection[0m
+[0;31mE (607494) transport_base: Failed to open a new connection[0m
+[0;31mE (607494) mqtt_client: Error transport connect[0m
+[0;32mI (607504) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (607504) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (607514) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (607524) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (607524) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (617534) MQTT: Other event id:7[0m
+[0;31mE (617534) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (617534) esp-tls: Failed to open new connection[0m
+[0;31mE (617534) transport_base: Failed to open a new connection[0m
+[0;31mE (617544) mqtt_client: Error transport connect[0m
+[0;32mI (617554) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (617554) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (617564) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (617564) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (617574) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (632574) MQTT: Other event id:7[0m
+[0;31mE (632574) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (632574) esp-tls: Failed to open new connection[0m
+[0;31mE (632574) transport_base: Failed to open a new connection[0m
+[0;31mE (632584) mqtt_client: Error transport connect[0m
+[0;32mI (632594) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (632594) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (632604) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (632604) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (632614) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (647614) MQTT: Other event id:7[0m
+[0;31mE (647614) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (647614) esp-tls: Failed to open new connection[0m
+[0;31mE (647614) transport_base: Failed to open a new connection[0m
+[0;31mE (647624) mqtt_client: Error transport connect[0m
+[0;32mI (647634) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (647634) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (647644) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (647644) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (647654) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (662654) MQTT: Other event id:7[0m
+[0;31mE (662654) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (662654) esp-tls: Failed to open new connection[0m
+[0;31mE (662654) transport_base: Failed to open a new connection[0m
+[0;31mE (662664) mqtt_client: Error transport connect[0m
+[0;32mI (662674) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (662674) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (662684) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (662684) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (662694) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (677694) MQTT: Other event id:7[0m
+[0;31mE (677694) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (677694) esp-tls: Failed to open new connection[0m
+[0;31mE (677694) transport_base: Failed to open a new connection[0m
+[0;31mE (677704) mqtt_client: Error transport connect[0m
+[0;32mI (677714) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (677714) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (677724) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (677724) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (677734) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (692734) MQTT: Other event id:7[0m
+[0;31mE (692734) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (692734) esp-tls: Failed to open new connection[0m
+[0;31mE (692744) transport_base: Failed to open a new connection[0m
+[0;31mE (692744) mqtt_client: Error transport connect[0m
+[0;32mI (692754) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (692754) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (692764) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (692764) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (692774) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (702784) MQTT: Other event id:7[0m
+[0;31mE (702784) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (702784) esp-tls: Failed to open new connection[0m
+[0;31mE (702784) transport_base: Failed to open a new connection[0m
+[0;31mE (702794) mqtt_client: Error transport connect[0m
+[0;32mI (702804) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (702804) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (702814) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (702814) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (702824) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (717824) MQTT: Other event id:7[0m
+[0;31mE (717824) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (717824) esp-tls: Failed to open new connection[0m
+[0;31mE (717824) transport_base: Failed to open a new connection[0m
+[0;31mE (717834) mqtt_client: Error transport connect[0m
+[0;32mI (717844) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (717844) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (717854) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (717854) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (717864) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (732864) MQTT: Other event id:7[0m
+[0;31mE (732864) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (732864) esp-tls: Failed to open new connection[0m
+[0;31mE (732874) transport_base: Failed to open a new connection[0m
+[0;31mE (732874) mqtt_client: Error transport connect[0m
+[0;32mI (732884) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (732884) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (732894) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (732894) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (732904) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (742914) MQTT: Other event id:7[0m
+[0;31mE (742914) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (742914) esp-tls: Failed to open new connection[0m
+[0;31mE (742914) transport_base: Failed to open a new connection[0m
+[0;31mE (742924) mqtt_client: Error transport connect[0m
+[0;32mI (742934) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (742934) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (742944) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (742944) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (742954) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (757954) MQTT: Other event id:7[0m
+[0;31mE (757954) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (757954) esp-tls: Failed to open new connection[0m
+[0;31mE (757954) transport_base: Failed to open a new connection[0m
+[0;31mE (757964) mqtt_client: Error transport connect[0m
+[0;32mI (757974) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (757974) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (757984) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (757984) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (757994) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (772994) MQTT: Other event id:7[0m
+[0;31mE (772994) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (772994) esp-tls: Failed to open new connection[0m
+[0;31mE (772994) transport_base: Failed to open a new connection[0m
+[0;31mE (773004) mqtt_client: Error transport connect[0m
+[0;32mI (773014) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (773014) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (773024) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (773024) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (773034) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (788034) MQTT: Other event id:7[0m
+[0;31mE (788034) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (788034) esp-tls: Failed to open new connection[0m
+[0;31mE (788034) transport_base: Failed to open a new connection[0m
+[0;31mE (788044) mqtt_client: Error transport connect[0m
+[0;32mI (788054) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (788054) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (788064) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (788064) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (788074) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (803074) MQTT: Other event id:7[0m
+[0;31mE (803074) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (803074) esp-tls: Failed to open new connection[0m
+[0;31mE (803074) transport_base: Failed to open a new connection[0m
+[0;31mE (803084) mqtt_client: Error transport connect[0m
+[0;32mI (803094) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (803094) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (803104) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (803104) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (803114) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (818114) MQTT: Other event id:7[0m
+[0;31mE (818114) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (818114) esp-tls: Failed to open new connection[0m
+[0;31mE (818114) transport_base: Failed to open a new connection[0m
+[0;31mE (818124) mqtt_client: Error transport connect[0m
+[0;32mI (818134) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (818134) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (818144) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (818144) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (818154) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (833154) MQTT: Other event id:7[0m
+[0;31mE (833154) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (833154) esp-tls: Failed to open new connection[0m
+[0;31mE (833154) transport_base: Failed to open a new connection[0m
+[0;31mE (833164) mqtt_client: Error transport connect[0m
+[0;32mI (833174) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (833174) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (833184) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (833184) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (833194) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (848194) MQTT: Other event id:7[0m
+[0;31mE (848194) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (848194) esp-tls: Failed to open new connection[0m
+[0;31mE (848194) transport_base: Failed to open a new connection[0m
+[0;31mE (848204) mqtt_client: Error transport connect[0m
+[0;32mI (848214) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (848214) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (848224) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (848224) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (848234) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (863234) MQTT: Other event id:7[0m
+[0;31mE (863234) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (863234) esp-tls: Failed to open new connection[0m
+[0;31mE (863234) transport_base: Failed to open a new connection[0m
+[0;31mE (863244) mqtt_client: Error transport connect[0m
+[0;32mI (863254) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (863254) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (863264) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (863264) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (863274) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (878274) MQTT: Other event id:7[0m
+[0;31mE (878274) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (878274) esp-tls: Failed to open new connection[0m
+[0;31mE (878274) transport_base: Failed to open a new connection[0m
+[0;31mE (878284) mqtt_client: Error transport connect[0m
+[0;32mI (878294) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (878294) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (878304) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (878304) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (878314) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (893314) MQTT: Other event id:7[0m
+[0;31mE (893314) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (893314) esp-tls: Failed to open new connection[0m
+[0;31mE (893314) transport_base: Failed to open a new connection[0m
+[0;31mE (893324) mqtt_client: Error transport connect[0m
+[0;32mI (893334) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (893334) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (893344) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (893344) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (893354) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (908354) MQTT: Other event id:7[0m
+[0;31mE (908354) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (908354) esp-tls: Failed to open new connection[0m
+[0;31mE (908354) transport_base: Failed to open a new connection[0m
+[0;31mE (908364) mqtt_client: Error transport connect[0m
+[0;32mI (908374) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (908374) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (908384) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (908384) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (908394) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (923394) MQTT: Other event id:7[0m
+[0;31mE (923394) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (923394) esp-tls: Failed to open new connection[0m
+[0;31mE (923394) transport_base: Failed to open a new connection[0m
+[0;31mE (923404) mqtt_client: Error transport connect[0m
+[0;32mI (923414) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (923414) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (923424) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (923424) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (923434) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (938434) MQTT: Other event id:7[0m
+[0;31mE (938434) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (938434) esp-tls: Failed to open new connection[0m
+[0;31mE (938434) transport_base: Failed to open a new connection[0m
+[0;31mE (938444) mqtt_client: Error transport connect[0m
+[0;32mI (938454) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (938454) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (938464) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (938464) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (938474) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (953474) MQTT: Other event id:7[0m
+[0;31mE (953474) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (953474) esp-tls: Failed to open new connection[0m
+[0;31mE (953474) transport_base: Failed to open a new connection[0m
+[0;31mE (953484) mqtt_client: Error transport connect[0m
+[0;32mI (953494) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (953494) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (953504) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (953504) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (953514) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (968514) MQTT: Other event id:7[0m
+[0;31mE (968514) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (968514) esp-tls: Failed to open new connection[0m
+[0;31mE (968514) transport_base: Failed to open a new connection[0m
+[0;31mE (968524) mqtt_client: Error transport connect[0m
+[0;32mI (968534) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (968534) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (968544) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (968544) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (968554) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (983554) MQTT: Other event id:7[0m
+[0;31mE (983554) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (983554) esp-tls: Failed to open new connection[0m
+[0;31mE (983554) transport_base: Failed to open a new connection[0m
+[0;31mE (983564) mqtt_client: Error transport connect[0m
+[0;32mI (983574) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (983574) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (983584) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (983584) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (983594) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (998594) MQTT: Other event id:7[0m
+[0;31mE (998594) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (998594) esp-tls: Failed to open new connection[0m
+[0;31mE (998594) transport_base: Failed to open a new connection[0m
+[0;31mE (998604) mqtt_client: Error transport connect[0m
+[0;32mI (998614) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (998614) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (998624) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (998624) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (998634) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1013634) MQTT: Other event id:7[0m
+[0;31mE (1013634) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1013634) esp-tls: Failed to open new connection[0m
+[0;31mE (1013634) transport_base: Failed to open a new connection[0m
+[0;31mE (1013644) mqtt_client: Error transport connect[0m
+[0;32mI (1013654) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1013654) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1013664) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1013664) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1013674) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1028674) MQTT: Other event id:7[0m
+[0;31mE (1028674) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1028674) esp-tls: Failed to open new connection[0m
+[0;31mE (1028674) transport_base: Failed to open a new connection[0m
+[0;31mE (1028684) mqtt_client: Error transport connect[0m
+[0;32mI (1028694) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1028694) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1028704) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1028704) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1028714) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1043714) MQTT: Other event id:7[0m
+[0;31mE (1043714) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1043714) esp-tls: Failed to open new connection[0m
+[0;31mE (1043724) transport_base: Failed to open a new connection[0m
+[0;31mE (1043724) mqtt_client: Error transport connect[0m
+[0;32mI (1043734) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1043734) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1043744) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1043744) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1043754) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1053764) MQTT: Other event id:7[0m
+[0;31mE (1053764) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1053764) esp-tls: Failed to open new connection[0m
+[0;31mE (1053764) transport_base: Failed to open a new connection[0m
+[0;31mE (1053774) mqtt_client: Error transport connect[0m
+[0;32mI (1053784) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1053784) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1053794) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1053794) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1053804) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1068804) MQTT: Other event id:7[0m
+[0;31mE (1068804) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1068804) esp-tls: Failed to open new connection[0m
+[0;31mE (1068804) transport_base: Failed to open a new connection[0m
+[0;31mE (1068814) mqtt_client: Error transport connect[0m
+[0;32mI (1068824) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1068824) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1068834) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1068834) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1068844) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1078854) MQTT: Other event id:7[0m
+[0;31mE (1078854) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1078854) esp-tls: Failed to open new connection[0m
+[0;31mE (1078854) transport_base: Failed to open a new connection[0m
+[0;31mE (1078864) mqtt_client: Error transport connect[0m
+[0;32mI (1078874) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1078874) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1078884) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1078884) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1078894) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1088904) MQTT: Other event id:7[0m
+[0;31mE (1088904) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1088904) esp-tls: Failed to open new connection[0m
+[0;31mE (1088904) transport_base: Failed to open a new connection[0m
+[0;31mE (1088914) mqtt_client: Error transport connect[0m
+[0;32mI (1088924) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1088924) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1088934) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1088934) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1088944) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1098954) MQTT: Other event id:7[0m
+[0;31mE (1098954) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1098954) esp-tls: Failed to open new connection[0m
+[0;31mE (1098954) transport_base: Failed to open a new connection[0m
+[0;31mE (1098964) mqtt_client: Error transport connect[0m
+[0;32mI (1098974) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1098974) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1098984) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1098984) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1098994) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1109004) MQTT: Other event id:7[0m
+[0;31mE (1109004) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1109004) esp-tls: Failed to open new connection[0m
+[0;31mE (1109004) transport_base: Failed to open a new connection[0m
+[0;31mE (1109014) mqtt_client: Error transport connect[0m
+[0;32mI (1109024) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1109024) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1109034) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1109034) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1109044) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1119054) MQTT: Other event id:7[0m
+[0;31mE (1119054) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1119054) esp-tls: Failed to open new connection[0m
+[0;31mE (1119054) transport_base: Failed to open a new connection[0m
+[0;31mE (1119064) mqtt_client: Error transport connect[0m
+[0;32mI (1119074) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1119074) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1119084) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1119084) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1119094) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1129104) MQTT: Other event id:7[0m
+[0;31mE (1129104) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1129104) esp-tls: Failed to open new connection[0m
+[0;31mE (1129104) transport_base: Failed to open a new connection[0m
+[0;31mE (1129114) mqtt_client: Error transport connect[0m
+[0;32mI (1129124) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1129124) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1129134) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1129134) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1129144) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1144144) MQTT: Other event id:7[0m
+[0;31mE (1144144) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1144144) esp-tls: Failed to open new connection[0m
+[0;31mE (1144144) transport_base: Failed to open a new connection[0m
+[0;31mE (1144154) mqtt_client: Error transport connect[0m
+[0;32mI (1144164) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1144164) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1144174) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1144174) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1144184) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1159184) MQTT: Other event id:7[0m
+[0;31mE (1159184) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1159184) esp-tls: Failed to open new connection[0m
+[0;31mE (1159184) transport_base: Failed to open a new connection[0m
+[0;31mE (1159194) mqtt_client: Error transport connect[0m
+[0;32mI (1159204) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1159204) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1159214) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1159214) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1159224) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1169234) MQTT: Other event id:7[0m
+[0;31mE (1169234) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1169234) esp-tls: Failed to open new connection[0m
+[0;31mE (1169234) transport_base: Failed to open a new connection[0m
+[0;31mE (1169244) mqtt_client: Error transport connect[0m
+[0;32mI (1169254) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1169254) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1169264) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1169264) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1169274) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1184274) MQTT: Other event id:7[0m
+[0;31mE (1184274) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1184274) esp-tls: Failed to open new connection[0m
+[0;31mE (1184274) transport_base: Failed to open a new connection[0m
+[0;31mE (1184284) mqtt_client: Error transport connect[0m
+[0;32mI (1184294) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1184294) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1184304) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1184304) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1184314) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1194324) MQTT: Other event id:7[0m
+[0;31mE (1194324) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1194324) esp-tls: Failed to open new connection[0m
+[0;31mE (1194324) transport_base: Failed to open a new connection[0m
+[0;31mE (1194334) mqtt_client: Error transport connect[0m
+[0;32mI (1194344) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1194344) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1194354) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1194354) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1194364) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1209364) MQTT: Other event id:7[0m
+[0;31mE (1209364) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1209364) esp-tls: Failed to open new connection[0m
+[0;31mE (1209364) transport_base: Failed to open a new connection[0m
+[0;31mE (1209374) mqtt_client: Error transport connect[0m
+[0;32mI (1209384) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1209384) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1209394) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1209394) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1209404) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1219414) MQTT: Other event id:7[0m
+[0;31mE (1219414) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1219414) esp-tls: Failed to open new connection[0m
+[0;31mE (1219414) transport_base: Failed to open a new connection[0m
+[0;31mE (1219424) mqtt_client: Error transport connect[0m
+[0;32mI (1219434) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1219434) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1219444) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1219444) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1219454) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1234454) MQTT: Other event id:7[0m
+[0;31mE (1234454) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1234454) esp-tls: Failed to open new connection[0m
+[0;31mE (1234454) transport_base: Failed to open a new connection[0m
+[0;31mE (1234464) mqtt_client: Error transport connect[0m
+[0;32mI (1234474) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1234474) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1234484) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1234484) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1234494) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1249494) MQTT: Other event id:7[0m
+[0;31mE (1249494) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1249494) esp-tls: Failed to open new connection[0m
+[0;31mE (1249494) transport_base: Failed to open a new connection[0m
+[0;31mE (1249504) mqtt_client: Error transport connect[0m
+[0;32mI (1249514) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1249514) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1249524) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1249524) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1249534) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1259544) MQTT: Other event id:7[0m
+[0;31mE (1259544) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1259544) esp-tls: Failed to open new connection[0m
+[0;31mE (1259544) transport_base: Failed to open a new connection[0m
+[0;31mE (1259554) mqtt_client: Error transport connect[0m
+[0;32mI (1259564) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1259564) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1259574) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1259574) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1259584) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1274584) MQTT: Other event id:7[0m
+[0;31mE (1274584) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1274584) esp-tls: Failed to open new connection[0m
+[0;31mE (1274584) transport_base: Failed to open a new connection[0m
+[0;31mE (1274594) mqtt_client: Error transport connect[0m
+[0;32mI (1274604) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1274604) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1274614) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1274614) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1274624) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1289624) MQTT: Other event id:7[0m
+[0;31mE (1289624) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1289624) esp-tls: Failed to open new connection[0m
+[0;31mE (1289624) transport_base: Failed to open a new connection[0m
+[0;31mE (1289634) mqtt_client: Error transport connect[0m
+[0;32mI (1289644) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1289644) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1289654) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1289654) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1289664) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1304664) MQTT: Other event id:7[0m
+[0;31mE (1304664) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1304664) esp-tls: Failed to open new connection[0m
+[0;31mE (1304664) transport_base: Failed to open a new connection[0m
+[0;31mE (1304674) mqtt_client: Error transport connect[0m
+[0;32mI (1304684) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1304684) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1304694) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1304694) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1304704) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1314714) MQTT: Other event id:7[0m
+[0;31mE (1314714) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1314714) esp-tls: Failed to open new connection[0m
+[0;31mE (1314714) transport_base: Failed to open a new connection[0m
+[0;31mE (1314724) mqtt_client: Error transport connect[0m
+[0;32mI (1314734) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1314734) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1314744) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1314744) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1314754) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1324764) MQTT: Other event id:7[0m
+[0;31mE (1324764) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1324764) esp-tls: Failed to open new connection[0m
+[0;31mE (1324764) transport_base: Failed to open a new connection[0m
+[0;31mE (1324774) mqtt_client: Error transport connect[0m
+[0;32mI (1324784) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1324784) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1324794) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1324794) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1324804) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1334814) MQTT: Other event id:7[0m
+[0;31mE (1334814) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1334814) esp-tls: Failed to open new connection[0m
+[0;31mE (1334814) transport_base: Failed to open a new connection[0m
+[0;31mE (1334824) mqtt_client: Error transport connect[0m
+[0;32mI (1334834) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1334834) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1334844) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1334844) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1334854) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1344864) MQTT: Other event id:7[0m
+[0;31mE (1344864) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1344864) esp-tls: Failed to open new connection[0m
+[0;31mE (1344864) transport_base: Failed to open a new connection[0m
+[0;31mE (1344874) mqtt_client: Error transport connect[0m
+[0;32mI (1344884) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1344884) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1344894) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1344894) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1344904) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1354914) MQTT: Other event id:7[0m
+[0;31mE (1354914) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1354914) esp-tls: Failed to open new connection[0m
+[0;31mE (1354914) transport_base: Failed to open a new connection[0m
+[0;31mE (1354924) mqtt_client: Error transport connect[0m
+[0;32mI (1354934) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1354934) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1354944) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1354944) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1354954) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1364964) MQTT: Other event id:7[0m
+[0;31mE (1364964) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1364964) esp-tls: Failed to open new connection[0m
+[0;31mE (1364964) transport_base: Failed to open a new connection[0m
+[0;31mE (1364974) mqtt_client: Error transport connect[0m
+[0;32mI (1364984) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1364984) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1364994) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1364994) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1365004) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1375014) MQTT: Other event id:7[0m
+[0;31mE (1375014) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1375014) esp-tls: Failed to open new connection[0m
+[0;31mE (1375014) transport_base: Failed to open a new connection[0m
+[0;31mE (1375024) mqtt_client: Error transport connect[0m
+[0;32mI (1375034) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1375034) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1375044) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1375044) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1375054) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1390054) MQTT: Other event id:7[0m
+[0;31mE (1390054) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1390054) esp-tls: Failed to open new connection[0m
+[0;31mE (1390054) transport_base: Failed to open a new connection[0m
+[0;31mE (1390064) mqtt_client: Error transport connect[0m
+[0;32mI (1390074) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1390074) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1390084) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1390084) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1390094) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1400104) MQTT: Other event id:7[0m
+[0;31mE (1400104) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1400104) esp-tls: Failed to open new connection[0m
+[0;31mE (1400104) transport_base: Failed to open a new connection[0m
+[0;31mE (1400114) mqtt_client: Error transport connect[0m
+[0;32mI (1400124) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1400124) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1400134) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1400134) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1400144) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1415144) MQTT: Other event id:7[0m
+[0;31mE (1415144) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1415144) esp-tls: Failed to open new connection[0m
+[0;31mE (1415144) transport_base: Failed to open a new connection[0m
+[0;31mE (1415154) mqtt_client: Error transport connect[0m
+[0;32mI (1415164) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1415164) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1415174) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1415174) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1415184) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1430184) MQTT: Other event id:7[0m
+[0;31mE (1430184) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1430194) esp-tls: Failed to open new connection[0m
+[0;31mE (1430194) transport_base: Failed to open a new connection[0m
+[0;31mE (1430194) mqtt_client: Error transport connect[0m
+[0;32mI (1430204) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1430204) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1430214) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1430224) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1430224) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1440234) MQTT: Other event id:7[0m
+[0;31mE (1440234) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1440234) esp-tls: Failed to open new connection[0m
+[0;31mE (1440234) transport_base: Failed to open a new connection[0m
+[0;31mE (1440244) mqtt_client: Error transport connect[0m
+[0;32mI (1440254) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1440254) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1440264) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1440264) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1440274) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1450284) MQTT: Other event id:7[0m
+[0;31mE (1450284) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1450284) esp-tls: Failed to open new connection[0m
+[0;31mE (1450284) transport_base: Failed to open a new connection[0m
+[0;31mE (1450294) mqtt_client: Error transport connect[0m
+[0;32mI (1450304) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1450304) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1450314) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1450314) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1450324) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1465324) MQTT: Other event id:7[0m
+[0;31mE (1465324) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1465324) esp-tls: Failed to open new connection[0m
+[0;31mE (1465324) transport_base: Failed to open a new connection[0m
+[0;31mE (1465334) mqtt_client: Error transport connect[0m
+[0;32mI (1465344) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1465344) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1465354) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1465354) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1465364) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1480364) MQTT: Other event id:7[0m
+[0;31mE (1480364) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1480364) esp-tls: Failed to open new connection[0m
+[0;31mE (1480364) transport_base: Failed to open a new connection[0m
+[0;31mE (1480374) mqtt_client: Error transport connect[0m
+[0;32mI (1480384) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1480384) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1480394) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1480394) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1480404) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1490414) MQTT: Other event id:7[0m
+[0;31mE (1490414) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1490414) esp-tls: Failed to open new connection[0m
+[0;31mE (1490414) transport_base: Failed to open a new connection[0m
+[0;31mE (1490424) mqtt_client: Error transport connect[0m
+[0;32mI (1490434) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1490434) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1490444) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1490444) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1490454) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1505454) MQTT: Other event id:7[0m
+[0;31mE (1505454) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1505454) esp-tls: Failed to open new connection[0m
+[0;31mE (1505454) transport_base: Failed to open a new connection[0m
+[0;31mE (1505464) mqtt_client: Error transport connect[0m
+[0;32mI (1505474) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1505474) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1505484) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1505484) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1505494) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1515504) MQTT: Other event id:7[0m
+[0;31mE (1515504) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1515504) esp-tls: Failed to open new connection[0m
+[0;31mE (1515504) transport_base: Failed to open a new connection[0m
+[0;31mE (1515514) mqtt_client: Error transport connect[0m
+[0;32mI (1515524) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1515524) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1515534) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1515534) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1515544) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1525554) MQTT: Other event id:7[0m
+[0;31mE (1525554) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1525554) esp-tls: Failed to open new connection[0m
+[0;31mE (1525554) transport_base: Failed to open a new connection[0m
+[0;31mE (1525564) mqtt_client: Error transport connect[0m
+[0;32mI (1525574) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1525574) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1525584) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1525584) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1525594) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1535604) MQTT: Other event id:7[0m
+[0;31mE (1535604) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1535604) esp-tls: Failed to open new connection[0m
+[0;31mE (1535604) transport_base: Failed to open a new connection[0m
+[0;31mE (1535614) mqtt_client: Error transport connect[0m
+[0;32mI (1535624) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1535624) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1535634) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1535634) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1535644) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1545654) MQTT: Other event id:7[0m
+[0;31mE (1545654) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1545654) esp-tls: Failed to open new connection[0m
+[0;31mE (1545654) transport_base: Failed to open a new connection[0m
+[0;31mE (1545664) mqtt_client: Error transport connect[0m
+[0;32mI (1545674) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1545674) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1545684) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1545684) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1545694) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1555704) MQTT: Other event id:7[0m
+[0;31mE (1555704) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1555704) esp-tls: Failed to open new connection[0m
+[0;31mE (1555704) transport_base: Failed to open a new connection[0m
+[0;31mE (1555714) mqtt_client: Error transport connect[0m
+[0;32mI (1555724) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1555724) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1555734) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1555734) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1555744) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1565754) MQTT: Other event id:7[0m
+[0;31mE (1565754) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1565754) esp-tls: Failed to open new connection[0m
+[0;31mE (1565754) transport_base: Failed to open a new connection[0m
+[0;31mE (1565764) mqtt_client: Error transport connect[0m
+[0;32mI (1565774) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1565774) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1565784) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1565784) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1565794) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1575804) MQTT: Other event id:7[0m
+[0;31mE (1575804) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1575804) esp-tls: Failed to open new connection[0m
+[0;31mE (1575814) transport_base: Failed to open a new connection[0m
+[0;31mE (1575814) mqtt_client: Error transport connect[0m
+[0;32mI (1575824) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1575824) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1575834) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1575844) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1575844) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1585854) MQTT: Other event id:7[0m
+[0;31mE (1585854) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1585854) esp-tls: Failed to open new connection[0m
+[0;31mE (1585854) transport_base: Failed to open a new connection[0m
+[0;31mE (1585864) mqtt_client: Error transport connect[0m
+[0;32mI (1585874) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1585874) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1585884) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1585884) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1585894) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1600894) MQTT: Other event id:7[0m
+[0;31mE (1600894) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1600894) esp-tls: Failed to open new connection[0m
+[0;31mE (1600894) transport_base: Failed to open a new connection[0m
+[0;31mE (1600904) mqtt_client: Error transport connect[0m
+[0;32mI (1600914) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1600914) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1600924) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1600924) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1600934) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1610944) MQTT: Other event id:7[0m
+[0;31mE (1610944) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1610944) esp-tls: Failed to open new connection[0m
+[0;31mE (1610944) transport_base: Failed to open a new connection[0m
+[0;31mE (1610954) mqtt_client: Error transport connect[0m
+[0;32mI (1610964) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1610964) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1610974) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1610974) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1610984) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1620994) MQTT: Other event id:7[0m
+[0;31mE (1620994) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1620994) esp-tls: Failed to open new connection[0m
+[0;31mE (1620994) transport_base: Failed to open a new connection[0m
+[0;31mE (1621004) mqtt_client: Error transport connect[0m
+[0;32mI (1621014) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1621014) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1621024) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1621024) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1621034) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1631044) MQTT: Other event id:7[0m
+[0;31mE (1631044) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1631044) esp-tls: Failed to open new connection[0m
+[0;31mE (1631044) transport_base: Failed to open a new connection[0m
+[0;31mE (1631054) mqtt_client: Error transport connect[0m
+[0;32mI (1631064) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1631064) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1631074) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1631074) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1631084) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1641094) MQTT: Other event id:7[0m
+[0;31mE (1641094) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1641094) esp-tls: Failed to open new connection[0m
+[0;31mE (1641094) transport_base: Failed to open a new connection[0m
+[0;31mE (1641104) mqtt_client: Error transport connect[0m
+[0;32mI (1641114) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1641114) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1641124) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1641124) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1641134) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1651144) MQTT: Other event id:7[0m
+[0;31mE (1651144) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1651144) esp-tls: Failed to open new connection[0m
+[0;31mE (1651144) transport_base: Failed to open a new connection[0m
+[0;31mE (1651154) mqtt_client: Error transport connect[0m
+[0;32mI (1651164) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1651164) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1651174) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1651174) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1651184) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1666184) MQTT: Other event id:7[0m
+[0;31mE (1666184) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1666184) esp-tls: Failed to open new connection[0m
+[0;31mE (1666184) transport_base: Failed to open a new connection[0m
+[0;31mE (1666194) mqtt_client: Error transport connect[0m
+[0;32mI (1666204) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1666204) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1666214) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1666214) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1666224) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1676234) MQTT: Other event id:7[0m
+[0;31mE (1676234) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1676234) esp-tls: Failed to open new connection[0m
+[0;31mE (1676234) transport_base: Failed to open a new connection[0m
+[0;31mE (1676244) mqtt_client: Error transport connect[0m
+[0;32mI (1676254) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1676254) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1676264) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1676264) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1676274) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1686284) MQTT: Other event id:7[0m
+[0;31mE (1686284) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1686284) esp-tls: Failed to open new connection[0m
+[0;31mE (1686284) transport_base: Failed to open a new connection[0m
+[0;31mE (1686294) mqtt_client: Error transport connect[0m
+[0;32mI (1686304) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1686304) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1686314) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1686314) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1686324) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1696334) MQTT: Other event id:7[0m
+[0;31mE (1696334) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1696334) esp-tls: Failed to open new connection[0m
+[0;31mE (1696334) transport_base: Failed to open a new connection[0m
+[0;31mE (1696344) mqtt_client: Error transport connect[0m
+[0;32mI (1696354) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1696354) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1696364) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1696364) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1696374) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1706384) MQTT: Other event id:7[0m
+[0;31mE (1706384) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1706384) esp-tls: Failed to open new connection[0m
+[0;31mE (1706384) transport_base: Failed to open a new connection[0m
+[0;31mE (1706394) mqtt_client: Error transport connect[0m
+[0;32mI (1706404) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1706404) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1706414) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1706414) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1706424) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1716434) MQTT: Other event id:7[0m
+[0;31mE (1716434) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1716434) esp-tls: Failed to open new connection[0m
+[0;31mE (1716434) transport_base: Failed to open a new connection[0m
+[0;31mE (1716444) mqtt_client: Error transport connect[0m
+[0;32mI (1716454) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1716454) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1716464) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1716464) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1716474) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1726484) MQTT: Other event id:7[0m
+[0;31mE (1726484) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1726484) esp-tls: Failed to open new connection[0m
+[0;31mE (1726484) transport_base: Failed to open a new connection[0m
+[0;31mE (1726494) mqtt_client: Error transport connect[0m
+[0;32mI (1726504) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1726504) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1726514) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1726514) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1726524) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1736534) MQTT: Other event id:7[0m
+[0;31mE (1736534) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1736534) esp-tls: Failed to open new connection[0m
+[0;31mE (1736534) transport_base: Failed to open a new connection[0m
+[0;31mE (1736544) mqtt_client: Error transport connect[0m
+[0;32mI (1736554) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1736554) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1736564) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1736564) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1736574) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1746584) MQTT: Other event id:7[0m
+[0;31mE (1746584) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1746584) esp-tls: Failed to open new connection[0m
+[0;31mE (1746584) transport_base: Failed to open a new connection[0m
+[0;31mE (1746594) mqtt_client: Error transport connect[0m
+[0;32mI (1746604) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1746604) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1746614) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1746614) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1746624) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1756634) MQTT: Other event id:7[0m
+[0;31mE (1756634) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1756634) esp-tls: Failed to open new connection[0m
+[0;31mE (1756634) transport_base: Failed to open a new connection[0m
+[0;31mE (1756644) mqtt_client: Error transport connect[0m
+[0;32mI (1756654) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1756654) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1756664) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1756664) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1756674) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1771674) MQTT: Other event id:7[0m
+[0;31mE (1771674) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1771674) esp-tls: Failed to open new connection[0m
+[0;31mE (1771674) transport_base: Failed to open a new connection[0m
+[0;31mE (1771684) mqtt_client: Error transport connect[0m
+[0;32mI (1771694) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1771694) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1771704) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1771704) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1771714) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1786714) MQTT: Other event id:7[0m
+[0;31mE (1786714) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1786714) esp-tls: Failed to open new connection[0m
+[0;31mE (1786714) transport_base: Failed to open a new connection[0m
+[0;31mE (1786724) mqtt_client: Error transport connect[0m
+[0;32mI (1786734) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1786734) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1786744) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1786744) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1786754) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1796764) MQTT: Other event id:7[0m
+[0;31mE (1796764) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1796764) esp-tls: Failed to open new connection[0m
+[0;31mE (1796764) transport_base: Failed to open a new connection[0m
+[0;31mE (1796774) mqtt_client: Error transport connect[0m
+[0;32mI (1796784) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1796784) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1796794) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1796794) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1796804) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1811804) MQTT: Other event id:7[0m
+[0;31mE (1811804) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1811804) esp-tls: Failed to open new connection[0m
+[0;31mE (1811804) transport_base: Failed to open a new connection[0m
+[0;31mE (1811814) mqtt_client: Error transport connect[0m
+[0;32mI (1811824) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1811824) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1811834) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1811834) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1811844) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1826844) MQTT: Other event id:7[0m
+[0;31mE (1826844) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1826844) esp-tls: Failed to open new connection[0m
+[0;31mE (1826844) transport_base: Failed to open a new connection[0m
+[0;31mE (1826854) mqtt_client: Error transport connect[0m
+[0;32mI (1826864) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1826864) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1826874) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1826874) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1826884) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1836894) MQTT: Other event id:7[0m
+[0;31mE (1836894) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1836894) esp-tls: Failed to open new connection[0m
+[0;31mE (1836894) transport_base: Failed to open a new connection[0m
+[0;31mE (1836904) mqtt_client: Error transport connect[0m
+[0;32mI (1836914) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1836914) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1836924) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1836924) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1836934) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1846944) MQTT: Other event id:7[0m
+[0;31mE (1846944) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1846944) esp-tls: Failed to open new connection[0m
+[0;31mE (1846944) transport_base: Failed to open a new connection[0m
+[0;31mE (1846954) mqtt_client: Error transport connect[0m
+[0;32mI (1846964) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1846964) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1846974) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1846974) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1846984) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1856994) MQTT: Other event id:7[0m
+[0;31mE (1856994) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1856994) esp-tls: Failed to open new connection[0m
+[0;31mE (1857004) transport_base: Failed to open a new connection[0m
+[0;31mE (1857004) mqtt_client: Error transport connect[0m
+[0;32mI (1857014) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1857014) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1857024) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1857024) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1857034) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1867044) MQTT: Other event id:7[0m
+[0;31mE (1867044) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1867044) esp-tls: Failed to open new connection[0m
+[0;31mE (1867044) transport_base: Failed to open a new connection[0m
+[0;31mE (1867054) mqtt_client: Error transport connect[0m
+[0;32mI (1867064) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1867064) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1867074) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1867074) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1867084) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1877094) MQTT: Other event id:7[0m
+[0;31mE (1877094) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1877094) esp-tls: Failed to open new connection[0m
+[0;31mE (1877094) transport_base: Failed to open a new connection[0m
+[0;31mE (1877104) mqtt_client: Error transport connect[0m
+[0;32mI (1877114) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1877114) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1877124) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1877124) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1877134) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1892134) MQTT: Other event id:7[0m
+[0;31mE (1892134) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1892134) esp-tls: Failed to open new connection[0m
+[0;31mE (1892134) transport_base: Failed to open a new connection[0m
+[0;31mE (1892144) mqtt_client: Error transport connect[0m
+[0;32mI (1892154) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1892154) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1892164) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1892164) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1892174) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1907174) MQTT: Other event id:7[0m
+[0;31mE (1907174) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1907174) esp-tls: Failed to open new connection[0m
+[0;31mE (1907184) transport_base: Failed to open a new connection[0m
+[0;31mE (1907184) mqtt_client: Error transport connect[0m
+[0;32mI (1907194) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1907194) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1907204) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1907204) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1907214) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1917224) MQTT: Other event id:7[0m
+[0;31mE (1917224) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1917224) esp-tls: Failed to open new connection[0m
+[0;31mE (1917224) transport_base: Failed to open a new connection[0m
+[0;31mE (1917234) mqtt_client: Error transport connect[0m
+[0;32mI (1917244) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1917244) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1917254) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1917254) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1917264) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1927274) MQTT: Other event id:7[0m
+[0;31mE (1927274) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1927274) esp-tls: Failed to open new connection[0m
+[0;31mE (1927274) transport_base: Failed to open a new connection[0m
+[0;31mE (1927284) mqtt_client: Error transport connect[0m
+[0;32mI (1927294) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1927294) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1927304) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1927304) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1927314) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1942314) MQTT: Other event id:7[0m
+[0;31mE (1942314) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1942314) esp-tls: Failed to open new connection[0m
+[0;31mE (1942314) transport_base: Failed to open a new connection[0m
+[0;31mE (1942324) mqtt_client: Error transport connect[0m
+[0;32mI (1942334) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1942334) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1942344) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1942344) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1942354) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1952364) MQTT: Other event id:7[0m
+[0;31mE (1952364) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1952364) esp-tls: Failed to open new connection[0m
+[0;31mE (1952364) transport_base: Failed to open a new connection[0m
+[0;31mE (1952374) mqtt_client: Error transport connect[0m
+[0;32mI (1952384) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1952384) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1952394) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1952394) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1952404) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1962414) MQTT: Other event id:7[0m
+[0;31mE (1962414) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1962414) esp-tls: Failed to open new connection[0m
+[0;31mE (1962414) transport_base: Failed to open a new connection[0m
+[0;31mE (1962424) mqtt_client: Error transport connect[0m
+[0;32mI (1962434) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1962434) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1962444) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1962444) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1962454) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1972464) MQTT: Other event id:7[0m
+[0;31mE (1972464) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1972464) esp-tls: Failed to open new connection[0m
+[0;31mE (1972464) transport_base: Failed to open a new connection[0m
+[0;31mE (1972474) mqtt_client: Error transport connect[0m
+[0;32mI (1972484) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1972484) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1972494) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1972494) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1972504) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1982514) MQTT: Other event id:7[0m
+[0;31mE (1982514) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1982514) esp-tls: Failed to open new connection[0m
+[0;31mE (1982514) transport_base: Failed to open a new connection[0m
+[0;31mE (1982524) mqtt_client: Error transport connect[0m
+[0;32mI (1982534) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1982534) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1982544) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1982544) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1982554) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1997554) MQTT: Other event id:7[0m
+[0;31mE (1997554) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1997554) esp-tls: Failed to open new connection[0m
+[0;31mE (1997554) transport_base: Failed to open a new connection[0m
+[0;31mE (1997564) mqtt_client: Error transport connect[0m
+[0;32mI (1997574) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (1997574) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (1997584) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (1997584) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (1997594) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2012594) MQTT: Other event id:7[0m
+[0;31mE (2012594) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2012604) esp-tls: Failed to open new connection[0m
+[0;31mE (2012604) transport_base: Failed to open a new connection[0m
+[0;31mE (2012604) mqtt_client: Error transport connect[0m
+[0;32mI (2012614) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2012614) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2012624) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2012634) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2012634) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2022644) MQTT: Other event id:7[0m
+[0;31mE (2022644) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2022644) esp-tls: Failed to open new connection[0m
+[0;31mE (2022644) transport_base: Failed to open a new connection[0m
+[0;31mE (2022654) mqtt_client: Error transport connect[0m
+[0;32mI (2022664) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2022664) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2022674) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2022674) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2022684) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2032694) MQTT: Other event id:7[0m
+[0;31mE (2032694) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2032694) esp-tls: Failed to open new connection[0m
+[0;31mE (2032694) transport_base: Failed to open a new connection[0m
+[0;31mE (2032704) mqtt_client: Error transport connect[0m
+[0;32mI (2032714) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2032714) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2032724) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2032724) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2032734) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2047734) MQTT: Other event id:7[0m
+[0;31mE (2047734) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2047734) esp-tls: Failed to open new connection[0m
+[0;31mE (2047734) transport_base: Failed to open a new connection[0m
+[0;31mE (2047744) mqtt_client: Error transport connect[0m
+[0;32mI (2047754) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2047754) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2047764) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2047764) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2047774) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2057784) MQTT: Other event id:7[0m
+[0;31mE (2057784) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2057784) esp-tls: Failed to open new connection[0m
+[0;31mE (2057784) transport_base: Failed to open a new connection[0m
+[0;31mE (2057794) mqtt_client: Error transport connect[0m
+[0;32mI (2057804) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2057804) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2057814) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2057814) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2057824) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2067834) MQTT: Other event id:7[0m
+[0;31mE (2067834) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2067834) esp-tls: Failed to open new connection[0m
+[0;31mE (2067834) transport_base: Failed to open a new connection[0m
+[0;31mE (2067844) mqtt_client: Error transport connect[0m
+[0;32mI (2067854) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2067854) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2067864) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2067864) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2067874) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2077884) MQTT: Other event id:7[0m
+[0;31mE (2077884) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2077884) esp-tls: Failed to open new connection[0m
+[0;31mE (2077884) transport_base: Failed to open a new connection[0m
+[0;31mE (2077894) mqtt_client: Error transport connect[0m
+[0;32mI (2077904) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2077904) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2077914) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2077914) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2077924) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2087934) MQTT: Other event id:7[0m
+[0;31mE (2087934) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2087934) esp-tls: Failed to open new connection[0m
+[0;31mE (2087934) transport_base: Failed to open a new connection[0m
+[0;31mE (2087944) mqtt_client: Error transport connect[0m
+[0;32mI (2087954) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2087954) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2087964) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2087964) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2087974) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2097984) MQTT: Other event id:7[0m
+[0;31mE (2097984) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2097984) esp-tls: Failed to open new connection[0m
+[0;31mE (2097984) transport_base: Failed to open a new connection[0m
+[0;31mE (2097994) mqtt_client: Error transport connect[0m
+[0;32mI (2098004) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2098004) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2098014) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2098014) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2098024) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2108034) MQTT: Other event id:7[0m
+[0;31mE (2108044) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2108044) esp-tls: Failed to open new connection[0m
+[0;31mE (2108044) transport_base: Failed to open a new connection[0m
+[0;31mE (2108044) mqtt_client: Error transport connect[0m
+[0;32mI (2108054) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2108054) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2108064) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2108074) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2108074) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2118084) MQTT: Other event id:7[0m
+[0;31mE (2118084) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2118084) esp-tls: Failed to open new connection[0m
+[0;31mE (2118084) transport_base: Failed to open a new connection[0m
+[0;31mE (2118094) mqtt_client: Error transport connect[0m
+[0;32mI (2118104) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2118104) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2118114) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2118114) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2118124) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2128134) MQTT: Other event id:7[0m
+[0;31mE (2128134) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2128134) esp-tls: Failed to open new connection[0m
+[0;31mE (2128134) transport_base: Failed to open a new connection[0m
+[0;31mE (2128144) mqtt_client: Error transport connect[0m
+[0;32mI (2128154) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2128154) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2128164) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2128164) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2128174) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2138184) MQTT: Other event id:7[0m
+[0;31mE (2138194) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2138194) esp-tls: Failed to open new connection[0m
+[0;31mE (2138194) transport_base: Failed to open a new connection[0m
+[0;31mE (2138204) mqtt_client: Error transport connect[0m
+[0;32mI (2138204) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2138204) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2138214) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2138224) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2138224) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2148234) MQTT: Other event id:7[0m
+[0;31mE (2148234) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2148234) esp-tls: Failed to open new connection[0m
+[0;31mE (2148244) transport_base: Failed to open a new connection[0m
+[0;31mE (2148244) mqtt_client: Error transport connect[0m
+[0;32mI (2148254) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2148254) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2148264) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2148274) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2148274) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2158284) MQTT: Other event id:7[0m
+[0;31mE (2158284) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2158294) esp-tls: Failed to open new connection[0m
+[0;31mE (2158294) transport_base: Failed to open a new connection[0m
+[0;31mE (2158294) mqtt_client: Error transport connect[0m
+[0;32mI (2158304) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2158304) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2158314) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2158324) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2158324) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2168334) MQTT: Other event id:7[0m
+[0;31mE (2168334) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2168334) esp-tls: Failed to open new connection[0m
+[0;31mE (2168334) transport_base: Failed to open a new connection[0m
+[0;31mE (2168344) mqtt_client: Error transport connect[0m
+[0;32mI (2168354) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2168354) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2168364) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2168364) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2168374) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2183374) MQTT: Other event id:7[0m
+[0;31mE (2183374) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2183374) esp-tls: Failed to open new connection[0m
+[0;31mE (2183374) transport_base: Failed to open a new connection[0m
+[0;31mE (2183384) mqtt_client: Error transport connect[0m
+[0;32mI (2183394) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2183394) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2183404) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2183404) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2183414) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2193424) MQTT: Other event id:7[0m
+[0;31mE (2193424) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2193424) esp-tls: Failed to open new connection[0m
+[0;31mE (2193424) transport_base: Failed to open a new connection[0m
+[0;31mE (2193434) mqtt_client: Error transport connect[0m
+[0;32mI (2193444) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2193444) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2193454) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2193454) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2193464) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2203474) MQTT: Other event id:7[0m
+[0;31mE (2203474) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2203474) esp-tls: Failed to open new connection[0m
+[0;31mE (2203474) transport_base: Failed to open a new connection[0m
+[0;31mE (2203484) mqtt_client: Error transport connect[0m
+[0;32mI (2203494) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2203494) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2203504) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2203504) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2203514) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2213524) MQTT: Other event id:7[0m
+[0;31mE (2213524) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2213524) esp-tls: Failed to open new connection[0m
+[0;31mE (2213524) transport_base: Failed to open a new connection[0m
+[0;31mE (2213534) mqtt_client: Error transport connect[0m
+[0;32mI (2213544) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2213544) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2213554) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2213554) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2213564) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2228564) MQTT: Other event id:7[0m
+[0;31mE (2228564) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2228564) esp-tls: Failed to open new connection[0m
+[0;31mE (2228564) transport_base: Failed to open a new connection[0m
+[0;31mE (2228574) mqtt_client: Error transport connect[0m
+[0;32mI (2228584) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2228584) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2228594) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2228594) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2228604) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2238614) MQTT: Other event id:7[0m
+[0;31mE (2238614) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2238614) esp-tls: Failed to open new connection[0m
+[0;31mE (2238614) transport_base: Failed to open a new connection[0m
+[0;31mE (2238624) mqtt_client: Error transport connect[0m
+[0;32mI (2238634) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2238634) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2238644) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2238644) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2238654) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2248664) MQTT: Other event id:7[0m
+[0;31mE (2248664) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2248664) esp-tls: Failed to open new connection[0m
+[0;31mE (2248664) transport_base: Failed to open a new connection[0m
+[0;31mE (2248674) mqtt_client: Error transport connect[0m
+[0;32mI (2248684) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2248684) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2248694) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2248694) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2248704) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2258714) MQTT: Other event id:7[0m
+[0;31mE (2258714) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2258714) esp-tls: Failed to open new connection[0m
+[0;31mE (2258714) transport_base: Failed to open a new connection[0m
+[0;31mE (2258724) mqtt_client: Error transport connect[0m
+[0;32mI (2258734) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2258734) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2258744) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2258744) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2258754) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2268764) MQTT: Other event id:7[0m
+[0;31mE (2268764) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2268764) esp-tls: Failed to open new connection[0m
+[0;31mE (2268764) transport_base: Failed to open a new connection[0m
+[0;31mE (2268774) mqtt_client: Error transport connect[0m
+[0;32mI (2268784) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2268784) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2268794) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2268794) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2268804) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2278814) MQTT: Other event id:7[0m
+[0;31mE (2278814) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2278814) esp-tls: Failed to open new connection[0m
+[0;31mE (2278814) transport_base: Failed to open a new connection[0m
+[0;31mE (2278824) mqtt_client: Error transport connect[0m
+[0;32mI (2278834) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2278834) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2278844) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2278844) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2278854) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2293854) MQTT: Other event id:7[0m
+[0;31mE (2293854) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2293854) esp-tls: Failed to open new connection[0m
+[0;31mE (2293854) transport_base: Failed to open a new connection[0m
+[0;31mE (2293864) mqtt_client: Error transport connect[0m
+[0;32mI (2293874) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2293874) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2293884) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2293884) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2293894) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2303904) MQTT: Other event id:7[0m
+[0;31mE (2303904) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2303904) esp-tls: Failed to open new connection[0m
+[0;31mE (2303904) transport_base: Failed to open a new connection[0m
+[0;31mE (2303914) mqtt_client: Error transport connect[0m
+[0;32mI (2303924) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2303924) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2303934) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2303934) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2303944) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2313954) MQTT: Other event id:7[0m
+[0;31mE (2313954) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2313954) esp-tls: Failed to open new connection[0m
+[0;31mE (2313954) transport_base: Failed to open a new connection[0m
+[0;31mE (2313964) mqtt_client: Error transport connect[0m
+[0;32mI (2313974) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2313974) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2313984) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2313984) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2313994) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2324004) MQTT: Other event id:7[0m
+[0;31mE (2324004) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2324004) esp-tls: Failed to open new connection[0m
+[0;31mE (2324004) transport_base: Failed to open a new connection[0m
+[0;31mE (2324014) mqtt_client: Error transport connect[0m
+[0;32mI (2324024) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2324024) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2324034) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2324034) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2324044) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2334054) MQTT: Other event id:7[0m
+[0;31mE (2334054) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2334054) esp-tls: Failed to open new connection[0m
+[0;31mE (2334054) transport_base: Failed to open a new connection[0m
+[0;31mE (2334064) mqtt_client: Error transport connect[0m
+[0;32mI (2334074) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2334074) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2334084) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2334084) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2334094) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2344104) MQTT: Other event id:7[0m
+[0;31mE (2344104) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2344104) esp-tls: Failed to open new connection[0m
+[0;31mE (2344104) transport_base: Failed to open a new connection[0m
+[0;31mE (2344114) mqtt_client: Error transport connect[0m
+[0;32mI (2344124) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2344124) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2344134) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2344134) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2344144) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2359144) MQTT: Other event id:7[0m
+[0;31mE (2359144) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2359144) esp-tls: Failed to open new connection[0m
+[0;31mE (2359144) transport_base: Failed to open a new connection[0m
+[0;31mE (2359154) mqtt_client: Error transport connect[0m
+[0;32mI (2359164) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2359164) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2359174) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2359174) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2359184) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2369194) MQTT: Other event id:7[0m
+[0;31mE (2369194) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2369194) esp-tls: Failed to open new connection[0m
+[0;31mE (2369194) transport_base: Failed to open a new connection[0m
+[0;31mE (2369204) mqtt_client: Error transport connect[0m
+[0;32mI (2369214) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2369214) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2369224) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2369224) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2369234) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2384234) MQTT: Other event id:7[0m
+[0;31mE (2384234) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2384234) esp-tls: Failed to open new connection[0m
+[0;31mE (2384234) transport_base: Failed to open a new connection[0m
+[0;31mE (2384244) mqtt_client: Error transport connect[0m
+[0;32mI (2384254) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2384254) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2384264) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2384264) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2384274) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2394284) MQTT: Other event id:7[0m
+[0;31mE (2394284) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2394284) esp-tls: Failed to open new connection[0m
+[0;31mE (2394284) transport_base: Failed to open a new connection[0m
+[0;31mE (2394294) mqtt_client: Error transport connect[0m
+[0;32mI (2394304) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2394304) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2394314) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2394314) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2394324) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2409324) MQTT: Other event id:7[0m
+[0;31mE (2409324) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2409324) esp-tls: Failed to open new connection[0m
+[0;31mE (2409324) transport_base: Failed to open a new connection[0m
+[0;31mE (2409334) mqtt_client: Error transport connect[0m
+[0;32mI (2409344) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2409344) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2409354) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2409354) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2409364) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2419374) MQTT: Other event id:7[0m
+[0;31mE (2419374) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2419374) esp-tls: Failed to open new connection[0m
+[0;31mE (2419374) transport_base: Failed to open a new connection[0m
+[0;31mE (2419384) mqtt_client: Error transport connect[0m
+[0;32mI (2419394) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2419394) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2419404) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2419404) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2419414) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2429424) MQTT: Other event id:7[0m
+[0;31mE (2429424) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2429424) esp-tls: Failed to open new connection[0m
+[0;31mE (2429434) transport_base: Failed to open a new connection[0m
+[0;31mE (2429434) mqtt_client: Error transport connect[0m
+[0;32mI (2429444) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2429444) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2429454) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2429454) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2429464) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2439474) MQTT: Other event id:7[0m
+[0;31mE (2439474) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2439474) esp-tls: Failed to open new connection[0m
+[0;31mE (2439484) transport_base: Failed to open a new connection[0m
+[0;31mE (2439484) mqtt_client: Error transport connect[0m
+[0;32mI (2439494) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2439494) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2439504) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2439504) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2439514) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2449524) MQTT: Other event id:7[0m
+[0;31mE (2449524) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2449524) esp-tls: Failed to open new connection[0m
+[0;31mE (2449524) transport_base: Failed to open a new connection[0m
+[0;31mE (2449534) mqtt_client: Error transport connect[0m
+[0;32mI (2449544) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2449544) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2449554) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2449554) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2449564) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2464564) MQTT: Other event id:7[0m
+[0;31mE (2464564) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2464564) esp-tls: Failed to open new connection[0m
+[0;31mE (2464564) transport_base: Failed to open a new connection[0m
+[0;31mE (2464574) mqtt_client: Error transport connect[0m
+[0;32mI (2464584) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2464584) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2464594) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2464594) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2464604) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2474614) MQTT: Other event id:7[0m
+[0;31mE (2474614) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2474614) esp-tls: Failed to open new connection[0m
+[0;31mE (2474614) transport_base: Failed to open a new connection[0m
+[0;31mE (2474624) mqtt_client: Error transport connect[0m
+[0;32mI (2474634) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2474634) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2474644) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2474644) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2474654) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2484664) MQTT: Other event id:7[0m
+[0;31mE (2484664) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2484664) esp-tls: Failed to open new connection[0m
+[0;31mE (2484664) transport_base: Failed to open a new connection[0m
+[0;31mE (2484674) mqtt_client: Error transport connect[0m
+[0;32mI (2484684) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2484684) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2484694) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2484694) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2484704) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2494714) MQTT: Other event id:7[0m
+[0;31mE (2494714) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2494714) esp-tls: Failed to open new connection[0m
+[0;31mE (2494714) transport_base: Failed to open a new connection[0m
+[0;31mE (2494724) mqtt_client: Error transport connect[0m
+[0;32mI (2494734) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2494734) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2494744) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2494744) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2494754) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2504764) MQTT: Other event id:7[0m
+[0;31mE (2504764) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2504764) esp-tls: Failed to open new connection[0m
+[0;31mE (2504764) transport_base: Failed to open a new connection[0m
+[0;31mE (2504774) mqtt_client: Error transport connect[0m
+[0;32mI (2504784) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2504784) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2504794) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2504794) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2504804) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2514814) MQTT: Other event id:7[0m
+[0;31mE (2514814) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2514814) esp-tls: Failed to open new connection[0m
+[0;31mE (2514814) transport_base: Failed to open a new connection[0m
+[0;31mE (2514824) mqtt_client: Error transport connect[0m
+[0;32mI (2514834) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2514834) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2514844) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2514844) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2514854) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2524864) MQTT: Other event id:7[0m
+[0;31mE (2524864) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2524874) esp-tls: Failed to open new connection[0m
+[0;31mE (2524874) transport_base: Failed to open a new connection[0m
+[0;31mE (2524874) mqtt_client: Error transport connect[0m
+[0;32mI (2524884) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2524884) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2524894) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2524904) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2524904) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2534914) MQTT: Other event id:7[0m
+[0;31mE (2534914) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2534914) esp-tls: Failed to open new connection[0m
+[0;31mE (2534914) transport_base: Failed to open a new connection[0m
+[0;31mE (2534924) mqtt_client: Error transport connect[0m
+[0;32mI (2534934) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2534934) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2534944) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2534944) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2534954) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2544964) MQTT: Other event id:7[0m
+[0;31mE (2544964) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2544964) esp-tls: Failed to open new connection[0m
+[0;31mE (2544964) transport_base: Failed to open a new connection[0m
+[0;31mE (2544974) mqtt_client: Error transport connect[0m
+[0;32mI (2544984) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2544984) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2544994) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2544994) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2545004) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2555014) MQTT: Other event id:7[0m
+[0;31mE (2555014) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2555014) esp-tls: Failed to open new connection[0m
+[0;31mE (2555014) transport_base: Failed to open a new connection[0m
+[0;31mE (2555024) mqtt_client: Error transport connect[0m
+[0;32mI (2555034) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2555034) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2555044) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2555044) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2555054) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2565064) MQTT: Other event id:7[0m
+[0;31mE (2565064) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2565064) esp-tls: Failed to open new connection[0m
+[0;31mE (2565064) transport_base: Failed to open a new connection[0m
+[0;31mE (2565074) mqtt_client: Error transport connect[0m
+[0;32mI (2565084) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2565084) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2565094) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2565094) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2565104) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2575114) MQTT: Other event id:7[0m
+[0;31mE (2575114) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2575114) esp-tls: Failed to open new connection[0m
+[0;31mE (2575114) transport_base: Failed to open a new connection[0m
+[0;31mE (2575124) mqtt_client: Error transport connect[0m
+[0;32mI (2575134) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2575134) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2575144) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2575144) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2575154) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2590154) MQTT: Other event id:7[0m
+[0;31mE (2590154) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2590154) esp-tls: Failed to open new connection[0m
+[0;31mE (2590154) transport_base: Failed to open a new connection[0m
+[0;31mE (2590164) mqtt_client: Error transport connect[0m
+[0;32mI (2590174) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2590174) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2590184) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2590184) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2590194) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2600204) MQTT: Other event id:7[0m
+[0;31mE (2600204) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2600204) esp-tls: Failed to open new connection[0m
+[0;31mE (2600204) transport_base: Failed to open a new connection[0m
+[0;31mE (2600214) mqtt_client: Error transport connect[0m
+[0;32mI (2600224) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2600224) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2600234) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2600234) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2600244) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2615244) MQTT: Other event id:7[0m
+[0;31mE (2615244) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2615244) esp-tls: Failed to open new connection[0m
+[0;31mE (2615244) transport_base: Failed to open a new connection[0m
+[0;31mE (2615254) mqtt_client: Error transport connect[0m
+[0;32mI (2615264) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2615264) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2615274) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2615274) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2615284) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2630284) MQTT: Other event id:7[0m
+[0;31mE (2630284) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2630284) esp-tls: Failed to open new connection[0m
+[0;31mE (2630284) transport_base: Failed to open a new connection[0m
+[0;31mE (2630294) mqtt_client: Error transport connect[0m
+[0;32mI (2630304) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2630304) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2630314) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2630314) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2630324) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2640334) MQTT: Other event id:7[0m
+[0;31mE (2640334) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2640334) esp-tls: Failed to open new connection[0m
+[0;31mE (2640334) transport_base: Failed to open a new connection[0m
+[0;31mE (2640344) mqtt_client: Error transport connect[0m
+[0;32mI (2640354) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2640354) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2640364) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2640364) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2640374) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2650384) MQTT: Other event id:7[0m
+[0;31mE (2650384) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2650384) esp-tls: Failed to open new connection[0m
+[0;31mE (2650384) transport_base: Failed to open a new connection[0m
+[0;31mE (2650394) mqtt_client: Error transport connect[0m
+[0;32mI (2650404) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2650404) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2650414) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2650414) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2650424) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2660434) MQTT: Other event id:7[0m
+[0;31mE (2660434) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2660434) esp-tls: Failed to open new connection[0m
+[0;31mE (2660434) transport_base: Failed to open a new connection[0m
+[0;31mE (2660444) mqtt_client: Error transport connect[0m
+[0;32mI (2660454) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2660454) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2660464) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2660464) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2660474) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2670484) MQTT: Other event id:7[0m
+[0;31mE (2670484) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2670484) esp-tls: Failed to open new connection[0m
+[0;31mE (2670494) transport_base: Failed to open a new connection[0m
+[0;31mE (2670494) mqtt_client: Error transport connect[0m
+[0;32mI (2670504) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2670504) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2670514) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2670524) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2670524) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2680534) MQTT: Other event id:7[0m
+[0;31mE (2680534) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2680534) esp-tls: Failed to open new connection[0m
+[0;31mE (2680534) transport_base: Failed to open a new connection[0m
+[0;31mE (2680544) mqtt_client: Error transport connect[0m
+[0;32mI (2680554) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2680554) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2680564) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2680564) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2680574) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2690584) MQTT: Other event id:7[0m
+[0;31mE (2690584) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2690584) esp-tls: Failed to open new connection[0m
+[0;31mE (2690584) transport_base: Failed to open a new connection[0m
+[0;31mE (2690594) mqtt_client: Error transport connect[0m
+[0;32mI (2690604) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2690604) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2690614) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2690614) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2690624) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2705624) MQTT: Other event id:7[0m
+[0;31mE (2705624) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2705624) esp-tls: Failed to open new connection[0m
+[0;31mE (2705624) transport_base: Failed to open a new connection[0m
+[0;31mE (2705634) mqtt_client: Error transport connect[0m
+[0;32mI (2705644) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2705644) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2705654) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2705654) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2705664) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2720664) MQTT: Other event id:7[0m
+[0;31mE (2720664) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2720664) esp-tls: Failed to open new connection[0m
+[0;31mE (2720674) transport_base: Failed to open a new connection[0m
+[0;31mE (2720674) mqtt_client: Error transport connect[0m
+[0;32mI (2720684) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2720684) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2720694) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2720704) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2720704) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2730714) MQTT: Other event id:7[0m
+[0;31mE (2730714) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2730714) esp-tls: Failed to open new connection[0m
+[0;31mE (2730714) transport_base: Failed to open a new connection[0m
+[0;31mE (2730724) mqtt_client: Error transport connect[0m
+[0;32mI (2730734) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2730734) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2730744) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2730744) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2730754) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2740764) MQTT: Other event id:7[0m
+[0;31mE (2740764) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2740764) esp-tls: Failed to open new connection[0m
+[0;31mE (2740764) transport_base: Failed to open a new connection[0m
+[0;31mE (2740774) mqtt_client: Error transport connect[0m
+[0;32mI (2740784) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2740784) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2740794) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2740794) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2740804) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2750814) MQTT: Other event id:7[0m
+[0;31mE (2750814) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2750814) esp-tls: Failed to open new connection[0m
+[0;31mE (2750814) transport_base: Failed to open a new connection[0m
+[0;31mE (2750824) mqtt_client: Error transport connect[0m
+[0;32mI (2750834) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2750834) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2750844) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2750844) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2750854) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2765854) MQTT: Other event id:7[0m
+[0;31mE (2765854) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2765854) esp-tls: Failed to open new connection[0m
+[0;31mE (2765854) transport_base: Failed to open a new connection[0m
+[0;31mE (2765864) mqtt_client: Error transport connect[0m
+[0;32mI (2765874) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2765874) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2765884) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2765884) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2765894) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2780894) MQTT: Other event id:7[0m
+[0;31mE (2780894) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2780894) esp-tls: Failed to open new connection[0m
+[0;31mE (2780894) transport_base: Failed to open a new connection[0m
+[0;31mE (2780904) mqtt_client: Error transport connect[0m
+[0;32mI (2780914) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2780914) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2780924) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2780924) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2780934) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2790944) MQTT: Other event id:7[0m
+[0;31mE (2790944) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2790944) esp-tls: Failed to open new connection[0m
+[0;31mE (2790944) transport_base: Failed to open a new connection[0m
+[0;31mE (2790954) mqtt_client: Error transport connect[0m
+[0;32mI (2790964) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2790964) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2790974) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2790974) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2790984) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2800994) MQTT: Other event id:7[0m
+[0;31mE (2800994) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2800994) esp-tls: Failed to open new connection[0m
+[0;31mE (2800994) transport_base: Failed to open a new connection[0m
+[0;31mE (2801004) mqtt_client: Error transport connect[0m
+[0;32mI (2801014) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2801014) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2801024) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2801024) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2801034) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2811044) MQTT: Other event id:7[0m
+[0;31mE (2811044) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2811044) esp-tls: Failed to open new connection[0m
+[0;31mE (2811044) transport_base: Failed to open a new connection[0m
+[0;31mE (2811054) mqtt_client: Error transport connect[0m
+[0;32mI (2811064) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2811064) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2811074) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2811074) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2811084) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2826084) MQTT: Other event id:7[0m
+[0;31mE (2826084) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2826084) esp-tls: Failed to open new connection[0m
+[0;31mE (2826084) transport_base: Failed to open a new connection[0m
+[0;31mE (2826094) mqtt_client: Error transport connect[0m
+[0;32mI (2826104) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2826104) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2826114) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2826114) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2826124) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2836134) MQTT: Other event id:7[0m
+[0;31mE (2836134) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2836134) esp-tls: Failed to open new connection[0m
+[0;31mE (2836134) transport_base: Failed to open a new connection[0m
+[0;31mE (2836144) mqtt_client: Error transport connect[0m
+[0;32mI (2836154) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2836154) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2836164) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2836164) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2836174) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2846184) MQTT: Other event id:7[0m
+[0;31mE (2846184) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2846184) esp-tls: Failed to open new connection[0m
+[0;31mE (2846184) transport_base: Failed to open a new connection[0m
+[0;31mE (2846194) mqtt_client: Error transport connect[0m
+[0;32mI (2846204) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2846204) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2846214) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2846214) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2846224) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2856234) MQTT: Other event id:7[0m
+[0;31mE (2856234) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2856234) esp-tls: Failed to open new connection[0m
+[0;31mE (2856234) transport_base: Failed to open a new connection[0m
+[0;31mE (2856244) mqtt_client: Error transport connect[0m
+[0;32mI (2856254) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2856254) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2856264) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2856264) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2856274) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2866284) MQTT: Other event id:7[0m
+[0;31mE (2866284) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2866284) esp-tls: Failed to open new connection[0m
+[0;31mE (2866284) transport_base: Failed to open a new connection[0m
+[0;31mE (2866294) mqtt_client: Error transport connect[0m
+[0;32mI (2866304) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2866304) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2866314) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2866314) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2866324) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2876334) MQTT: Other event id:7[0m
+[0;31mE (2876334) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2876334) esp-tls: Failed to open new connection[0m
+[0;31mE (2876334) transport_base: Failed to open a new connection[0m
+[0;31mE (2876344) mqtt_client: Error transport connect[0m
+[0;32mI (2876354) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2876354) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2876364) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2876364) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2876374) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2886384) MQTT: Other event id:7[0m
+[0;31mE (2886384) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2886384) esp-tls: Failed to open new connection[0m
+[0;31mE (2886384) transport_base: Failed to open a new connection[0m
+[0;31mE (2886394) mqtt_client: Error transport connect[0m
+[0;32mI (2886404) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2886404) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2886414) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2886414) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2886424) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2896434) MQTT: Other event id:7[0m
+[0;31mE (2896434) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2896434) esp-tls: Failed to open new connection[0m
+[0;31mE (2896434) transport_base: Failed to open a new connection[0m
+[0;31mE (2896444) mqtt_client: Error transport connect[0m
+[0;32mI (2896454) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2896454) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2896464) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2896464) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2896474) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2906484) MQTT: Other event id:7[0m
+[0;31mE (2906484) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2906484) esp-tls: Failed to open new connection[0m
+[0;31mE (2906484) transport_base: Failed to open a new connection[0m
+[0;31mE (2906494) mqtt_client: Error transport connect[0m
+[0;32mI (2906504) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2906504) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2906514) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2906514) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2906524) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2916534) MQTT: Other event id:7[0m
+[0;31mE (2916534) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2916534) esp-tls: Failed to open new connection[0m
+[0;31mE (2916534) transport_base: Failed to open a new connection[0m
+[0;31mE (2916544) mqtt_client: Error transport connect[0m
+[0;32mI (2916554) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2916554) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2916564) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2916564) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2916574) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2926584) MQTT: Other event id:7[0m
+[0;31mE (2926584) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2926584) esp-tls: Failed to open new connection[0m
+[0;31mE (2926584) transport_base: Failed to open a new connection[0m
+[0;31mE (2926594) mqtt_client: Error transport connect[0m
+[0;32mI (2926604) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2926604) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2926614) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2926614) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2926624) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2936634) MQTT: Other event id:7[0m
+[0;31mE (2936634) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2936634) esp-tls: Failed to open new connection[0m
+[0;31mE (2936634) transport_base: Failed to open a new connection[0m
+[0;31mE (2936644) mqtt_client: Error transport connect[0m
+[0;32mI (2936654) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2936654) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2936664) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2936664) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2936674) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2946684) MQTT: Other event id:7[0m
+[0;31mE (2946684) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2946684) esp-tls: Failed to open new connection[0m
+[0;31mE (2946684) transport_base: Failed to open a new connection[0m
+[0;31mE (2946694) mqtt_client: Error transport connect[0m
+[0;32mI (2946704) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2946704) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2946714) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2946714) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2946724) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2956734) MQTT: Other event id:7[0m
+[0;31mE (2956734) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2956734) esp-tls: Failed to open new connection[0m
+[0;31mE (2956734) transport_base: Failed to open a new connection[0m
+[0;31mE (2956744) mqtt_client: Error transport connect[0m
+[0;32mI (2956754) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2956754) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2956764) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2956764) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2956774) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2966784) MQTT: Other event id:7[0m
+[0;31mE (2966784) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2966784) esp-tls: Failed to open new connection[0m
+[0;31mE (2966794) transport_base: Failed to open a new connection[0m
+[0;31mE (2966794) mqtt_client: Error transport connect[0m
+[0;32mI (2966804) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2966804) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2966814) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2966814) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2966824) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2976834) MQTT: Other event id:7[0m
+[0;31mE (2976834) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2976834) esp-tls: Failed to open new connection[0m
+[0;31mE (2976834) transport_base: Failed to open a new connection[0m
+[0;31mE (2976844) mqtt_client: Error transport connect[0m
+[0;32mI (2976854) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2976854) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2976864) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2976864) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2976874) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2991874) MQTT: Other event id:7[0m
+[0;31mE (2991874) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2991874) esp-tls: Failed to open new connection[0m
+[0;31mE (2991874) transport_base: Failed to open a new connection[0m
+[0;31mE (2991884) mqtt_client: Error transport connect[0m
+[0;32mI (2991894) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (2991894) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (2991904) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (2991904) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (2991914) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (3001924) MQTT: Other event id:7[0m
+[0;31mE (3001924) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (3001924) esp-tls: Failed to open new connection[0m
+[0;31mE (3001924) transport_base: Failed to open a new connection[0m
+[0;31mE (3001934) mqtt_client: Error transport connect[0m
+[0;32mI (3001944) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (3001944) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (3001954) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (3001954) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (3001964) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (3011974) MQTT: Other event id:7[0m
+[0;31mE (3011974) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (3011974) esp-tls: Failed to open new connection[0m
+[0;31mE (3011974) transport_base: Failed to open a new connection[0m
+[0;31mE (3011984) mqtt_client: Error transport connect[0m
+[0;32mI (3011994) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (3011994) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (3012004) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (3012004) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (3012014) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (3022024) MQTT: Other event id:7[0m
+[0;31mE (3022024) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (3022024) esp-tls: Failed to open new connection[0m
+[0;31mE (3022024) transport_base: Failed to open a new connection[0m
+[0;31mE (3022034) mqtt_client: Error transport connect[0m
+[0;32mI (3022044) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (3022044) MQTT: Last error reported from esp-tls: 0x8004[0m
+[0;31mE (3022054) MQTT: Last error captured as transport's socket errno: 0x68[0m
+[0;32mI (3022054) MQTT: Last errno string (Connection reset by peer)[0m
+[0;32mI (3022064) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (3032074) MQTT: Other event id:7[0m
+[0;31mE (3032074) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (3032074) esp-tls: Failed to open new connection[0m
+[0;31mE (3032074) transport_base: Failed to open a new connection[0m

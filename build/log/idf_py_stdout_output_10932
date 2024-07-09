@@ -1,24 +1,94 @@
-[1/9] Performing build step for 'bootloader'
+[1/5] cmd.exe /C "cd /D D:\ESP_IDF\ESP32_project\gatt_server\build\esp-idf\esptool_py && D:\ESP_IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP_IDF/ESP32_project/gatt_server/build/partition_table/partition-table.bin D:/ESP_IDF/ESP32_project/gatt_server/build/gatt_server_demos.bin"
+gatt_server_demos.bin binary size 0x164290 bytes. Smallest app partition is 0x177000 bytes. 0x12d70 bytes (5%) free.
+[2/5] Performing build step for 'bootloader'
 [1/1] cmd.exe /C "cd /D D:\ESP_IDF\ESP32_project\gatt_server\build\bootloader\esp-idf\esptool_py && D:\ESP_IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ESP_IDF/ESP32_project/gatt_server/build/bootloader/bootloader.bin"
 Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
-[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/gatts_demo.c.obj
-In file included from D:/ESP_IDF/ESP32_project/gatt_server/main/gatts_demo.c:21:
-D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h:53:13: warning: 'gatts_profile_a_event_handler' declared 'static' but never defined [-Wunused-function]
-   53 | static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
-      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h:51:13: warning: 'gap_event_handler' declared 'static' but never defined [-Wunused-function]
-   51 | static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param);
-      |             ^~~~~~~~~~~~~~~~~
-D:/ESP_IDF/ESP32_project/gatt_server/components/ble_test/include/ble_test.h:52:13: warning: 'gatts_event_handler' declared 'static' but never defined [-Wunused-function]
-   52 | static void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
-      |             ^~~~~~~~~~~~~~~~~~~
-[3/7] Linking C static library esp-idf\main\libmain.a
-[4/7] Generating ld/sections.ld
-[5/7] Linking CXX executable gatt_server_demos.elf
-FAILED: gatt_server_demos.elf 
-cmd.exe /C "cd . && D:\ESP_IDF\Espressif\tools\xtensa-esp32-elf\esp-12.2.0_20230208\xtensa-esp32-elf\bin\xtensa-esp32-elf-g++.exe -mlongcalls -Wno-frame-address -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32=0 -Wl,--Map=D:/ESP_IDF/ESP32_project/gatt_server/build/gatt_server_demos.map -Wl,--no-warn-rwx-segments -fno-rtti -fno-lto -Wl,--gc-sections -Wl,--warn-common -T esp32.peripherals.ld -T esp32.rom.ld -T esp32.rom.api.ld -T esp32.rom.libgcc.ld -T esp32.rom.newlib-data.ld -T esp32.rom.syscalls.ld -T esp32.rom.newlib-funcs.ld -T memory.ld -T sections.ld @CMakeFiles\gatt_server_demos.elf.rsp -o gatt_server_demos.elf  && cd ."
-d:/esp_idf/espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: gatt_server_demos.elf section `.iram0.text' will not fit in region `iram0_0_seg'
-d:/esp_idf/espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: IRAM0 segment data does not fit.
-d:/esp_idf/espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: region `iram0_0_seg' overflowed by 3348 bytes
-collect2.exe: error: ld returned 1 exit status
-ninja: build stopped: subcommand failed.
+[2/3] cmd.exe /C "cd /D D:\ESP_IDF\Espressif\frameworks\esp-idf-v5.1.1\components\esptool_py && D:\ESP_IDF\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1 -D SERIAL_TOOL=D:/ESP_IDF/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/ESP_IDF/ESP32_project/gatt_server/build -P D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 gatt_server_demos.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: e8:6b:ea:d4:3f:f4
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00174fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26640 bytes to 16689...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000768d... (100 %)
+Wrote 26640 bytes (16689 compressed) at 0x00001000 in 0.7 seconds (effective 290.1 kbit/s)...
+Hash of data verified.
+Compressed 1458832 bytes to 910713...
+Writing at 0x00010000... (1 %)
+Writing at 0x0001d240... (3 %)
+Writing at 0x0002a20d... (5 %)
+Writing at 0x0003831c... (7 %)
+Writing at 0x0003e034... (8 %)
+Writing at 0x0004490b... (10 %)
+Writing at 0x00050205... (12 %)
+Writing at 0x00055d4f... (14 %)
+Writing at 0x0005bc6b... (16 %)
+Writing at 0x000615a7... (17 %)
+Writing at 0x00066c46... (19 %)
+Writing at 0x0006c4a5... (21 %)
+Writing at 0x00071c64... (23 %)
+Writing at 0x0007841f... (25 %)
+Writing at 0x0007e0a0... (26 %)
+Writing at 0x0008408a... (28 %)
+Writing at 0x00089f99... (30 %)
+Writing at 0x0008fefa... (32 %)
+Writing at 0x00095b7c... (33 %)
+Writing at 0x0009bbf4... (35 %)
+Writing at 0x000a189c... (37 %)
+Writing at 0x000a7c07... (39 %)
+Writing at 0x000ada80... (41 %)
+Writing at 0x000b44b2... (42 %)
+Writing at 0x000ba38e... (44 %)
+Writing at 0x000c0024... (46 %)
+Writing at 0x000c5f66... (48 %)
+Writing at 0x000cba03... (50 %)
+Writing at 0x000d1882... (51 %)
+Writing at 0x000d7604... (53 %)
+Writing at 0x000dcf91... (55 %)
+Writing at 0x000e26d3... (57 %)
+Writing at 0x000e79cd... (58 %)
+Writing at 0x000ecf9d... (60 %)
+Writing at 0x000f212d... (62 %)
+Writing at 0x000f7853... (64 %)
+Writing at 0x000fcf26... (66 %)
+Writing at 0x0010282b... (67 %)
+Writing at 0x001084e7... (69 %)
+Writing at 0x0010d9ed... (71 %)
+Writing at 0x001132bd... (73 %)
+Writing at 0x00118adb... (75 %)
+Writing at 0x0011e1f8... (76 %)
+Writing at 0x00123a1b... (78 %)
+Writing at 0x001294a5... (80 %)
+Writing at 0x0012ef39... (82 %)
+Writing at 0x0013515a... (83 %)
+Writing at 0x0013d1b1... (85 %)
+Writing at 0x001453f6... (87 %)
+Writing at 0x0014badf... (89 %)
+Writing at 0x00154d09... (91 %)
+Writing at 0x0015a321... (92 %)
+Writing at 0x001600d3... (94 %)
+Writing at 0x00165b41... (96 %)
+Writing at 0x0016b9c9... (98 %)
+Writing at 0x00170c8c... (100 %)
+Wrote 1458832 bytes (910713 compressed) at 0x00010000 in 21.6 seconds (effective 539.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 461.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

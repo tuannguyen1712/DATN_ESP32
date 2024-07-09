@@ -10,8 +10,8 @@
 #include <time.h>
 #include <sys/time.h>
 
-#define TXD2 25             // connect mcu
-#define RXD2 27
+#define TXD2 32             // connect mcu
+#define RXD2 33
 
 #define BUF_SIZE (1024)
 #define RD_BUF_SIZE (BUF_SIZE)

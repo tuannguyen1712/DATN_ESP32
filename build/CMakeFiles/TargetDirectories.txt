@@ -412,6 +412,13 @@ D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp-tls/CMakeFiles/list_insta
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp-tls/CMakeFiles/install.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp-tls/CMakeFiles/install/local.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp-tls/CMakeFiles/install/strip.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp32-camera/CMakeFiles/__idf_esp32-camera.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp32-camera/CMakeFiles/edit_cache.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp32-camera/CMakeFiles/rebuild_cache.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp32-camera/CMakeFiles/list_install_components.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp32-camera/CMakeFiles/install.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp32-camera/CMakeFiles/install/local.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp32-camera/CMakeFiles/install/strip.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp_adc/CMakeFiles/edit_cache.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp_adc/CMakeFiles/rebuild_cache.dir
@@ -643,6 +650,13 @@ D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/CMakeFiles/list_instal
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/CMakeFiles/install.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/CMakeFiles/install/local.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/CMakeFiles/install/strip.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/lcd/CMakeFiles/__idf_lcd.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/lcd/CMakeFiles/edit_cache.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/lcd/CMakeFiles/rebuild_cache.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/lcd/CMakeFiles/list_install_components.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/lcd/CMakeFiles/install.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/lcd/CMakeFiles/install/local.dir
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/lcd/CMakeFiles/install/strip.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/main/CMakeFiles/__idf_main.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/main/CMakeFiles/edit_cache.dir
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

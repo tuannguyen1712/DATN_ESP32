@@ -39,6 +39,7 @@ $<TARGET_FILE:__idf_cmock>
 $<TARGET_FILE:__idf_console>
 $<TARGET_FILE:__idf_http_parser>
 $<TARGET_FILE:__idf_esp-tls>
+$<TARGET_FILE:__idf_esp32-camera>
 $<TARGET_FILE:__idf_esp_adc>
 $<TARGET_FILE:__idf_esp_eth>
 $<TARGET_FILE:__idf_esp_gdbstub>
@@ -66,4 +67,5 @@ $<TARGET_FILE:__idf_mqtt_handle>
 $<TARGET_FILE:__idf_uart_handle>
 $<TARGET_FILE:__idf_datn_sntp>
 $<TARGET_FILE:__idf_w25q32>
+$<TARGET_FILE:__idf_lcd>
 $<TARGET_FILE:__idf_main>

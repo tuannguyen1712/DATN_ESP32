@@ -1,0 +1,142 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 22 2024 10:40:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3f618h (259608) map[0m
+[0;32mI (199) esp_image: segment 1: paddr=0004f640 vaddr=3ffbdb60 size=009d8h (  2520) load[0m
+[0;32mI (200) esp_image: segment 2: paddr=00050020 vaddr=400d0020 size=fe4c8h (1041608) map[0m
+[0;32mI (580) esp_image: segment 3: paddr=0014e4f0 vaddr=3ffbe538 size=04ce8h ( 19688) load[0m
+[0;32mI (588) esp_image: segment 4: paddr=001531e0 vaddr=40080000 size=2108ch (135308) load[0m
+[0;32mI (661) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (661) boot: Disabling RNG early entropy source...[0m
+[0;32mI (673) cpu_start: Multicore app[0m
+[0;32mI (673) cpu_start: Pro cpu up.[0m
+[0;32mI (673) cpu_start: Starting app cpu, entry point is 0x400815d0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (693) cpu_start: Pro cpu start user code[0m
+[0;32mI (693) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (694) cpu_start: Application information:[0m
+[0;32mI (698) cpu_start: Project name:     gatt_server_demos[0m
+[0;32mI (704) cpu_start: App version:      09d1446-dirty[0m
+[0;32mI (709) cpu_start: Compile time:     Jun 22 2024 09:38:31[0m
+[0;32mI (716) cpu_start: ELF file SHA256:  0be213be13c6a46e...[0m
+[0;32mI (722) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (727) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (732) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (736) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (741) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (749) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (754) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (761) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (767) heap_init: At 3FFCC840 len 000137C0 (77 KiB): DRAM[0m
+[0;32mI (773) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (779) heap_init: At 3FFE4350 len 0001AC24 (107 KiB): D/IRAM[0m
+[0;32mI (787) spi_flash: detected chip: generic[0m
+[0;32mI (790) spi_flash: flash io: dio[0m
+[0;32mI (795) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (800) app_start: Starting scheduler on CPU0[0m
+[0;32m[0;32mI (805) app_start: Starting scheduler on CPU1[0m
+I (805) main_task: Started on CPU0[0m
+[0;32mI (815) main_task: Calling app_main()[0m
+[0;32mI (845) MQTT: datn/E8:6B:EA:D4:3F:F6/data datn/E8:6B:EA:D4:3F:F6/control[0m
+[0;32mI (845) LCD: Start init pin[0m
+[0;32mI (845) LCD: Start init LCD[0m
+[0;32mI (885) W25Q32: Init spi bus[0m
+[0;32mI (885) gpio: GPIO[19]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (885) BLE:: ble task, wifi queue: 0, data_flag: 0[0m
+[0;32mI (895) WIFI: wifi task, ble_queue: 0 wifi_connect: 0[0m
+[0;32mI (895) UART: uart task[0m
+[0;32mI (895) uart: queue free spaces: 20[0m
+[0;32mI (905) UART: init uart[0m
+[0;32mI (905) main_task: Returned from app_main()[0m
+[0;32mI (995) BLE:: ble task have mutex[0m
+[0;32mI (995) W25Q32: Read data from w25q32 at 0: save	i:0	l:35����[0m
+[0;32mI (995) W25Q32: wifi data location: save	i:0	l:35����[0m
+[0;32mI (995) W25Q32: wifi data at sector 0, len 35[0m
+[0;32mI (1005) BLE:: ble task release mutex[0m
+I (1115) wifi:wifi driver task: 3ffd3d40, prio:23, stack:6656, core=0
+I (1125) wifi:wifi firmware version: ce9244d
+I (1135) wifi:wifi certification version: v7.0
+I (1135) wifi:config NVS flash: enabled
+I (1135) wifi:config nano formating: disabled
+I (1135) wifi:Init data frame dynamic rx buffer num: 32
+I (1135) wifi:Init management frame dynamic rx buffer num: 32
+I (1145) wifi:Init management short buffer num: 32
+I (1155) wifi:Init static tx buffer num: 16
+I (1155) wifi:Init static rx buffer size: 1600
+I (1155) wifi:Init static rx buffer num: 10
+I (1165) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1165) wifi_init: rx ba win: 6[0m
+[0;32mI (1165) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1175) wifi_init: udp mbox: 6[0m
+[0;32mI (1175) wifi_init: tcp mbox: 6[0m
+[0;32mI (1185) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1185) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1185) wifi_init: tcp mss: 1440[0m
+[0;32mI (1195) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1195) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1205) BLE:: ble task have mutex[0m
+[0;32mI (1205) W25Q32: Read data from w25q32 at 4096: w:Infrastructure NW	p:NetworkPolicy[0m
+[0;32mI (1215) W25Q32: get wifi info: w:Infrastructure NW	p:NetworkPolicy[0m
+ssid: .Infrastructure NW. pass: .NetworkPolicy.
+[0;32mI (1255) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1365) wifi:mode : sta (e8:6b:ea:d4:3f:f4)
+I (1365) wifi:enable tsf
+[0;32mI (1365) WIFI STATION: wifi_init_sta finished, ssid: Infrastructure NW, pass: NetworkPolicy.[0m
+[0;32mI (1375) BLE:: start connect wifi[0m
+[0;32mI (1375) BLE:: ble task release mutex[0m
+[0;32mI (1385) BLE:: init ble[0m
+[0;32mI (1385) BLE:: init lwip[0m
+I (3785) wifi:new:<12,0>, old:<1,0>, ap:<255,255>, sta:<12,0>, prof:1
+I (4965) wifi:state: init -> auth (b0)
+I (4975) wifi:state: auth -> assoc (0)
+I (4985) wifi:state: assoc -> run (10)
+W (4985) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (4985) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (4985) wifi:[ADDBA]rx delba, code:39, delete tid:5
+I (4995) wifi:<ba-add>idx:0 (ifx:0, 24:0b:2a:2e:69:79), tid:5, ssn:6, winSize:64
+I (5085) wifi:<ba-add>idx:1 (ifx:0, 24:0b:2a:2e:69:79), tid:0, ssn:363, winSize:64
+I (5085) wifi:connected with Infrastructure NW, aid = 9, channel 12, BW20, bssid = 24:0b:2a:2e:69:79
+I (5095) wifi:security: WPA2-PSK, phy: bgn, rssi: -50
+I (5105) wifi:pm start, type: 1
+
+I (5185) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (5295) esp_netif_handlers: sta ip: 192.168.1.5, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5295) WIFI STATION: got ip:192.168.1.5[0m
+[0;32mI (5305) BLE:: ble task have mutex[0m
+[0;32mI (5305) BLE:: connect state = 1[0m
+[0;32mI (5305) BLE:: ble task release mutex[0m
+[0;32mI (5315) WIFI: wifi task have mutex[0m
+[0;32mI (5315) WIFI: disable ble[0m
+[0;32mI (5315) SNTP: Initializing and starting SNTP[0m
+[0;32mI (5325) MQTT: Other event id:7[0m
+[0;32mI (6025) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6035) MQTT: Subcribe to topic: datn/E8:6B:EA:D4:3F:F6/control , id: 36108[0m
+[0;32mI (6035) MQTT: sent publish successful, msg_id=36108[0m
+[0;32mI (6045) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=36108[0m
+[0;32mI (7325) SNTP: Waiting for system time to be set... (1/15)[0m
+[0;32mI (9325) SNTP: Waiting for system time to be set... (2/15)[0m
+[0;32mI (9765) SNTP: Set time success[0m
+[0;32mI (9765) WIFI: wifi task release mutex[0m

@@ -111,7 +111,8 @@ void mqtt_init()
     esp_mqtt_client_config_t mqtt_cfg = {
         // .broker.address.uri = "mqtt://broker.emqx.io:1883",
         // .broker.address.uri = "mqtt://white-dev.aithings.vn:1883",
-        .broker.address.uri = "mqtts://192.168.1.15:8883",
+            .broker.address.uri = "mqtts://192.168.3.234:8883",
+        // .broker.address.uri = "mqtts://192.168.218.233:8883",
         .broker.verification.certificate = (const char *)mqtt_eclipseprojects_io_pem_start
         // .broker.address.transport = MQTT_TRANSPORT_OVER_TCP,
         // .broker.address.path = "/mqtt",

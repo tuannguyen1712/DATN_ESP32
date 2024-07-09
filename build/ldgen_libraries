@@ -39,6 +39,7 @@ D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/cmock/libcmock.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/console/libconsole.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/http_parser/libhttp_parser.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp-tls/libesp-tls.a
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp32-camera/libesp32-camera.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp_adc/libesp_adc.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp_eth/libesp_eth.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/esp_gdbstub/libesp_gdbstub.a
@@ -66,4 +67,5 @@ D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/mqtt_handle/libmqtt_handle.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/uart_handle/libuart_handle.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/datn_sntp/libdatn_sntp.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/w25q32/libw25q32.a
+D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/lcd/liblcd.a
 D:/ESP_IDF/ESP32_project/gatt_server/build/esp-idf/main/libmain.a

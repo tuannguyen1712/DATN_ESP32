@@ -1,15 +1,109 @@
 [1/10] Performing build step for 'bootloader'
 [1/1] cmd.exe /C "cd /D D:\ESP_IDF\ESP32_project\gatt_server\build\bootloader\esp-idf\esptool_py && D:\ESP_IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ESP_IDF/ESP32_project/gatt_server/build/bootloader/bootloader.bin"
 Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
-[2/8] Building C object esp-idf/uart_handle/CMakeFiles/__idf_uart_handle.dir/uart_handle.c.obj
-FAILED: esp-idf/uart_handle/CMakeFiles/__idf_uart_handle.dir/uart_handle.c.obj 
-ccache D:\ESP_IDF\Espressif\tools\xtensa-esp32-elf\esp-12.2.0_20230208\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.1.1-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -ID:/ESP_IDF/ESP32_project/gatt_server/build/config -ID:/ESP_IDF/ESP32_project/gatt_server/components/uart_handle/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/platform_include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/esp_additions/include/freertos -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/esp_additions/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/esp_additions/arch/xtensa/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/include/soc -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/include/soc/esp32 -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/port/esp32/. -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support/port/esp32/private_include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/log/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/soc/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/soc/esp32 -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/soc/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/hal/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/hal/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/hal/platform_port/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/include/esp32 -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/esp32 -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_common/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/soc -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/include/private -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/xtensa/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/xtensa/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/include/apps -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/include/apps/sntp -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/lwip/src/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/port/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/port/freertos/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/port/esp32xx/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip/port/esp32xx/include/arch -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/deprecated -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/analog_comparator/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/dac/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/gpio/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/gptimer/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/i2c/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/i2s/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/ledc/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/mcpwm/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/parlio/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/pcnt/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/rmt/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/sdio_slave/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/sdmmc/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/sigma_delta/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/spi/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/temperature_sensor/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/touch_sensor/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/twai/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/uart/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/usb_serial_jtag/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver/touch_sensor/esp32/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_pm/include -ID:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_ringbuf/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=D:/ESP_IDF/ESP32_project/gatt_server=. -fmacro-prefix-map=D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/uart_handle/CMakeFiles/__idf_uart_handle.dir/uart_handle.c.obj -MF esp-idf\uart_handle\CMakeFiles\__idf_uart_handle.dir\uart_handle.c.obj.d -o esp-idf/uart_handle/CMakeFiles/__idf_uart_handle.dir/uart_handle.c.obj -c D:/ESP_IDF/ESP32_project/gatt_server/components/uart_handle/uart_handle.c
-D:/ESP_IDF/ESP32_project/gatt_server/components/uart_handle/uart_handle.c: In function 'uart_handle_event':
-D:/ESP_IDF/ESP32_project/gatt_server/components/uart_handle/uart_handle.c:90:1: error: number of arguments doesn't match prototype
-   90 | {
-      | ^
-In file included from D:/ESP_IDF/ESP32_project/gatt_server/components/uart_handle/uart_handle.c:2:
-D:/ESP_IDF/ESP32_project/gatt_server/components/uart_handle/include/uart_handle.h:17:6: error: prototype declaration
-   17 | void uart_handle_event(uart_event_t* event, uint8_t* dtmp);
-      |      ^~~~~~~~~~~~~~~~~
-ninja: build stopped: subcommand failed.
+[2/8] Building C object esp-idf/mqtt_handle/CMakeFiles/__idf_mqtt_handle.dir/mqtt_handle.c.obj
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c: In function 'mqtt_event_handler':
+D:/ESP_IDF/ESP32_project/gatt_server/components/mqtt_handle/mqtt_handle.c:51:9: warning: unused variable 'msg_id' [-Wunused-variable]
+   51 |     int msg_id;
+      |         ^~~~~~
+[3/8] Linking C static library esp-idf\mqtt_handle\libmqtt_handle.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable gatt_server_demos.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/ESP_IDF/ESP32_project/gatt_server/build/gatt_server_demos.bin
+[7/8] cmd.exe /C "cd /D D:\ESP_IDF\ESP32_project\gatt_server\build\esp-idf\esptool_py && D:\ESP_IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP_IDF/ESP32_project/gatt_server/build/partition_table/partition-table.bin D:/ESP_IDF/ESP32_project/gatt_server/build/gatt_server_demos.bin"
+gatt_server_demos.bin binary size 0x1642b0 bytes. Smallest app partition is 0x177000 bytes. 0x12d50 bytes (5%) free.
+[7/8] cmd.exe /C "cd /D D:\ESP_IDF\Espressif\frameworks\esp-idf-v5.1.1\components\esptool_py && D:\ESP_IDF\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1 -D SERIAL_TOOL=D:/ESP_IDF/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/ESP_IDF/ESP32_project/gatt_server/build -P D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 gatt_server_demos.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+WARNING: Detected crystal freq 41.01MHz is quite different to normalized freq 40MHz. Unsupported crystal in use?
+Crystal is 40MHz
+MAC: fc:b4:67:f5:ed:80
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00174fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26640 bytes to 16689...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000768d... (100 %)
+Wrote 26640 bytes (16689 compressed) at 0x00001000 in 0.9 seconds (effective 244.4 kbit/s)...
+Hash of data verified.
+Compressed 1458864 bytes to 910783...
+Writing at 0x00010000... (1 %)
+Writing at 0x0001d253... (3 %)
+Writing at 0x0002a226... (5 %)
+Writing at 0x00038324... (7 %)
+Writing at 0x0003e03d... (8 %)
+Writing at 0x00044944... (10 %)
+Writing at 0x00050205... (12 %)
+Writing at 0x00055d4f... (14 %)
+Writing at 0x0005bc71... (16 %)
+Writing at 0x000615ae... (17 %)
+Writing at 0x00066c39... (19 %)
+Writing at 0x0006c49c... (21 %)
+Writing at 0x00071c56... (23 %)
+Writing at 0x0007841b... (25 %)
+Writing at 0x0007e0ae... (26 %)
+Writing at 0x0008408b... (28 %)
+Writing at 0x00089fa4... (30 %)
+Writing at 0x0008ff01... (32 %)
+Writing at 0x00095b84... (33 %)
+Writing at 0x0009bbfe... (35 %)
+Writing at 0x000a189e... (37 %)
+Writing at 0x000a7c0c... (39 %)
+Writing at 0x000ada86... (41 %)
+Writing at 0x000b4448... (42 %)
+Writing at 0x000ba338... (44 %)
+Writing at 0x000bffc1... (46 %)
+Writing at 0x000c5f2a... (48 %)
+Writing at 0x000cb9d2... (50 %)
+Writing at 0x000d1852... (51 %)
+Writing at 0x000d75c9... (53 %)
+Writing at 0x000dcf54... (55 %)
+Writing at 0x000e268c... (57 %)
+Writing at 0x000e7985... (58 %)
+Writing at 0x000ecf61... (60 %)
+Writing at 0x000f20f0... (62 %)
+Writing at 0x000f780f... (64 %)
+Writing at 0x000fcee0... (66 %)
+Writing at 0x001027bb... (67 %)
+Writing at 0x001084aa... (69 %)
+Writing at 0x0010d9be... (71 %)
+Writing at 0x00113282... (73 %)
+Writing at 0x00118aaf... (75 %)
+Writing at 0x0011e1e2... (76 %)
+Writing at 0x001239fa... (78 %)
+Writing at 0x0012945b... (80 %)
+Writing at 0x0012ef05... (82 %)
+Writing at 0x00135137... (83 %)
+Writing at 0x0013d19a... (85 %)
+Writing at 0x001453a7... (87 %)
+Writing at 0x0014bac0... (89 %)
+Writing at 0x00154cd8... (91 %)
+Writing at 0x0015a2f9... (92 %)
+Writing at 0x00160095... (94 %)
+Writing at 0x00165ae9... (96 %)
+Writing at 0x0016b973... (98 %)
+Writing at 0x00170c42... (100 %)
+Wrote 1458864 bytes (910783 compressed) at 0x00010000 in 21.4 seconds (effective 546.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 279.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

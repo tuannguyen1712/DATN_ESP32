@@ -14,6 +14,16 @@ uint8_t data[1024];
 uint8_t uart_buffer[1024];
 uint8_t cnt = 0;
 
+float tem;
+float hum;
+int adc_val;
+int door1 = 0;
+int door2 = 0;
+int d_mod = 0;					// door mode (0:manual 1:auto)
+int d_mod_2 = 0;
+int door_state = 0; 
+int door2, d_mod_2, door_state_2, fan1, motor_speed, fan2, motor_speed_2, led1, led_mod, led_state, led2, led_mod_2, led_state_2, buz_state;
+
 // delete pattern det and buffered_size;
 // static void uart2_event_task(void *pvParameters)
 // {
@@ -143,6 +153,12 @@ void uart_handle_event()
                 else {
                     ESP_LOGI("UART2", "turn 2");
                     strcat((char*) uart_buffer, (char*) dtmp);
+                    sscanf((char*) uart_buffer,
+                        "tem:%f\thum:%f\tmq2:%d\tdr1:%d\tdm1:%d\tds1:%d\tdr2:%d\tdm2:%d\tds2:%d\tfn1:%d\tfs1:%d\tfn2:%d\tfs2:%d\tld1:%d\tlm1:%d\tls1:%d\tld2:%d\tlm2:%d\tls2:%d\tbuz:%d",
+                        &tem, &hum, &adc_val, &door1, &d_mod, &door_state, &door2, &d_mod_2,
+                        &door_state_2, &fan1, &motor_speed, &fan2, &motor_speed_2, &led1, &led_mod,
+                        &led_state, &led2, &led_mod_2, &led_state_2, &buz_state);
+                    // ESP_LOGI("UART", "%s %f", uart_buffer, tem);
                     uart_rcv_done = 1;
                 }
                 last_tick = g_sys_tick;

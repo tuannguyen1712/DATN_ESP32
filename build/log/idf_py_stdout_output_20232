@@ -1,0 +1,390 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 22 2024 10:40:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3f7a8h (260008) map[0m
+[0;32mI (199) esp_image: segment 1: paddr=0004f7d0 vaddr=3ffbdb60 size=00848h (  2120) load[0m
+[0;32mI (200) esp_image: segment 2: paddr=00050020 vaddr=400d0020 size=fdf38h (1040184) map[0m
+[0;32mI (580) esp_image: segment 3: paddr=0014df60 vaddr=3ffbe3a8 size=04e78h ( 20088) load[0m
+[0;32mI (588) esp_image: segment 4: paddr=00152de0 vaddr=40080000 size=2108ch (135308) load[0m
+[0;32mI (661) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (661) boot: Disabling RNG early entropy source...[0m
+[0;32mI (673) cpu_start: Multicore app[0m
+[0;32mI (673) cpu_start: Pro cpu up.[0m
+[0;32mI (673) cpu_start: Starting app cpu, entry point is 0x400815d0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (693) cpu_start: Pro cpu start user code[0m
+[0;32mI (693) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (693) cpu_start: Application information:[0m
+[0;32mI (698) cpu_start: Project name:     gatt_server_demos[0m
+[0;32mI (704) cpu_start: App version:      09d1446-dirty[0m
+[0;32mI (709) cpu_start: Compile time:     May 13 2024 22:40:35[0m
+[0;32mI (715) cpu_start: ELF file SHA256:  e76fc5f7c6a0ac4d...[0m
+[0;32mI (721) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (727) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (731) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (736) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (741) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (748) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (754) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (760) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (766) heap_init: At 3FFCC7D0 len 00013830 (78 KiB): DRAM[0m
+[0;32mI (773) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (779) heap_init: At 3FFE4350 len 0001AC24 (107 KiB): D/IRAM[0m
+[0;32mI (787) spi_flash: detected chip: generic[0m
+[0;32mI (790) spi_flash: flash io: dio[0m
+[0;32mI (795) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (800) app_start: Starting scheduler on CPU0[0m
+[0;32[0;32mI (804) app_start: Starting scheduler on CPU1[0m
+mI (804) main_task: Started on CPU0[0m
+[0;32mI (814) main_task: Calling app_main()[0m
+[0;32mI (844) W25Q32: Init spi bus[0m
+[0;32mI (844) gpio: GPIO[19]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (854) MQTT: datn/E8:6B:EA:D4:3F:F6/data datn/E8:6B:EA:D4:3F:F6/control[0m
+[0;32mI (854) BLE:: ble task, wifi queue: 0, data_flag: 0[0m
+[0;32mI (864) WIFI: wifi task, ble_queue: 0 wifi_connect: 0[0m
+[0;32mI (864) UART: uart task[0m
+[0;32mI (874) uart: queue free spaces: 20[0m
+[0;32mI (874) UART: init uart[0m
+[0;32mI (874) main_task: Returned from app_main()[0m
+[0;32mI (964) BLE:: ble task have mutex[0m
+[0;32mI (964) W25Q32: Read data from w25q32 at 0: save	i:0	l:30����[0m
+[0;32mI (964) W25Q32: wifi data location: save	i:0	l:30����[0m
+[0;32mI (964) W25Q32: wifi data at sector 0, len 30[0m
+[0;32mI (974) BLE:: ble task release mutex[0m
+I (1084) wifi:wifi driver task: 3ffd3cd0, prio:23, stack:6656, core=0
+I (1104) wifi:wifi firmware version: ce9244d
+I (1104) wifi:wifi certification version: v7.0
+I (1104) wifi:config NVS flash: enabled
+I (1104) wifi:config nano formating: disabled
+I (1104) wifi:Init data frame dynamic rx buffer num: 32
+I (1114) wifi:Init management frame dynamic rx buffer num: 32
+I (1114) wifi:Init management short buffer num: 32
+I (1124) wifi:Init static tx buffer num: 16
+I (1124) wifi:Init static rx buffer size: 1600
+I (1124) wifi:Init static rx buffer num: 10
+I (1134) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1134) wifi_init: rx ba win: 6[0m
+[0;32mI (1144) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1144) wifi_init: udp mbox: 6[0m
+[0;32mI (1144) wifi_init: tcp mbox: 6[0m
+[0;32mI (1154) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1154) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1164) wifi_init: tcp mss: 1440[0m
+[0;32mI (1164) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1164) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1174) BLE:: ble task have mutex[0m
+[0;32mI (1174) W25Q32: Read data from w25q32 at 4096: w:Wifi Chùa :/	p:toikhongbiet[0m
+[0;32mI (1184) W25Q32: get wifi info: w:Wifi Chùa :/	p:toikhongbiet[0m
+ssid: .Wifi Chùa :/. pass: .toikhongbiet.
+[0;32mI (1224) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1334) wifi:mode : sta (e8:6b:ea:d4:3f:f4)
+I (1334) wifi:enable tsf
+[0;32mI (1344) WIFI STATION: wifi_init_sta finished, ssid: Wifi Chùa :/, pass: toikhongbiet.[0m
+[0;32mI (1344) BLE:: start connect wifi[0m
+[0;32mI (1344) BLE:: ble task release mutex[0m
+[0;32mI (1354) BLE:: init ble[0m
+[0;32mI (1354) BLE:: init lwip[0m
+I (3754) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (4934) wifi:state: init -> auth (b0)
+I (5934) wifi:state: auth -> init (200)
+I (5934) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+[0;32mI (5944) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (5944) WIFI STATION: connect to the AP fail[0m
+[0;32mI (8354) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (8354) WIFI STATION: connect to the AP fail[0m
+I (10764) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (10774) wifi:state: init -> auth (b0)
+I (10784) wifi:state: auth -> assoc (0)
+I (10794) wifi:state: assoc -> run (10)
+I (10814) wifi:connected with Wifi Chùa :/, aid = 1, channel 1, BW20, bssid = 26:d1:fa:05:6e:c0
+I (10814) wifi:security: WPA2-PSK, phy: bgn, rssi: -44
+I (10824) wifi:pm start, type: 1
+
+[0;32mI (10854) esp_netif_handlers: sta ip: 192.168.231.68, mask: 255.255.255.0, gw: 192.168.231.254[0m
+[0;32mI (10854) WIFI STATION: got ip:192.168.231.68[0m
+[0;32mI (10864) BLE:: ble task have mutex[0m
+[0;32mI (10864) BLE:: connect state = 1[0m
+[0;32mI (10864) BLE:: ble task release mutex[0m
+[0;32mI (10874) WIFI: wifi task have mutex[0m
+[0;32mI (10874) WIFI: disable ble[0m
+I (10874) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (10884) SNTP: Initializing and starting SNTP[0m
+[0;32mI (10884) MQTT: Other event id:7[0m
+[0;32mI (12514) SNTP: Set time success[0m
+[0;32mI (12514) WIFI: wifi task release mutex[0m
+[0;32mI (14174) UART2: uart[2] event:[0m
+[0;32mI (14174) UART2: [UART DATA]: 120[0m
+[0;32mI (14174) UART2: turn 1[0m
+[0;32mI (14184) UART2: uart[2] event:[0m
+[0;32mI (14184) UART2: [UART DATA]: 9[0m
+[0;32mI (14184) UART2: turn 2[0m
+[0;32mI (14184) UART: uart task have mutex[0m
+[0;32mI (14184) UART: receive data from uart[0m
+[0;32mI (14194) SNTP: Current time in Vietnam: 2024:06:15 15:24:33[0m
+[0;31mE (20914) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (20914) esp-tls: Failed to open new connection[0m
+[0;31mE (20914) transport_base: Failed to open a new connection[0m
+[0;31mE (20914) mqtt_client: Error transport connect[0m
+[0;32mI (20924) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (20924) MQTT: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (20934) MQTT: Last errno string (Success)[0m
+[0;32mI (20934) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;33mW (20944) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (20944) UART: publish data to mqtt server, data: 20240615152433	tem:27.3	hum:47.3	mq2:292	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:-1	fn2:0	fs2:-1	ld1:0	lm1:0	ls1:1	ld2:0	lm2:0	ls2:1	buz:0, len: 9[0m
+[0;32mI (20964) UART: uart task release mutex[0m
+[0;32mI (30944) MQTT: Other event id:7[0m
+[0;31mE (38654) esp-tls-mbedtls: mbedtls_x509_crt_parse of CA cert returned -0x2180[0m
+[0;31mE (38654) esp-tls-mbedtls: Failed to set client configurations, returned [0x8015] (ESP_ERR_MBEDTLS_X509_CRT_PARSE_FAILED)[0m
+[0;31mE (38664) esp-tls: create_ssl_handle failed[0m
+[0;31mE (38664) esp-tls: Failed to open new connection[0m
+[0;31mE (38674) transport_base: Failed to open a new connection[0m
+[0;31mE (38684) mqtt_client: Error transport connect[0m
+[0;32mI (38684) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (38684) MQTT: Last error reported from esp-tls: 0x8015[0m
+[0;31mE (38694) MQTT: Last error reported from tls stack: 0x2180[0m
+[0;32mI (38694) MQTT: Last errno string (Success)[0m
+[0;32mI (38704) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (44884) UART2: uart[2] event:[0m
+[0;32mI (44894) UART2: [UART DATA]: 120[0m
+[0;32mI (44894) UART2: turn 1[0m
+[0;32mI (44904) UART2: uart[2] event:[0m
+[0;32mI (44904) UART2: [UART DATA]: 9[0m
+[0;32mI (44904) UART2: turn 2[0m
+[0;32mI (44904) UART: uart task have mutex[0m
+[0;32mI (44904) UART: receive data from uart[0m
+[0;32mI (44914) SNTP: Current time in Vietnam: 2024:06:15 15:25:03[0m
+[0;33mW (44914) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (44924) UART: publish data to mqtt server, data: 20240615152503	tem:27.3	hum:46.9	mq2:289	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:-1	fn2:0	fs2:-1	ld1:0	lm1:0	ls1:1	ld2:0	lm2:0	ls2:1	buz:0, len: 9[0m
+[0;32mI (44944) UART: uart task release mutex[0m
+[0;32mI (53704) MQTT: Other event id:7[0m
+[0;31mE (53824) esp-tls-mbedtls: mbedtls_x509_crt_parse of CA cert returned -0x2180[0m
+[0;31mE (53824) esp-tls-mbedtls: Failed to set client configurations, returned [0x8015] (ESP_ERR_MBEDTLS_X509_CRT_PARSE_FAILED)[0m
+[0;31mE (53834) esp-tls: create_ssl_handle failed[0m
+[0;31mE (53834) esp-tls: Failed to open new connection[0m
+[0;31mE (53844) transport_base: Failed to open a new connection[0m
+[0;31mE (53844) mqtt_client: Error transport connect[0m
+[0;32mI (53854) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (53854) MQTT: Last error reported from esp-tls: 0x8015[0m
+[0;31mE (53864) MQTT: Last error reported from tls stack: 0x2180[0m
+[0;32mI (53864) MQTT: Last errno string (Success)[0m
+[0;32mI (53874) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (68874) MQTT: Other event id:7[0m
+[0;31mE (68894) esp-tls-mbedtls: mbedtls_x509_crt_parse of CA cert returned -0x2180[0m
+[0;31mE (68894) esp-tls-mbedtls: Failed to set client configurations, returned [0x8015] (ESP_ERR_MBEDTLS_X509_CRT_PARSE_FAILED)[0m
+[0;31mE (68904) esp-tls: create_ssl_handle failed[0m
+[0;31mE (68904) esp-tls: Failed to open new connection[0m
+[0;31mE (68914) transport_base: Failed to open a new connection[0m
+[0;31mE (68924) mqtt_client: Error transport connect[0m
+[0;32mI (68924) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (68924) MQTT: Last error reported from esp-tls: 0x8015[0m
+[0;31mE (68934) MQTT: Last error reported from tls stack: 0x2180[0m
+[0;32mI (68944) MQTT: Last errno string (Success)[0m
+[0;32mI (68944) MQTT: MQTT_EVENT_DISCONNECTED[0m
+I (68974) wifi:<ba-add>idx:0 (ifx:0, 26:d1:fa:05:6e:c0), tid:0, ssn:16, winSize:64
+[0;32mI (75594) UART2: uart[2] event:[0m
+[0;32mI (75594) UART2: [UART DATA]: 120[0m
+[0;32mI (75594) UART2: turn 1[0m
+[0;32mI (75604) UART2: uart[2] event:[0m
+[0;32mI (75604) UART2: [UART DATA]: 9[0m
+[0;32mI (75604) UART2: turn 2[0m
+[0;32mI (75604) UART: uart task have mutex[0m
+[0;32mI (75604) UART: receive data from uart[0m
+[0;32mI (75614) SNTP: Current time in Vietnam: 2024:06:15 15:25:34[0m
+[0;33mW (75624) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (75624) UART: publish data to mqtt server, data: 20240615152534	tem:27.4	hum:46.7	mq2:285	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:-1	fn2:0	fs2:-1	ld1:0	lm1:0	ls1:1	ld2:0	lm2:0	ls2:1	buz:0, len: 9[0m
+[0;32mI (75644) UART: uart task release mutex[0m
+[0;32mI (83944) MQTT: Other event id:7[0m
+[0;31mE (93954) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (93954) esp-tls: Failed to open new connection[0m
+[0;31mE (93954) transport_base: Failed to open a new connection[0m
+[0;31mE (93954) mqtt_client: Error transport connect[0m
+[0;32mI (93964) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (93964) MQTT: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (93974) MQTT: Last errno string (Success)[0m
+[0;32mI (93974) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (103984) MQTT: Other event id:7[0m
+[0;32mI (106284) UART2: uart[2] event:[0m
+[0;32mI (106284) UART2: [UART DATA]: 120[0m
+[0;32mI (106284) UART2: turn 1[0m
+[0;32mI (106294) UART2: uart[2] event:[0m
+[0;32mI (106294) UART2: [UART DATA]: 9[0m
+[0;32mI (106294) UART2: turn 2[0m
+[0;32mI (106294) UART: uart task have mutex[0m
+[0;32mI (106304) UART: receive data from uart[0m
+[0;32mI (106304) SNTP: Current time in Vietnam: 2024:06:15 15:26:05[0m
+[0;31mE (113994) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (113994) esp-tls: Failed to open new connection[0m
+[0;31mE (113994) transport_base: Failed to open a new connection[0m
+[0;31mE (113994) mqtt_client: Error transport connect[0m
+[0;32mI (114004) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (114004) MQTT: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (114014) MQTT: Last errno string (Success)[0m
+[0;32mI (114014) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;33mW (114024) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (114024) UART: publish data to mqtt server, data: 20240615152605	tem:27.4	hum:46.7	mq2:283	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:-1	fn2:0	fs2:-1	ld1:0	lm1:0	ls1:1	ld2:0	lm2:0	ls2:1	buz:0, len: 9[0m
+[0;32mI (114044) UART: uart task release mutex[0m
+[0;32mI (124024) MQTT: Other event id:7[0m
+[0;31mE (134034) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (134034) esp-tls: Failed to open new connection[0m
+[0;31mE (134034) transport_base: Failed to open a new connection[0m
+[0;31mE (134034) mqtt_client: Error transport connect[0m
+[0;32mI (134044) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (134044) MQTT: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (134054) MQTT: Last errno string (Success)[0m
+[0;32mI (134054) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (136984) UART2: uart[2] event:[0m
+[0;32mI (136984) UART2: [UART DATA]: 120[0m
+[0;32mI (136984) UART2: turn 1[0m
+[0;32mI (136994) UART2: uart[2] event:[0m
+[0;32mI (136994) UART2: [UART DATA]: 9[0m
+[0;32mI (136994) UART2: turn 2[0m
+[0;32mI (136994) UART: uart task have mutex[0m
+[0;32mI (137004) UART: receive data from uart[0m
+[0;32mI (137004) SNTP: Current time in Vietnam: 2024:06:15 15:26:35[0m
+[0;33mW (137014) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (137014) UART: publish data to mqtt server, data: 20240615152635	tem:27.4	hum:46.3	mq2:282	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:-1	fn2:0	fs2:-1	ld1:0	lm1:0	ls1:1	ld2:0	lm2:0	ls2:1	buz:0, len: 9[0m
+[0;32mI (137034) UART: uart task release mutex[0m
+[0;32mI (144064) MQTT: Other event id:7[0m
+[0;31mE (154074) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (154074) esp-tls: Failed to open new connection[0m
+[0;31mE (154074) transport_base: Failed to open a new connection[0m
+[0;31mE (154074) mqtt_client: Error transport connect[0m
+[0;32mI (154084) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (154084) MQTT: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (154094) MQTT: Last errno string (Success)[0m
+[0;32mI (154094) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (164104) MQTT: Other event id:7[0m
+[0;32mI (167674) UART2: uart[2] event:[0m
+[0;32mI (167684) UART2: [UART DATA]: 120[0m
+[0;32mI (167684) UART2: turn 1[0m
+[0;32mI (167694) UART2: uart[2] event:[0m
+[0;32mI (167694) UART2: [UART DATA]: 9[0m
+[0;32mI (167694) UART2: turn 2[0m
+[0;32mI (167694) UART: uart task have mutex[0m
+[0;32mI (167694) UART: receive data from uart[0m
+[0;32mI (167704) SNTP: Current time in Vietnam: 2024:06:15 15:27:06[0m
+[0;31mE (174114) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (174114) esp-tls: Failed to open new connection[0m
+[0;31mE (174114) transport_base: Failed to open a new connection[0m
+[0;31mE (174114) mqtt_client: Error transport connect[0m
+[0;32mI (174124) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (174124) MQTT: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (174134) MQTT: Last errno string (Success)[0m
+[0;32mI (174134) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;33mW (174144) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (174144) UART: publish data to mqtt server, data: 20240615152706	tem:27.3	hum:46.2	mq2:280	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:-1	fn2:0	fs2:-1	ld1:0	lm1:0	ls1:1	ld2:0	lm2:0	ls2:1	buz:0, len: 9[0m
+[0;32mI (174164) UART: uart task release mutex[0m
+[0;32mI (184144) MQTT: Other event id:7[0m
+[0;31mE (194154) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (194154) esp-tls: Failed to open new connection[0m
+[0;31mE (194154) transport_base: Failed to open a new connection[0m
+[0;31mE (194154) mqtt_client: Error transport connect[0m
+[0;32mI (194164) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (194164) MQTT: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (194174) MQTT: Last errno string (Success)[0m
+[0;32mI (194174) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (198384) UART2: uart[2] event:[0m
+[0;32mI (198384) UART2: [UART DATA]: 120[0m
+[0;32mI (198384) UART2: turn 1[0m
+[0;32mI (198394) UART2: uart[2] event:[0m
+[0;32mI (198394) UART2: [UART DATA]: 9[0m
+[0;32mI (198394) UART2: turn 2[0m
+[0;32mI (198394) UART: uart task have mutex[0m
+[0;32mI (198394) UART: receive data from uart[0m
+[0;32mI (198404) SNTP: Current time in Vietnam: 2024:06:15 15:27:37[0m
+[0;33mW (198404) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (198414) UART: publish data to mqtt server, data: 20240615152737	tem:27.2	hum:46.3	mq2:279	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:-1	fn2:0	fs2:-1	ld1:0	lm1:0	ls1:1	ld2:0	lm2:0	ls2:1	buz:0, len: 9[0m
+[0;32mI (198434) UART: uart task release mutex[0m
+[0;32mI (204184) MQTT: Other event id:7[0m
+[0;31mE (214194) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (214194) esp-tls: Failed to open new connection[0m
+[0;31mE (214194) transport_base: Failed to open a new connection[0m
+[0;31mE (214194) mqtt_client: Error transport connect[0m
+[0;32mI (214204) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (214204) MQTT: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (214214) MQTT: Last errno string (Success)[0m
+[0;32mI (214214) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (224224) MQTT: Other event id:7[0m
+[0;32mI (229084) UART2: uart[2] event:[0m
+[0;32mI (229084) UART2: [UART DATA]: 120[0m
+[0;32mI (229084) UART2: turn 1[0m
+[0;32mI (229094) UART2: uart[2] event:[0m
+[0;32mI (229094) UART2: [UART DATA]: 9[0m
+[0;32mI (229094) UART2: turn 2[0m
+[0;32mI (229094) UART: uart task have mutex[0m
+[0;32mI (229094) UART: receive data from uart[0m
+[0;32mI (229104) SNTP: Current time in Vietnam: 2024:06:15 15:28:08[0m
+[0;31mE (234234) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (234234) esp-tls: Failed to open new connection[0m
+[0;31mE (234234) transport_base: Failed to open a new connection[0m
+[0;31mE (234234) mqtt_client: Error transport connect[0m
+[0;32mI (234244) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (234244) MQTT: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (234254) MQTT: Last errno string (Success)[0m
+[0;32mI (234254) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;33mW (234264) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (234264) UART: publish data to mqtt server, data: 20240615152808	tem:27.1	hum:46.6	mq2:272	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:-1	fn2:0	fs2:-1	ld1:0	lm1:0	ls1:1	ld2:0	lm2:0	ls2:1	buz:0, len: 9[0m
+[0;32mI (234284) UART: uart task release mutex[0m
+[0;32mI (244264) MQTT: Other event id:7[0m
+[0;31mE (254274) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (254274) esp-tls: Failed to open new connection[0m
+[0;31mE (254274) transport_base: Failed to open a new connection[0m
+[0;31mE (254274) mqtt_client: Error transport connect[0m
+[0;32mI (254284) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (254284) MQTT: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (254294) MQTT: Last errno string (Success)[0m
+[0;32mI (254294) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (259774) UART2: uart[2] event:[0m
+[0;32mI (259774) UART2: [UART DATA]: 120[0m
+[0;32mI (259774) UART2: turn 1[0m
+[0;32mI (259784) UART2: uart[2] event:[0m
+[0;32mI (259784) UART2: [UART DATA]: 9[0m
+[0;32mI (259784) UART2: turn 2[0m
+[0;32mI (259794) UART: uart task have mutex[0m
+[0;32mI (259794) UART: receive data from uart[0m
+[0;32mI (259794) SNTP: Current time in Vietnam: 2024:06:15 15:28:38[0m
+[0;33mW (259804) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (259814) UART: publish data to mqtt server, data: 20240615152838	tem:27.0	hum:46.9	mq2:274	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:0	fs1:-1	fn2:0	fs2:-1	ld1:0	lm1:0	ls1:1	ld2:0	lm2:0	ls2:1	buz:0, len: 9[0m
+[0;32mI (259834) UART: uart task release mutex[0m
+[0;32mI (264304) MQTT: Other event id:7[0m
+[0;31mE (274314) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (274314) esp-tls: Failed to open new connection[0m
+[0;31mE (274314) transport_base: Failed to open a new connection[0m
+[0;31mE (274314) mqtt_client: Error transport connect[0m
+[0;32mI (274324) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (274324) MQTT: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (274334) MQTT: Last errno string (Success)[0m
+[0;32mI (274334) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (284344) MQTT: Other event id:7[0m
+[0;32mI (290474) UART2: uart[2] event:[0m
+[0;32mI (290474) UART2: [UART DATA]: 120[0m
+[0;32mI (290474) UART2: turn 1[0m
+[0;32mI (290484) UART2: uart[2] event:[0m
+[0;32mI (290484) UART2: [UART DATA]: 9[0m
+[0;32mI (290484) UART2: turn 2[0m
+[0;32mI (290494) UART: uart task have mutex[0m
+[0;32mI (290494) UART: receive data from uart[0m
+[0;32mI (290494) SNTP: Current time in Vietnam: 2024:06:15 15:29:09[0m

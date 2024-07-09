@@ -39,7 +39,8 @@
         "w25q32.h": "c",
         "stdio.h": "c",
         "nvs_flash.h": "c",
-        "aes.h": "c"
+        "aes.h": "c",
+        "corecrt_stdio_config.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
