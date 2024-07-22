@@ -1,0 +1,825 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 22 2024 10:40:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3f638h (259640) map[0m
+[0;32mI (199) esp_image: segment 1: paddr=0004f660 vaddr=3ffbdb60 size=009b8h (  2488) load[0m
+[0;32mI (200) esp_image: segment 2: paddr=00050020 vaddr=400d0020 size=fe4c8h (1041608) map[0m
+[0;32mI (580) esp_image: segment 3: paddr=0014e4f0 vaddr=3ffbe518 size=04d08h ( 19720) load[0m
+[0;32mI (588) esp_image: segment 4: paddr=00153200 vaddr=40080000 size=2108ch (135308) load[0m
+[0;32mI (661) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (661) boot: Disabling RNG early entropy source...[0m
+[0;32mI (673) cpu_start: Multicore app[0m
+[0;32mI (673) cpu_start: Pro cpu up.[0m
+[0;32mI (673) cpu_start: Starting app cpu, entry point is 0x400815d0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (693) cpu_start: Pro cpu start user code[0m
+[0;32mI (693) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (693) cpu_start: Application information:[0m
+[0;32mI (698) cpu_start: Project name:     gatt_server_demos[0m
+[0;32mI (704) cpu_start: App version:      0b3c4e1-dirty[0m
+[0;32mI (709) cpu_start: Compile time:     Jul 10 2024 06:56:04[0m
+[0;32mI (715) cpu_start: ELF file SHA256:  3af763319f8af46e...[0m
+[0;32mI (721) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (727) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (731) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (736) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (741) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (748) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (754) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (760) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (767) heap_init: At 3FFCC840 len 000137C0 (77 KiB): DRAM[0m
+[0;32mI (773) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (779) heap_init: At 3FFE4350 len 0001AC24 (107 KiB): D/IRAM[0m
+[0;32mI (787) spi_flash: detected chip: generic[0m
+[0;32mI (790) spi_flash: flash io: dio[0m
+[0;32mI (795) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (800) app_start: Starting scheduler on CPU0[0m
+[0;32m[0;32mI (804) app_start: Starting scheduler on CPU1[0m
+I (804) main_task: Started on CPU0[0m
+[0;32mI (814) main_task: Calling app_main()[0m
+[0;32mI (854) MQTT: datn/FC:B4:67:F5:ED:82/data datn/FC:B4:67:F5:ED:82/control[0m
+[0;32mI (854) LCD: Start init pin[0m
+[0;32mI (854) LCD: Start init LCD[0m
+[0;32mI (894) W25Q32: Init spi bus[0m
+[0;32mI (894) gpio: GPIO[19]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (894) BLE:: ble task, wifi queue: 0, data_flag: 0[0m
+[0;32mI (904) WIFI: wifi task, ble_queue: 0 wifi_connect: 0[0m
+[0;32mI (904) UART: uart task[0m
+[0;32mI (904) uart: queue free spaces: 20[0m
+[0;32mI (914) UART: init uart[0m
+[0;32mI (914) main_task: Returned from app_main()[0m
+[0;32mI (1004) BLE:: ble task have mutex[0m
+[0;32mI (1004) W25Q32: Read data from w25q32 at 0: [0m
+[0;32mI (1004) W25Q32: wifi data location: [0m
+[0;32mI (1004) W25Q32: There has never been wifi data written to the w25q32 before[0m
+[0;32mI (1014) BLE:: ble task release mutex[0m
+I (1124) wifi:wifi driver task: 3ffd3d40, prio:23, stack:6656, core=0
+I (1134) wifi:wifi firmware version: ce9244d
+I (1144) wifi:wifi certification version: v7.0
+I (1144) wifi:config NVS flash: enabled
+I (1144) wifi:config nano formating: disabled
+I (1144) wifi:Init data frame dynamic rx buffer num: 32
+I (1144) wifi:Init management frame dynamic rx buffer num: 32
+I (1154) wifi:Init management short buffer num: 32
+I (1164) wifi:Init static tx buffer num: 16
+I (1164) wifi:Init static rx buffer size: 1600
+I (1164) wifi:Init static rx buffer num: 10
+I (1174) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1174) wifi_init: rx ba win: 6[0m
+[0;32mI (1174) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1184) wifi_init: udp mbox: 6[0m
+[0;32mI (1184) wifi_init: tcp mbox: 6[0m
+[0;32mI (1194) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1194) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1194) wifi_init: tcp mss: 1440[0m
+[0;32mI (1204) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1204) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1214) BLE:: ble task have mutex[0m
+[0;32mI (1214) BTDM_INIT: BT controller compile version [946b762][0m
+[0;32mI (1224) BTDM_INIT: Bluetooth MAC: fc:b4:67:f5:ed:82[0m
+[0;32mI (1234) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+[0;32mI (1674) BLE:: ble task release mutex[0m
+[0;32mI (1674) BLE:: init ble[0m
+[0;32mI (1674) BLE:: init lwip[0m
+[0;32mI (1674) GATTS_DEMO: REGISTER_APP_EVT, status 0, app_id 0
+[0m
+[0;32mI (1694) GATTS_DEMO: CREATE_SERVICE_EVT, status 0,  service_handle 40
+[0m
+[0;32mI (1714) GATTS_DEMO: SERVICE_START_EVT, status 0, service_handle 40
+[0m
+[0;32mI (1714) GATTS_DEMO: ADD_CHAR_EVT, status 0,  attr_handle 42, service_handle 40
+[0m
+[0;32mI (1724) GATTS_DEMO: the gatts demo char length = 3
+[0m
+[0;32mI (1724) GATTS_DEMO: prf_char[0] =11
+[0m
+[0;32mI (1734) GATTS_DEMO: prf_char[1] =22
+[0m
+[0;32mI (1734) GATTS_DEMO: prf_char[2] =33
+[0m
+[0;32mI (1744) GATTS_DEMO: ADD_DESCR_EVT, status 0, attr_handle 43, service_handle 40
+[0m
+[0;32mI (7474) UART2: uart[2] event:[0m
+[0;32mI (7474) UART2: [UART DATA]: 120[0m
+[0;32mI (7474) UART2: turn 1[0m
+[0;32mI (7484) UART2: uart[2] event:[0m
+[0;32mI (7484) UART2: [UART DATA]: 7[0m
+[0;32mI (7484) UART2: turn 2[0m
+[0;32mI (7484) UART: uart task have mutex[0m
+[0;32mI (7484) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (7514) LCD: t:10.2  h:69.5[0m
+[0;32mI (7524) LCD: MQ2:123[0m
+[0;32mI (7524) UART: uart task release mutex[0m
+[0;32mI (8374) UART2: uart[2] event:[0m
+[0;32mI (8374) UART2: [UART DATA]: 120[0m
+[0;32mI (8374) UART2: turn 1[0m
+[0;32mI (8384) UART2: uart[2] event:[0m
+[0;32mI (8384) UART2: [UART DATA]: 7[0m
+[0;32mI (8384) UART2: turn 2[0m
+[0;32mI (8384) UART: uart task have mutex[0m
+[0;32mI (8394) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (8414) LCD: t:10.2  h:69.5[0m
+[0;32mI (8424) LCD: MQ2:123[0m
+[0;32mI (8424) UART: uart task release mutex[0m
+[0;32mI (9104) UART2: uart[2] event:[0m
+[0;32mI (9104) UART2: [UART DATA]: 120[0m
+[0;32mI (9104) UART2: turn 1[0m
+[0;32mI (9114) UART2: uart[2] event:[0m
+[0;32mI (9114) UART2: [UART DATA]: 7[0m
+[0;32mI (9114) UART2: turn 2[0m
+[0;32mI (9114) UART: uart task have mutex[0m
+[0;32mI (9114) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (9144) LCD: t:10.2  h:69.5[0m
+[0;32mI (9154) LCD: MQ2:123[0m
+[0;32mI (9154) UART: uart task release mutex[0m
+[0;32mI (9374) UART2: uart[2] event:[0m
+[0;32mI (9374) UART2: [UART DATA]: 120[0m
+[0;32mI (9374) UART2: turn 1[0m
+[0;32mI (9384) UART2: uart[2] event:[0m
+[0;32mI (9384) UART2: [UART DATA]: 7[0m
+[0;32mI (9384) UART2: turn 2[0m
+[0;32mI (9384) UART: uart task have mutex[0m
+[0;32mI (9384) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (9414) LCD: t:10.2  h:69.5[0m
+[0;32mI (9424) LCD: MQ2:123[0m
+[0;32mI (9424) UART: uart task release mutex[0m
+[0;32mI (9594) UART2: uart[2] event:[0m
+[0;32mI (9594) UART2: [UART DATA]: 120[0m
+[0;32mI (9594) UART2: turn 1[0m
+[0;32mI (9604) UART2: uart[2] event:[0m
+[0;32mI (9604) UART2: [UART DATA]: 7[0m
+[0;32mI (9604) UART2: turn 2[0m
+[0;32mI (9604) UART: uart task have mutex[0m
+[0;32mI (9604) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (9634) LCD: t:10.2  h:69.5[0m
+[0;32mI (9644) LCD: MQ2:123[0m
+[0;32mI (9644) UART: uart task release mutex[0m
+[0;32mI (9774) UART2: uart[2] event:[0m
+[0;32mI (9774) UART2: [UART DATA]: 120[0m
+[0;32mI (9774) UART2: turn 1[0m
+[0;32mI (9784) UART2: uart[2] event:[0m
+[0;32mI (9784) UART2: [UART DATA]: 7[0m
+[0;32mI (9784) UART2: turn 2[0m
+[0;32mI (9784) UART: uart task have mutex[0m
+[0;32mI (9794) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (9814) LCD: t:10.2  h:69.5[0m
+[0;32mI (9824) LCD: MQ2:123[0m
+[0;32mI (9824) UART: uart task release mutex[0m
+[0;32mI (9984) UART2: uart[2] event:[0m
+[0;32mI (9984) UART2: [UART DATA]: 120[0m
+[0;32mI (9984) UART2: turn 1[0m
+[0;32mI (9994) UART2: uart[2] event:[0m
+[0;32mI (9994) UART2: [UART DATA]: 7[0m
+[0;32mI (9994) UART2: turn 2[0m
+[0;32mI (9994) UART: uart task have mutex[0m
+[0;32mI (9994) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (10024) LCD: t:10.2  h:69.5[0m
+[0;32mI (10034) LCD: MQ2:123[0m
+[0;32mI (10034) UART: uart task release mutex[0m
+[0;32mI (10264) UART2: uart[2] event:[0m
+[0;32mI (10264) UART2: [UART DATA]: 120[0m
+[0;32mI (10264) UART2: turn 1[0m
+[0;32mI (10274) UART2: uart[2] event:[0m
+[0;32mI (10274) UART2: [UART DATA]: 7[0m
+[0;32mI (10274) UART2: turn 2[0m
+[0;32mI (10274) UART: uart task have mutex[0m
+[0;32mI (10274) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (10304) LCD: t:10.2  h:69.5[0m
+[0;32mI (10314) LCD: MQ2:123[0m
+[0;32mI (10314) UART: uart task release mutex[0m
+[0;32mI (10464) UART2: uart[2] event:[0m
+[0;32mI (10464) UART2: [UART DATA]: 120[0m
+[0;32mI (10464) UART2: turn 1[0m
+[0;32mI (10474) UART2: uart[2] event:[0m
+[0;32mI (10474) UART2: [UART DATA]: 7[0m
+[0;32mI (10474) UART2: turn 2[0m
+[0;32mI (10474) UART: uart task have mutex[0m
+[0;32mI (10484) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (10514) LCD: t:10.2  h:69.5[0m
+[0;32mI (10524) LCD: MQ2:123[0m
+[0;32mI (10524) UART: uart task release mutex[0m
+[0;32mI (10654) UART2: uart[2] event:[0m
+[0;32mI (10654) UART2: [UART DATA]: 120[0m
+[0;32mI (10654) UART2: turn 1[0m
+[0;32mI (10664) UART2: uart[2] event:[0m
+[0;32mI (10664) UART2: [UART DATA]: 7[0m
+[0;32mI (10664) UART2: turn 2[0m
+[0;32mI (10664) UART: uart task have mutex[0m
+[0;32mI (10664) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (10694) LCD: t:10.2  h:69.5[0m
+[0;32mI (10704) LCD: MQ2:123[0m
+[0;32mI (10704) UART: uart task release mutex[0m
+[0;32mI (10824) UART2: uart[2] event:[0m
+[0;32mI (10824) UART2: [UART DATA]: 120[0m
+[0;32mI (10824) UART2: turn 1[0m
+[0;32mI (10834) UART2: uart[2] event:[0m
+[0;32mI (10834) UART2: [UART DATA]: 7[0m
+[0;32mI (10834) UART2: turn 2[0m
+[0;32mI (10834) UART: uart task have mutex[0m
+[0;32mI (10844) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (10864) LCD: t:10.2  h:69.5[0m
+[0;32mI (10874) LCD: MQ2:123[0m
+[0;32mI (10874) UART: uart task release mutex[0m
+[0;32mI (11014) UART2: uart[2] event:[0m
+[0;32mI (11014) UART2: [UART DATA]: 120[0m
+[0;32mI (11014) UART2: turn 1[0m
+[0;32mI (11024) UART2: uart[2] event:[0m
+[0;32mI (11024) UART2: [UART DATA]: 7[0m
+[0;32mI (11024) UART2: turn 2[0m
+[0;32mI (11024) UART: uart task have mutex[0m
+[0;32mI (11034) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (11054) LCD: t:10.2  h:69.5[0m
+[0;32mI (11064) LCD: MQ2:123[0m
+[0;32mI (11064) UART: uart task release mutex[0m
+[0;32mI (11184) UART2: uart[2] event:[0m
+[0;32mI (11184) UART2: [UART DATA]: 120[0m
+[0;32mI (11184) UART2: turn 1[0m
+[0;32mI (11194) UART2: uart[2] event:[0m
+[0;32mI (11194) UART2: [UART DATA]: 7[0m
+[0;32mI (11194) UART2: turn 2[0m
+[0;32mI (11204) UART: uart task have mutex[0m
+[0;32mI (11204) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (11234) LCD: t:10.2  h:69.5[0m
+[0;32mI (11244) LCD: MQ2:123[0m
+[0;32mI (11244) UART: uart task release mutex[0m
+[0;32mI (11374) UART2: uart[2] event:[0m
+[0;32mI (11374) UART2: [UART DATA]: 120[0m
+[0;32mI (11374) UART2: turn 1[0m
+[0;32mI (11384) UART2: uart[2] event:[0m
+[0;32mI (11384) UART2: [UART DATA]: 7[0m
+[0;32mI (11384) UART2: turn 2[0m
+[0;32mI (11384) UART: uart task have mutex[0m
+[0;32mI (11394) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (11414) LCD: t:10.2  h:69.5[0m
+[0;32mI (11424) LCD: MQ2:123[0m
+[0;32mI (11424) UART: uart task release mutex[0m
+[0;32mI (11584) UART2: uart[2] event:[0m
+[0;32mI (11584) UART2: [UART DATA]: 120[0m
+[0;32mI (11584) UART2: turn 1[0m
+[0;32mI (11594) UART2: uart[2] event:[0m
+[0;32mI (11594) UART2: [UART DATA]: 7[0m
+[0;32mI (11594) UART2: turn 2[0m
+[0;32mI (11594) UART: uart task have mutex[0m
+[0;32mI (11594) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (11624) LCD: t:10.2  h:69.5[0m
+[0;32mI (11634) LCD: MQ2:123[0m
+[0;32mI (11634) UART: uart task release mutex[0m
+[0;32mI (11754) UART2: uart[2] event:[0m
+[0;32mI (11754) UART2: [UART DATA]: 120[0m
+[0;32mI (11754) UART2: turn 1[0m
+[0;32mI (11764) UART2: uart[2] event:[0m
+[0;32mI (11764) UART2: [UART DATA]: 7[0m
+[0;32mI (11764) UART2: turn 2[0m
+[0;32mI (11764) UART: uart task have mutex[0m
+[0;32mI (11764) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (11794) LCD: t:10.2  h:69.5[0m
+[0;32mI (11804) LCD: MQ2:123[0m
+[0;32mI (11804) UART: uart task release mutex[0m
+[0;32mI (11944) UART2: uart[2] event:[0m
+[0;32mI (11944) UART2: [UART DATA]: 120[0m
+[0;32mI (11944) UART2: turn 1[0m
+[0;32mI (11954) UART2: uart[2] event:[0m
+[0;32mI (11954) UART2: [UART DATA]: 7[0m
+[0;32mI (11954) UART2: turn 2[0m
+[0;32mI (11954) UART: uart task have mutex[0m
+[0;32mI (11954) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (11984) LCD: t:10.2  h:69.5[0m
+[0;32mI (11994) LCD: MQ2:123[0m
+[0;32mI (11994) UART: uart task release mutex[0m
+[0;32mI (12134) UART2: uart[2] event:[0m
+[0;32mI (12134) UART2: [UART DATA]: 120[0m
+[0;32mI (12134) UART2: turn 1[0m
+[0;32mI (12144) UART2: uart[2] event:[0m
+[0;32mI (12144) UART2: [UART DATA]: 7[0m
+[0;32mI (12144) UART2: turn 2[0m
+[0;32mI (12144) UART: uart task have mutex[0m
+[0;32mI (12144) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (12174) LCD: t:10.2  h:69.5[0m
+[0;32mI (12184) LCD: MQ2:123[0m
+[0;32mI (12184) UART: uart task release mutex[0m
+[0;32mI (12304) UART2: uart[2] event:[0m
+[0;32mI (12304) UART2: [UART DATA]: 120[0m
+[0;32mI (12304) UART2: turn 1[0m
+[0;32mI (12314) UART2: uart[2] event:[0m
+[0;32mI (12314) UART2: [UART DATA]: 7[0m
+[0;32mI (12314) UART2: turn 2[0m
+[0;32mI (12314) UART: uart task have mutex[0m
+[0;32mI (12314) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (12344) LCD: t:10.2  h:69.5[0m
+[0;32mI (12354) LCD: MQ2:123[0m
+[0;32mI (12354) UART: uart task release mutex[0m
+[0;32mI (12504) UART2: uart[2] event:[0m
+[0;32mI (12504) UART2: [UART DATA]: 120[0m
+[0;32mI (12504) UART2: turn 1[0m
+[0;32mI (12514) UART2: uart[2] event:[0m
+[0;32mI (12514) UART2: [UART DATA]: 7[0m
+[0;32mI (12514) UART2: turn 2[0m
+[0;32mI (12524) UART: uart task have mutex[0m
+[0;32mI (12524) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (12554) LCD: t:10.2  h:69.5[0m
+[0;32mI (12564) LCD: MQ2:123[0m
+[0;32mI (12564) UART: uart task release mutex[0m
+[0;32mI (12664) UART2: uart[2] event:[0m
+[0;32mI (12664) UART2: [UART DATA]: 120[0m
+[0;32mI (12664) UART2: turn 1[0m
+[0;32mI (12674) UART2: uart[2] event:[0m
+[0;32mI (12674) UART2: [UART DATA]: 7[0m
+[0;32mI (12674) UART2: turn 2[0m
+[0;32mI (12674) UART: uart task have mutex[0m
+[0;32mI (12684) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (12714) LCD: t:10.2  h:69.5[0m
+[0;32mI (12724) LCD: MQ2:123[0m
+[0;32mI (12724) UART: uart task release mutex[0m
+[0;32mI (12854) UART2: uart[2] event:[0m
+[0;32mI (12854) UART2: [UART DATA]: 120[0m
+[0;32mI (12854) UART2: turn 1[0m
+[0;32mI (12864) UART2: uart[2] event:[0m
+[0;32mI (12864) UART2: [UART DATA]: 7[0m
+[0;32mI (12864) UART2: turn 2[0m
+[0;32mI (12864) UART: uart task have mutex[0m
+[0;32mI (12864) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (12894) LCD: t:10.2  h:69.5[0m
+[0;32mI (12904) LCD: MQ2:123[0m
+[0;32mI (12904) UART: uart task release mutex[0m
+[0;32mI (13024) UART2: uart[2] event:[0m
+[0;32mI (13024) UART2: [UART DATA]: 120[0m
+[0;32mI (13024) UART2: turn 1[0m
+[0;32mI (13034) UART2: uart[2] event:[0m
+[0;32mI (13034) UART2: [UART DATA]: 7[0m
+[0;32mI (13034) UART2: turn 2[0m
+[0;32mI (13034) UART: uart task have mutex[0m
+[0;32mI (13044) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (13064) LCD: t:10.2  h:69.5[0m
+[0;32mI (13074) LCD: MQ2:123[0m
+[0;32mI (13074) UART: uart task release mutex[0m
+[0;32mI (13224) UART2: uart[2] event:[0m
+[0;32mI (13224) UART2: [UART DATA]: 120[0m
+[0;32mI (13224) UART2: turn 1[0m
+[0;32mI (13234) UART2: uart[2] event:[0m
+[0;32mI (13234) UART2: [UART DATA]: 7[0m
+[0;32mI (13234) UART2: turn 2[0m
+[0;32mI (13244) UART: uart task have mutex[0m
+[0;32mI (13244) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (13274) LCD: t:10.2  h:69.5[0m
+[0;32mI (13284) LCD: MQ2:123[0m
+[0;32mI (13284) UART: uart task release mutex[0m
+[0;32mI (13394) UART2: uart[2] event:[0m
+[0;32mI (13404) UART2: [UART DATA]: 120[0m
+[0;32mI (13404) UART2: turn 1[0m
+[0;32mI (13414) UART2: uart[2] event:[0m
+[0;32mI (13414) UART2: [UART DATA]: 7[0m
+[0;32mI (13414) UART2: turn 2[0m
+[0;32mI (13414) UART: uart task have mutex[0m
+[0;32mI (13414) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (13444) LCD: t:10.2  h:69.5[0m
+[0;32mI (13454) LCD: MQ2:123[0m
+[0;32mI (13454) UART: uart task release mutex[0m
+[0;32mI (13584) UART2: uart[2] event:[0m
+[0;32mI (13584) UART2: [UART DATA]: 120[0m
+[0;32mI (13584) UART2: turn 1[0m
+[0;32mI (13594) UART2: uart[2] event:[0m
+[0;32mI (13594) UART2: [UART DATA]: 7[0m
+[0;32mI (13594) UART2: turn 2[0m
+[0;32mI (13594) UART: uart task have mutex[0m
+[0;32mI (13604) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (13624) LCD: t:10.2  h:69.5[0m
+[0;32mI (13634) LCD: MQ2:123[0m
+[0;32mI (13634) UART: uart task release mutex[0m
+[0;32mI (13784) UART2: uart[2] event:[0m
+[0;32mI (13784) UART2: [UART DATA]: 120[0m
+[0;32mI (13784) UART2: turn 1[0m
+[0;32mI (13794) UART2: uart[2] event:[0m
+[0;32mI (13794) UART2: [UART DATA]: 7[0m
+[0;32mI (13794) UART2: turn 2[0m
+[0;32mI (13794) UART: uart task have mutex[0m
+[0;32mI (13804) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (13834) LCD: t:10.2  h:69.5[0m
+[0;32mI (13844) LCD: MQ2:123[0m
+[0;32mI (13844) UART: uart task release mutex[0m
+[0;32mI (13944) UART2: uart[2] event:[0m
+[0;32mI (13944) UART2: [UART DATA]: 120[0m
+[0;32mI (13944) UART2: turn 1[0m
+[0;32mI (13954) UART2: uart[2] event:[0m
+[0;32mI (13954) UART2: [UART DATA]: 7[0m
+[0;32mI (13954) UART2: turn 2[0m
+[0;32mI (13954) UART: uart task have mutex[0m
+[0;32mI (13954) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (13984) LCD: t:10.2  h:69.5[0m
+[0;32mI (13994) LCD: MQ2:123[0m
+[0;32mI (13994) UART: uart task release mutex[0m
+[0;32mI (14114) UART2: uart[2] event:[0m
+[0;32mI (14114) UART2: [UART DATA]: 120[0m
+[0;32mI (14114) UART2: turn 1[0m
+[0;32mI (14124) UART2: uart[2] event:[0m
+[0;32mI (14124) UART2: [UART DATA]: 7[0m
+[0;32mI (14124) UART2: turn 2[0m
+[0;32mI (14124) UART: uart task have mutex[0m
+[0;32mI (14124) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (14154) LCD: t:10.2  h:69.5[0m
+[0;32mI (14164) LCD: MQ2:123[0m
+[0;32mI (14164) UART: uart task release mutex[0m
+[0;32mI (14314) UART2: uart[2] event:[0m
+[0;32mI (14324) UART2: [UART DATA]: 120[0m
+[0;32mI (14324) UART2: turn 1[0m
+[0;32mI (14334) UART2: uart[2] event:[0m
+[0;32mI (14334) UART2: [UART DATA]: 7[0m
+[0;32mI (14334) UART2: turn 2[0m
+[0;32mI (14334) UART: uart task have mutex[0m
+[0;32mI (14334) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (14364) LCD: t:10.2  h:69.5[0m
+[0;32mI (14374) LCD: MQ2:123[0m
+[0;32mI (14374) UART: uart task release mutex[0m
+[0;32mI (14504) UART2: uart[2] event:[0m
+[0;32mI (14504) UART2: [UART DATA]: 120[0m
+[0;32mI (14504) UART2: turn 1[0m
+[0;32mI (14514) UART2: uart[2] event:[0m
+[0;32mI (14514) UART2: [UART DATA]: 7[0m
+[0;32mI (14514) UART2: turn 2[0m
+[0;32mI (14514) UART: uart task have mutex[0m
+[0;32mI (14514) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (14544) LCD: t:10.2  h:69.5[0m
+[0;32mI (14554) LCD: MQ2:123[0m
+[0;32mI (14554) UART: uart task release mutex[0m
+[0;32mI (14704) UART2: uart[2] event:[0m
+[0;32mI (14704) UART2: [UART DATA]: 122[0m
+[0;32mI (14704) UART2: turn 1[0m
+[0;32mI (14714) UART2: uart[2] event:[0m
+[0;32mI (14714) UART2: [UART DATA]: 5[0m
+[0;32mI (14714) UART2: turn 2[0m
+[0;32mI (14724) UART: uart task have mutex[0m
+[0;32mI (14724) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (14754) LCD: t:10.2  h:69.5[0m
+[0;32mI (14764) LCD: MQ2:123[0m
+[0;32mI (14764) UART: uart task release mutex[0m
+[0;32mI (14974) UART2: uart[2] event:[0m
+[0;32mI (14974) UART2: [UART DATA]: 120[0m
+[0;32mI (14974) UART2: turn 1[0m
+[0;32mI (14984) UART2: uart[2] event:[0m
+[0;32mI (14984) UART2: [UART DATA]: 7[0m
+[0;32mI (14984) UART2: turn 2[0m
+[0;32mI (14984) UART: uart task have mutex[0m
+[0;32mI (14994) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (15014) LCD: t:10.2  h:69.5[0m
+[0;32mI (15024) LCD: MQ2:123[0m
+[0;32mI (15024) UART: uart task release mutex[0m
+[0;32mI (79764) GATTS_DEMO: ESP_GATTS_CONNECT_EVT, conn_id 0, remote 4f:11:bb:17:f0:52:[0m
+[0;32mI (80154) GATTS_DEMO: update connection params status = 0, min_int = 16, max_int = 32,conn_int = 6,latency = 0, timeout = 500[0m
+[0;32mI (80374) GATTS_DEMO: ESP_GATTS_MTU_EVT, MTU 500[0m
+[0;32mI (80424) GATTS_DEMO: update connection params status = 0, min_int = 0, max_int = 0,conn_int = 24,latency = 0, timeout = 400[0m
+[0;31mE (88974) BT_GATT: gatt_sr_write_cl_supp_feat len 35[0m
+[0;32mI (89044) GATTS_DEMO: GATT_WRITE_EVT, conn_id 0, trans_id 3, handle 42[0m
+[0;32mI (89044) GATTS_DEMO: GATT_WRITE_EVT, value len 35, value : w:Infrastructure NW	p:NetworkPolicy profile x[0m
+[0;32mI (89044) GATTS_DEMO: 77 3a 49 6e 66 72 61 73 74 72 75 63 74 75 72 65 [0m
+[0;32mI (89054) GATTS_DEMO: 20 4e 57 09 70 3a 4e 65 74 77 6f 72 6b 50 6f 6c [0m
+[0;32mI (89064) GATTS_DEMO: 69 63 79 [0m
+[0;32mI (89064) BLE: dataflag = 1[0m
+[0;32mI (89074) BLE:: ble task have mutex[0m
+ssid: .Infrastructure NW. pass: .NetworkPolicy.
+I (89104) wifi:mode : sta (fc:b4:67:f5:ed:80)
+I (89114) wifi:enable tsf
+[0;32mI (89114) WIFI STATION: wifi_init_sta finished, ssid: Infrastructure NW, pass: NetworkPolicy.[0m
+[0;32mI (89114) BLE:: start connect wifi[0m
+[0;32mI (89114) BLE:: ble task release mutex[0m
+I (92504) wifi:new:<12,0>, old:<1,0>, ap:<255,255>, sta:<12,0>, prof:1
+I (93714) wifi:state: init -> auth (b0)
+I (94714) wifi:state: auth -> init (200)
+I (94714) wifi:new:<12,0>, old:<12,0>, ap:<255,255>, sta:<12,0>, prof:1
+[0;32mI (94724) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (94724) WIFI STATION: connect to the AP fail[0m
+[0;32mI (96324) UART2: uart[2] event:[0m
+[0;32mI (96324) UART2: [UART DATA]: 120[0m
+[0;32mI (96324) UART2: turn 1[0m
+[0;32mI (96334) UART2: uart[2] event:[0m
+[0;32mI (96334) UART2: [UART DATA]: 7[0m
+[0;32mI (96334) UART2: turn 2[0m
+[0;32mI (96334) UART: uart task have mutex[0m
+[0;32mI (96344) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (96374) LCD: t:10.2  h:69.5[0m
+[0;32mI (96384) LCD: MQ2:123[0m
+[0;32mI (96384) UART: uart task release mutex[0m
+[0;32mI (97344) UART2: uart[2] event:[0m
+[0;32mI (97344) UART2: [UART DATA]: 120[0m
+[0;32mI (97344) UART2: turn 1[0m
+[0;32mI (97354) UART2: uart[2] event:[0m
+[0;32mI (97354) UART2: [UART DATA]: 7[0m
+[0;32mI (97354) UART2: turn 2[0m
+[0;32mI (97354) UART: uart task have mutex[0m
+[0;32mI (97354) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (97384) LCD: t:10.2  h:69.5[0m
+[0;32mI (97394) LCD: MQ2:123[0m
+[0;32mI (97394) UART: uart task release mutex[0m
+[0;32mI (98114) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (98114) WIFI STATION: connect to the AP fail[0m
+[0;32mI (98124) UART2: uart[2] event:[0m
+[0;32mI (98124) UART2: [UART DATA]: 120[0m
+[0;32mI (98124) UART2: turn 1[0m
+[0;32mI (98134) UART2: uart[2] event:[0m
+[0;32mI (98134) UART2: [UART DATA]: 7[0m
+[0;32mI (98134) UART2: turn 2[0m
+[0;32mI (98134) UART: uart task have mutex[0m
+[0;32mI (98144) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (98164) LCD: t:10.2  h:69.5[0m
+[0;32mI (98174) LCD: MQ2:123[0m
+[0;32mI (98174) UART: uart task release mutex[0m
+I (101494) wifi:new:<12,0>, old:<12,0>, ap:<255,255>, sta:<12,0>, prof:1
+I (101494) wifi:state: init -> auth (b0)
+I (101514) wifi:state: auth -> assoc (0)
+I (101524) wifi:state: assoc -> run (10)
+I (101564) wifi:<ba-add>idx:0 (ifx:0, 24:0b:2a:2e:69:79), tid:5, ssn:0, winSize:64
+I (101664) wifi:<ba-add>idx:1 (ifx:0, 24:0b:2a:2e:69:79), tid:0, ssn:1, winSize:64
+I (103524) wifi:<ba-del>idx:0, tid:5
+I (103544) wifi:<ba-add>idx:0 (ifx:0, 24:0b:2a:2e:69:79), tid:5, ssn:0, winSize:64
+I (103684) wifi:<ba-del>idx:1, tid:0
+I (103704) wifi:<ba-add>idx:1 (ifx:0, 24:0b:2a:2e:69:79), tid:0, ssn:3, winSize:64
+I (104624) wifi:state: run -> init (fc0)
+I (104624) wifi:<ba-del>idx:1, tid:0
+I (104624) wifi:<ba-del>idx:0, tid:5
+I (104624) wifi:new:<12,0>, old:<12,0>, ap:<255,255>, sta:<12,0>, prof:1
+[0;32mI (104634) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (104634) WIFI STATION: connect to the AP fail[0m
+[0;32mI (106974) UART2: uart[2] event:[0m
+[0;32mI (106974) UART2: [UART DATA]: 120[0m
+[0;32mI (106974) UART2: turn 1[0m
+[0;32mI (106984) UART2: uart[2] event:[0m
+[0;32mI (106984) UART2: [UART DATA]: 7[0m
+[0;32mI (106984) UART2: turn 2[0m
+[0;32mI (106984) UART: uart task have mutex[0m
+[0;32mI (106994) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (107024) LCD: t:10.2  h:69.5[0m
+[0;32mI (107034) LCD: MQ2:123[0m
+[0;32mI (107034) UART: uart task release mutex[0m
+[0;32mI (108024) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (108024) WIFI STATION: connect to the AP fail[0m
+[0;32mI (109674) UART2: uart[2] event:[0m
+[0;32mI (109674) UART2: [UART DATA]: 120[0m
+[0;32mI (109674) UART2: turn 1[0m
+[0;32mI (109684) UART2: uart[2] event:[0m
+[0;32mI (109684) UART2: [UART DATA]: 7[0m
+[0;32mI (109684) UART2: turn 2[0m
+[0;32mI (109684) UART: uart task have mutex[0m
+[0;32mI (109684) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (109714) LCD: t:10.2  h:69.5[0m
+[0;32mI (109724) LCD: MQ2:123[0m
+[0;32mI (109724) UART: uart task release mutex[0m
+I (111404) wifi:new:<12,0>, old:<12,0>, ap:<255,255>, sta:<12,0>, prof:1
+I (111404) wifi:state: init -> auth (b0)
+I (112404) wifi:state: auth -> init (200)
+I (112404) wifi:new:<12,0>, old:<12,0>, ap:<255,255>, sta:<12,0>, prof:1
+[0;32mI (112414) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (112414) WIFI STATION: connect to the AP fail[0m
+[0;32mI (115794) WIFI STATION: Can't connect to the AP point[0m
+[0;32mI (115804) WIFI STATION: connect to the AP fail[0m
+[0;32mI (115804) BLE:: ble task have mutex[0m
+[0;32mI (115804) BLE:: connect state = 0[0m
+[0;32mI (115804) BLE:: ble task release mutex[0m
+[0;32mI (115814) WIFI: wifi task have mutex[0m
+E (115824) wifi:NAN WiFi stop
+I (115824) wifi:flush txq
+I (115824) wifi:stop sw txq
+I (115824) wifi:lmac stop hw txq
+[0;32mI (115824) WIFI: stop wifi connection, fail connect in the first time[0m
+[0;33mW (115834) mqtt_client: Client asked to stop, but was not started[0m
+[0;31mE (115844) BT_LOG: Bluedroid already initialised
+[0m
+[0;31mE (115844) BT_LOG: Bluedroid already enabled
+[0m
+[0;32mI (115854) WIFI: wifi task release mutex[0m
+[0;31mE (115854) BT_APPL: application already registered.
+[0m
+[0;32mI (115864) GATTS_DEMO: Reg app failed, app_id ffff, status 144
+[0m
+[0;32mI (129244) GATTS_DEMO: ESP_GATTS_MTU_EVT, MTU 500[0m
+[0;31mE (142644) BT_GATT: gatt_sr_write_cl_supp_feat len 35[0m
+[0;32mI (142714) GATTS_DEMO: GATT_WRITE_EVT, conn_id 0, trans_id 5, handle 42[0m
+[0;32mI (142714) GATTS_DEMO: GATT_WRITE_EVT, value len 35, value : w:Infrastructure NW	p:NetworkPolicy profile x[0m
+[0;32mI (142714) GATTS_DEMO: 77 3a 49 6e 66 72 61 73 74 72 75 63 74 75 72 65 [0m
+[0;32mI (142724) GATTS_DEMO: 20 4e 57 09 70 3a 4e 65 74 77 6f 72 6b 50 6f 6c [0m
+[0;32mI (142734) GATTS_DEMO: 69 63 79 [0m
+[0;32mI (142734) BLE: dataflag = 1[0m
+[0;32mI (142744) BLE:: ble task have mutex[0m
+ssid: .Infrastructure NW. pass: .NetworkPolicy.
+I (142774) wifi:mode : sta (fc:b4:67:f5:ed:80)
+I (142774) wifi:enable tsf
+[0;32mI (142774) WIFI STATION: wifi_init_sta finished, ssid: Infrastructure NW, pass: NetworkPolicy.[0m
+[0;32mI (142784) BLE:: start connect wifi[0m
+[0;32mI (142784) BLE:: ble task release mutex[0m
+I (146174) wifi:new:<12,0>, old:<1,0>, ap:<255,255>, sta:<12,0>, prof:1
+[0;32mI (147364) UART2: uart[2] event:[0m
+[0;32mI (147364) UART2: [UART DATA]: 120[0m
+[0;32mI (147364) UART2: turn 1[0m
+[0;32mI (147424) UART2: uart[2] event:[0m
+[0;32mI (147424) UART2: [UART DATA]: 7[0m
+[0;32mI (147424) UART2: turn 2[0m
+[0;32mI (147424) UART: uart task have mutex[0m
+[0;32mI (147424) UART: receive data from uart, but not connected to the internet yet[0m
+I (147434) wifi:state: init -> auth (b0)
+[0;32mI (147454) LCD: t:10.2  h:69.5[0m
+[0;32mI (147464) LCD: MQ2:123[0m
+[0;32mI (147464) UART: uart task release mutex[0m
+[0;32mI (148244) UART2: uart[2] event:[0m
+[0;32mI (148244) UART2: [UART DATA]: 120[0m
+[0;32mI (148244) UART2: turn 1[0m
+[0;32mI (148254) UART2: uart[2] event:[0m
+[0;32mI (148254) UART2: [UART DATA]: 7[0m
+[0;32mI (148254) UART2: turn 2[0m
+[0;32mI (148264) UART: uart task have mutex[0m
+[0;32mI (148264) UART: receive data from uart, but not connected to the internet yet[0m
+[0;32mI (148294) LCD: t:10.2  h:69.5[0m
+[0;32mI (148304) LCD: MQ2:123[0m
+[0;32mI (148304) UART: uart task release mutex[0m
+I (148444) wifi:state: auth -> init (200)
+I (148444) wifi:new:<12,0>, old:<12,0>, ap:<255,255>, sta:<12,0>, prof:1
+[0;32mI (148444) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (148444) WIFI STATION: connect to the AP fail[0m
+[0;32mI (151834) WIFI STATION: retry to connect to the AP[0m
+[0;32mI (151834) WIFI STATION: connect to the AP fail[0m
+I (155214) wifi:new:<12,0>, old:<12,0>, ap:<255,255>, sta:<12,0>, prof:1
+I (155214) wifi:state: init -> auth (b0)
+I (155224) wifi:state: auth -> assoc (0)
+I (155234) wifi:state: assoc -> run (10)
+I (155254) wifi:<ba-add>idx:0 (ifx:0, 24:0b:2a:2e:69:79), tid:5, ssn:0, winSize:64
+I (155354) wifi:<ba-add>idx:1 (ifx:0, 24:0b:2a:2e:69:79), tid:0, ssn:1, winSize:64
+I (155374) wifi:connected with Infrastructure NW, aid = 7, channel 12, BW20, bssid = 24:0b:2a:2e:69:79
+I (155374) wifi:security: WPA2-PSK, phy: bgn, rssi: -67
+I (155394) wifi:pm start, type: 1
+
+I (155424) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (174904) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (174904) WIFI STATION: got ip:192.168.1.10[0m
+[0;32mI (174914) BLE:: ble task have mutex[0m
+[0;32mI (174914) BLE:: connect state = 1[0m
+[0;32mI (174914) BLE:: ble task release mutex[0m
+[0;32mI (174924) WIFI: wifi task have mutex[0m
+[0;33mW (174934) BT_HCI: hci cmd send: disconnect: hdl 0x0, rsn:0x13[0m
+[0;32mI (174934) GATTS_DEMO: ESP_GATTS_DISCONNECT_EVT, disconnect reason 0x16[0m
+[0;33mW (175014) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x16[0m
+[0;32mI (176034) W25Q32: write wifi info: w:Infrastructure NW	p:NetworkPolicy[0m
+[0;32mI (176034) W25Q32: Erase 4k of w25q32 at 4096[0m
+[0;32mI (176034) W25Q32: Write data to w25q32 at 4096: w:Infrastructure NW	p:NetworkPolicy[0m
+[0;32mI (176044) W25Q32: update info location: i:0 l:35[0m
+[0;32mI (176044) W25Q32: Erase 4k of w25q32 at 0[0m
+[0;32mI (176054) W25Q32: Write data to w25q32 at 0: save	i:0	l:35[0m
+[0;32mI (176054) WIFI: disable ble[0m
+[0;32mI (176064) SNTP: Initializing and starting SNTP[0m
+[0;32mI (176064) MQTT: Other event id:7[0m
+[0;32mI (178064) SNTP: Waiting for system time to be set... (1/15)[0m
+[0;32mI (178724) SNTP: Set time success[0m
+[0;32mI (178724) WIFI: wifi task release mutex[0m
+[0;31mE (186084) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (186084) esp-tls: Failed to open new connection[0m
+[0;31mE (186084) transport_base: Failed to open a new connection[0m
+[0;31mE (186084) mqtt_client: Error transport connect[0m
+[0;32mI (186094) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (186094) MQTT: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (186104) MQTT: Last errno string (Success)[0m
+[0;32mI (186104) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (189734) UART2: uart[2] event:[0m
+[0;32mI (189734) UART2: [UART DATA]: 120[0m
+[0;32mI (189734) UART2: turn 1[0m
+[0;32mI (189744) UART2: uart[2] event:[0m
+[0;32mI (189744) UART2: [UART DATA]: 7[0m
+[0;32mI (189744) UART2: turn 2[0m
+[0;32mI (189744) UART: uart task have mutex[0m
+[0;32mI (189744) UART: receive data from uart[0m
+[0;32mI (189754) SNTP: Current time in Vietnam: 2024:07:10 07:02:55[0m
+[0;33mW (189754) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (189764) UART: publish data to mqtt server, data: 20240710070255	tem:10.2	hum:69.5	mq2:123	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:1	fs1:0	fn2:0	fs2:0	ld1:1	lm1:1	ls1:1	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (189804) LCD: t:10.2  h:69.5[0m
+[0;32mI (189814) LCD: MQ2:123[0m
+[0;32mI (189814) UART: uart task release mutex[0m
+[0;32mI (190374) UART2: uart[2] event:[0m
+[0;32mI (190374) UART2: [UART DATA]: 120[0m
+[0;32mI (190374) UART2: turn 1[0m
+[0;32mI (190384) UART2: uart[2] event:[0m
+[0;32mI (190384) UART2: [UART DATA]: 7[0m
+[0;32mI (190384) UART2: turn 2[0m
+[0;32mI (190384) UART: uart task have mutex[0m
+[0;32mI (190384) UART: receive data from uart[0m
+[0;32mI (190394) SNTP: Current time in Vietnam: 2024:07:10 07:02:56[0m
+[0;33mW (190394) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (190404) UART: publish data to mqtt server, data: 20240710070256	tem:10.2	hum:69.5	mq2:123	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:1	fs1:0	fn2:0	fs2:0	ld1:1	lm1:1	ls1:1	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (190444) LCD: t:10.2  h:69.5[0m
+[0;32mI (190454) LCD: MQ2:123[0m
+[0;32mI (190454) UART: uart task release mutex[0m
+[0;32mI (190964) UART2: uart[2] event:[0m
+[0;32mI (190964) UART2: [UART DATA]: 120[0m
+[0;32mI (190964) UART2: turn 1[0m
+[0;32mI (190974) UART2: uart[2] event:[0m
+[0;32mI (190974) UART2: [UART DATA]: 7[0m
+[0;32mI (190974) UART2: turn 2[0m
+[0;32mI (190974) UART: uart task have mutex[0m
+[0;32mI (190974) UART: receive data from uart[0m
+[0;32mI (190984) SNTP: Current time in Vietnam: 2024:07:10 07:02:57[0m
+[0;33mW (190994) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (190994) UART: publish data to mqtt server, data: 20240710070257	tem:10.2	hum:69.5	mq2:123	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:1	fs1:0	fn2:0	fs2:0	ld1:1	lm1:1	ls1:1	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (191034) LCD: t:10.2  h:69.5[0m
+[0;32mI (191044) LCD: MQ2:123[0m
+[0;32mI (191044) UART: uart task release mutex[0m
+[0;32mI (191504) UART2: uart[2] event:[0m
+[0;32mI (191514) UART2: [UART DATA]: 120[0m
+[0;32mI (191514) UART2: turn 1[0m
+[0;32mI (191524) UART2: uart[2] event:[0m
+[0;32mI (191524) UART2: [UART DATA]: 7[0m
+[0;32mI (191524) UART2: turn 2[0m
+[0;32mI (191524) UART: uart task have mutex[0m
+[0;32mI (191524) UART: receive data from uart[0m
+[0;32mI (191534) SNTP: Current time in Vietnam: 2024:07:10 07:02:57[0m
+[0;33mW (191534) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (191544) UART: publish data to mqtt server, data: 20240710070257	tem:10.2	hum:69.5	mq2:123	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:1	fs1:0	fn2:0	fs2:0	ld1:1	lm1:1	ls1:1	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (191584) LCD: t:10.2  h:69.5[0m
+[0;32mI (191594) LCD: MQ2:123[0m
+[0;32mI (191594) UART: uart task release mutex[0m
+[0;32mI (191974) UART2: uart[2] event:[0m
+[0;32mI (191974) UART2: [UART DATA]: 120[0m
+[0;32mI (191974) UART2: turn 1[0m
+[0;32mI (191984) UART2: uart[2] event:[0m
+[0;32mI (191984) UART2: [UART DATA]: 7[0m
+[0;32mI (191984) UART2: turn 2[0m
+[0;32mI (191984) UART: uart task have mutex[0m
+[0;32mI (191994) UART: receive data from uart[0m
+[0;32mI (191994) SNTP: Current time in Vietnam: 2024:07:10 07:02:58[0m
+[0;33mW (192004) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (192014) UART: publish data to mqtt server, data: 20240710070258	tem:10.2	hum:69.5	mq2:123	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:1	fs1:0	fn2:0	fs2:0	ld1:1	lm1:1	ls1:1	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (192044) LCD: t:10.2  h:69.5[0m
+[0;32mI (192054) LCD: MQ2:123[0m
+[0;32mI (192054) UART: uart task release mutex[0m
+[0;32mI (192174) UART2: uart[2] event:[0m
+[0;32mI (192174) UART2: [UART DATA]: 120[0m
+[0;32mI (192174) UART2: turn 1[0m
+[0;32mI (192184) UART2: uart[2] event:[0m
+[0;32mI (192184) UART2: [UART DATA]: 7[0m
+[0;32mI (192184) UART2: turn 2[0m
+[0;32mI (192194) UART: uart task have mutex[0m
+[0;32mI (192194) UART: receive data from uart[0m
+[0;32mI (192194) SNTP: Current time in Vietnam: 2024:07:10 07:02:58[0m
+[0;33mW (192204) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (192214) UART: publish data to mqtt server, data: 20240710070258	tem:10.2	hum:69.5	mq2:123	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:1	fs1:0	fn2:0	fs2:0	ld1:1	lm1:1	ls1:1	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (192254) LCD: t:10.2  h:69.5[0m
+[0;32mI (192264) LCD: MQ2:123[0m
+[0;32mI (192264) UART: uart task release mutex[0m
+[0;32mI (192364) UART2: uart[2] event:[0m
+[0;32mI (192364) UART2: [UART DATA]: 120[0m
+[0;32mI (192364) UART2: turn 1[0m
+[0;32mI (192374) UART2: uart[2] event:[0m
+[0;32mI (192374) UART2: [UART DATA]: 7[0m
+[0;32mI (192374) UART2: turn 2[0m
+[0;32mI (192374) UART: uart task have mutex[0m
+[0;32mI (192384) UART: receive data from uart[0m
+[0;32mI (192384) SNTP: Current time in Vietnam: 2024:07:10 07:02:58[0m
+[0;33mW (192394) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (192404) UART: publish data to mqtt server, data: 20240710070258	tem:10.2	hum:69.5	mq2:123	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:1	fs1:0	fn2:0	fs2:0	ld1:1	lm1:1	ls1:1	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (192434) LCD: t:10.2  h:69.5[0m
+[0;32mI (192444) LCD: MQ2:123[0m
+[0;32mI (192444) UART: uart task release mutex[0m
+[0;32mI (192954) UART2: uart[2] event:[0m
+[0;32mI (192954) UART2: [UART DATA]: 120[0m
+[0;32mI (192954) UART2: turn 1[0m
+[0;32mI (192964) UART2: uart[2] event:[0m
+[0;32mI (192964) UART2: [UART DATA]: 7[0m
+[0;32mI (192964) UART2: turn 2[0m
+[0;32mI (192964) UART: uart task have mutex[0m
+[0;32mI (192974) UART: receive data from uart[0m
+[0;32mI (192974) SNTP: Current time in Vietnam: 2024:07:10 07:02:59[0m
+[0;33mW (192984) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (192994) UART: publish data to mqtt server, data: 20240710070259	tem:10.2	hum:69.5	mq2:123	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:1	fs1:0	fn2:0	fs2:0	ld1:1	lm1:1	ls1:1	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (193024) LCD: t:10.2  h:69.5[0m
+[0;32mI (193034) LCD: MQ2:123[0m
+[0;32mI (193034) UART: uart task release mutex[0m
+[0;32mI (193394) UART2: uart[2] event:[0m
+[0;32mI (193394) UART2: [UART DATA]: 120[0m
+[0;32mI (193394) UART2: turn 1[0m
+[0;32mI (193404) UART2: uart[2] event:[0m
+[0;32mI (193404) UART2: [UART DATA]: 7[0m
+[0;32mI (193404) UART2: turn 2[0m
+[0;32mI (193404) UART: uart task have mutex[0m
+[0;32mI (193414) UART: receive data from uart[0m
+[0;32mI (193414) SNTP: Current time in Vietnam: 2024:07:10 07:02:59[0m
+[0;33mW (193424) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (193424) UART: publish data to mqtt server, data: 20240710070259	tem:10.2	hum:69.5	mq2:123	dr1:0	dm1:0	ds1:0	dr2:0	dm2:0	ds2:0	fn1:1	fs1:0	fn2:0	fs2:0	ld1:1	lm1:1	ls1:1	ld2:0	lm2:0	ls2:0	buz:0, len: 7[0m
+[0;32mI (193464) LCD: t:10.2  h:69.5[0m
+[0;32mI (193474) LCD: MQ2:123[0m
+[0;32mI (193474) UART: uart task release mutex[0m
+[0;32mI (196114) MQTT: Other event id:7[0m
